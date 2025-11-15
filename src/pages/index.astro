@@ -1,0 +1,235 @@
+---
+import '../styles/global.css';
+import ComponentCard from '../components/ComponentCard';
+import GalaxyBackground from '../components/GalaxyBackground';
+import Navbar from '../components/Navbar';
+import ButtonExample, { buttonCode } from '../components/examples/ButtonExample';
+import CardExample, { cardCode } from '../components/examples/CardExample';
+import AlertExample, { alertCode } from '../components/examples/AlertExample';
+import BadgeExample, { badgeCode } from '../components/examples/BadgeExample';
+---
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Galería de Componentes Web | Modern UI Components</title>
+		<meta name="description" content="Biblioteca de componentes web reutilizables con React y Tailwind CSS - Diseño moderno con tema galaxy" />
+	</head>
+	<body class="min-h-screen">
+		<!-- Galaxy Background -->
+		<GalaxyBackground client:load />
+
+		<!-- Navbar -->
+		<Navbar client:load />
+
+		<!-- Hero Section -->
+		<section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+			<div class="container mx-auto px-6 py-32 text-center">
+				<!-- Giant Icon -->
+				<div class="mb-16 flex justify-center">
+					<div class="relative animate-float">
+						<!-- Glow Effect -->
+						<div class="absolute inset-0 bg-blue-500/10 blur-[100px] rounded-full"></div>
+
+						<!-- Icon Container -->
+						<div class="relative w-48 h-48 md:w-64 md:h-64 rounded-2xl bg-gradient-to-br from-slate-800/40 to-slate-900/40 backdrop-blur-xl border border-slate-700/50 flex items-center justify-center shadow-2xl shadow-black/50 hover:border-blue-500/30 transition-all duration-500">
+							<!-- Replace with your image later -->
+							<svg
+								class="w-24 h-24 md:w-32 md:h-32 text-blue-400/80"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+								/>
+							</svg>
+						</div>
+					</div>
+				</div>
+
+				<!-- Title -->
+				<h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
+					<span class="bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 bg-clip-text text-transparent">
+						Component Library
+					</span>
+				</h1>
+
+				<!-- Subtitle -->
+				<p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-16 leading-relaxed font-light">
+					Componentes web profesionales y reutilizables construidos con
+					<span class="text-blue-400 font-medium">React</span> y
+					<span class="text-indigo-400 font-medium">Tailwind CSS</span>
+				</p>
+
+				<!-- Scroll Indicator -->
+				<button onclick="smoothScrollToSection('#componentes')" class="inline-flex flex-col items-center gap-2 group cursor-pointer">
+					<span class="text-xs text-slate-500 font-medium tracking-wider uppercase">Explorar</span>
+					<div class="w-6 h-10 rounded-full border border-slate-600/50 flex items-start justify-center pt-2 group-hover:border-blue-500/50 transition-all duration-300">
+						<div class="w-1 h-2 bg-blue-400/60 rounded-full animate-scroll"></div>
+					</div>
+				</button>
+
+				<script is:inline>
+					function smoothScrollToSection(targetId) {
+						const element = document.querySelector(targetId);
+						if (!element) return;
+
+						const targetPosition = element.getBoundingClientRect().top + window.pageYOffset;
+						const startPosition = window.pageYOffset;
+						const distance = targetPosition - startPosition;
+						const duration = 1500;
+						let start = null;
+
+						function easeInOutCubic(t) {
+							return t < 0.5
+								? 4 * t * t * t
+								: 1 - Math.pow(-2 * t + 2, 3) / 2;
+						}
+
+						function animation(currentTime) {
+							if (start === null) start = currentTime;
+							const timeElapsed = currentTime - start;
+							const progress = Math.min(timeElapsed / duration, 1);
+							const ease = easeInOutCubic(progress);
+
+							window.scrollTo(0, startPosition + distance * ease);
+
+							if (timeElapsed < duration) {
+								requestAnimationFrame(animation);
+							}
+						}
+
+						requestAnimationFrame(animation);
+					}
+				</script>
+			</div>
+		</section>
+
+		<!-- Main Content -->
+		<main class="container mx-auto px-6 py-24 relative">
+			<!-- Stats -->
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-24">
+				<div class="glass rounded-xl p-6 border border-slate-800/30 hover:border-slate-700/50 transition-all duration-500 group">
+					<div class="text-3xl font-bold text-slate-200 mb-2">4</div>
+					<div class="text-slate-400 text-sm font-medium tracking-wide">Componentes</div>
+				</div>
+				<div class="glass rounded-xl p-6 border border-slate-800/30 hover:border-slate-700/50 transition-all duration-500 group">
+					<div class="text-3xl font-bold text-slate-200 mb-2">100%</div>
+					<div class="text-slate-400 text-sm font-medium tracking-wide">Responsive</div>
+				</div>
+				<div class="glass rounded-xl p-6 border border-slate-800/30 hover:border-slate-700/50 transition-all duration-500 group">
+					<div class="text-3xl font-bold text-slate-200 mb-2">TypeScript</div>
+					<div class="text-slate-400 text-sm font-medium tracking-wide">Type Safe</div>
+				</div>
+			</div>
+
+			<!-- Components Grid -->
+			<div class="mb-32" id="componentes">
+				<div class="text-center mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold mb-3 text-slate-100 tracking-tight">
+						Componentes Disponibles
+					</h2>
+					<p class="text-slate-400 text-base font-light">Explora y descarga componentes listos para usar</p>
+				</div>
+				<div class="masonry-grid gap-6">
+					<!-- Button Component -->
+					<ComponentCard
+						client:load
+						title="Botones"
+						description="Colección de botones con diferentes estilos y estados. Incluye variantes primary, secondary, success y danger."
+						code={buttonCode}
+						category="UI Elements"
+					>
+						<ButtonExample client:load />
+					</ComponentCard>
+
+					<!-- Card Component -->
+					<ComponentCard
+						client:load
+						title="Tarjeta"
+						description="Componente de tarjeta moderno con imagen, título, descripción y botón de acción. Perfecto para listados."
+						code={cardCode}
+						category="Layouts"
+					>
+						<CardExample client:load />
+					</ComponentCard>
+
+					<!-- Alert Component -->
+					<ComponentCard
+						client:load
+						title="Alertas"
+						description="Componentes de alerta para mensajes informativos, de éxito y error. Con bordes coloridos y iconos."
+						code={alertCode}
+						category="Feedback"
+					>
+						<AlertExample client:load />
+					</ComponentCard>
+
+					<!-- Badge Component -->
+					<ComponentCard
+						client:load
+						title="Badges"
+						description="Etiquetas pequeñas y coloridas para mostrar estados, categorías o información adicional."
+						code={badgeCode}
+						category="UI Elements"
+					>
+						<BadgeExample client:load />
+					</ComponentCard>
+				</div>
+			</div>
+
+			<!-- Info Section -->
+			<div id="guia" class="glass rounded-2xl p-10 md:p-16 mt-24 border border-slate-800/30">
+				<h2 class="text-2xl md:text-3xl font-bold mb-12 text-slate-100 text-center tracking-tight">
+					Cómo usar estos componentes
+				</h2>
+				<div class="grid md:grid-cols-2 gap-4">
+					<div class="flex items-start gap-4 p-6 rounded-xl bg-slate-900/20 border border-slate-800/30 hover:border-slate-700/50 transition-all duration-500">
+						<span class="shrink-0 w-8 h-8 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg flex items-center justify-center font-semibold text-sm">1</span>
+						<div>
+							<p class="text-slate-300 text-sm leading-relaxed"><span class="font-medium text-slate-200">Ver el código:</span> Haz clic en "Código" para visualizar el código completo del componente.</p>
+						</div>
+					</div>
+					<div class="flex items-start gap-4 p-6 rounded-xl bg-slate-900/20 border border-slate-800/30 hover:border-slate-700/50 transition-all duration-500">
+						<span class="shrink-0 w-8 h-8 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg flex items-center justify-center font-semibold text-sm">2</span>
+						<div>
+							<p class="text-slate-300 text-sm leading-relaxed"><span class="font-medium text-slate-200">Copiar:</span> Usa el botón "Copiar" para copiar el código al portapapeles.</p>
+						</div>
+					</div>
+					<div class="flex items-start gap-4 p-6 rounded-xl bg-slate-900/20 border border-slate-800/30 hover:border-slate-700/50 transition-all duration-500">
+						<span class="shrink-0 w-8 h-8 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg flex items-center justify-center font-semibold text-sm">3</span>
+						<div>
+							<p class="text-slate-300 text-sm leading-relaxed"><span class="font-medium text-slate-200">Descargar:</span> Descarga el componente como archivo .tsx listo para usar.</p>
+						</div>
+					</div>
+					<div class="flex items-start gap-4 p-6 rounded-xl bg-slate-900/20 border border-slate-800/30 hover:border-slate-700/50 transition-all duration-500">
+						<span class="shrink-0 w-8 h-8 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg flex items-center justify-center font-semibold text-sm">4</span>
+						<div>
+							<p class="text-slate-300 text-sm leading-relaxed"><span class="font-medium text-slate-200">Personalizar:</span> Modifica los estilos de Tailwind según tus necesidades.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<!-- Footer -->
+		<footer class="relative border-t border-slate-800/30 mt-32">
+			<div class="container mx-auto px-6 py-12 text-center relative">
+				<div class="mb-6">
+					<h3 class="text-lg font-semibold text-slate-200 mb-2 tracking-tight">
+						ComponentLib
+					</h3>
+				</div>
+				<p class="text-slate-400 text-sm mb-1">Construido con <span class="text-slate-300">Astro</span>, <span class="text-slate-300">React</span> y <span class="text-slate-300">Tailwind CSS</span></p>
+				<p class="text-slate-500 text-xs">Componentes de código abierto y libres de usar</p>
+			</div>
+		</footer>
+	</body>
+</html>

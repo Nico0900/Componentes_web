@@ -1,0 +1,4 @@
+client:1521 [vite] connecting...
+client:1644 [vite] connected.
+:4321/favicon.ico:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+(index):1  Failed to load resource: the server responded with a status of 500 (Internal Server Error)
