@@ -1,4 +1,44 @@
-client:1521 [vite] connecting...
+[vite] connecting...
+(index):1 [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) <input type=​"password" placeholder=​"Enter your password" class=​"w-full px-4 py-2.5 bg-slate-800/​50 border border-slate-700/​50 rounded-lg text-slate-200 placeholder-slate-500 focus:​outline-none focus:​border-blue-500/​50 focus:​ring-2 focus:​ring-blue-500/​20 transition-all duration-200">​
+(index):1 [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) <input type=​"password" class=​"w-full px-4 py-2.5 bg-slate-800/​50 border rounded-lg text-slate-200 placeholder-slate-500 focus:​outline-none transition-all duration-200 border-slate-700/​50 focus:​border-blue-500/​50 focus:​ring-2 focus:​ring-blue-500/​20" placeholder=​"••••••••" value>​
+(index):1 [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) <input type=​"password" placeholder=​"Enter your password" class=​"w-full px-4 py-2.5 bg-slate-800/​50 border border-slate-700/​50 rounded-lg text-slate-200 placeholder-slate-500 focus:​outline-none focus:​border-blue-500/​50 focus:​ring-2 focus:​ring-blue-500/​20 transition-all duration-200">​
+(index):1 [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) <input type=​"password" class=​"w-full px-4 py-2.5 bg-slate-800/​50 border rounded-lg text-slate-200 placeholder-slate-500 focus:​outline-none transition-all duration-200 border-slate-700/​50 focus:​border-blue-500/​50 focus:​ring-2 focus:​ring-blue-500/​20" placeholder=​"••••••••" value>​
 client:1644 [vite] connected.
-:4321/favicon.ico:1  Failed to load resource: the server responded with a status of 404 (Not Found)
-(index):1  Failed to load resource: the server responded with a status of 500 (Internal Server Error)
+@astrojs_react_client__js.js?v=521516bf:20104 Download the React DevTools for a better development experience: https://react.dev/link/react-devtools
+@astrojs_react_client__js.js?v=521516bf:3921 Uncaught Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  <ComponentGallery components={[...]}>
+    <div>
+      <div>
+      <div>
+      <div className="grid grid-...">
+        <ComponentCard title="Button 1 -..." description="Solid colo..." code={"export d..."} category="Buttons" ...>
+          <div className="group rela...">
+            <div>
+            <div className="p-10 h-ful...">
+              <div className="w-full tra...">
+-               <div className="flex flex-wrap gap-3 justify-center items-center">
+            ...
+          ...
+        ...
+
+    at throwOnHydrationMismatch (@astrojs_react_client__js.js?v=521516bf:3921:13)
+    at popHydrationState (@astrojs_react_client__js.js?v=521516bf:4029:11)
+    at completeWork (@astrojs_react_client__js.js?v=521516bf:8999:19)
+    at runWithFiberInDEV (@astrojs_react_client__js.js?v=521516bf:998:72)
+    at completeUnitOfWork (@astrojs_react_client__js.js?v=521516bf:12670:22)
+    at performUnitOfWork (@astrojs_react_client__js.js?v=521516bf:12576:29)
+    at workLoopConcurrentByScheduler (@astrojs_react_client__js.js?v=521516bf:12558:11)
+    at renderRootConcurrent (@astrojs_react_client__js.js?v=521516bf:12540:71)
+    at performWorkOnRoot (@astrojs_react_client__js.js?v=521516bf:11767:152)
+    at performWorkOnRootViaSchedulerTask (@astrojs_react_client__js.js?v=521516bf:13506:9)

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +16,8 @@ export default function Navbar() {
   const smoothScrollTo = (targetId: string) => {
     const element = document.querySelector(targetId);
     if (!element) return;
+
+    setMobileMenuOpen(false);
 
     const targetPosition = element.getBoundingClientRect().top + window.pageYOffset;
     const startPosition = window.pageYOffset;
@@ -108,7 +111,10 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden text-slate-400 hover:text-slate-200 transition-colors">
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden text-slate-400 hover:text-slate-200 transition-colors"
+          >
             <svg
               className="w-5 h-5"
               fill="none"
@@ -116,14 +122,56 @@ export default function Navbar() {
               viewBox="0 0 24 24"
               strokeWidth={2}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
+              {mobileMenuOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              )}
             </svg>
           </button>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden border-t border-slate-800/30 mt-2 py-4 space-y-1">
+            <button
+              onClick={() => smoothScrollTo('#hero')}
+              className="block w-full text-left text-slate-400 hover:text-slate-200 transition-colors duration-300 font-medium text-sm px-4 py-2 rounded-lg hover:bg-slate-800/30"
+            >
+              Inicio
+            </button>
+            <button
+              onClick={() => smoothScrollTo('#componentes')}
+              className="block w-full text-left text-slate-400 hover:text-slate-200 transition-colors duration-300 font-medium text-sm px-4 py-2 rounded-lg hover:bg-slate-800/30"
+            >
+              Componentes
+            </button>
+            <button
+              onClick={() => smoothScrollTo('#guia')}
+              className="block w-full text-left text-slate-400 hover:text-slate-200 transition-colors duration-300 font-medium text-sm px-4 py-2 rounded-lg hover:bg-slate-800/30"
+            >
+              Guía
+            </button>
+            <div className="pt-2">
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-center px-4 py-2 bg-slate-800/50 hover:bg-slate-700/50 border border-slate-700/50 hover:border-blue-500/30 text-slate-300 hover:text-white text-sm font-medium rounded-lg transition-all duration-300"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );

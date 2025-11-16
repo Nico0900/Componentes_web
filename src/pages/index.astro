@@ -1,12 +1,317 @@
 ---
 import '../styles/global.css';
 import ComponentCard from '../components/ComponentCard';
+import ComponentGallery from '../components/ComponentGallery';
 import GalaxyBackground from '../components/GalaxyBackground';
 import Navbar from '../components/Navbar';
-import ButtonExample, { buttonCode } from '../components/examples/ButtonExample';
-import CardExample, { cardCode } from '../components/examples/CardExample';
-import AlertExample, { alertCode } from '../components/examples/AlertExample';
-import BadgeExample, { badgeCode } from '../components/examples/BadgeExample';
+// Cards
+import Card1Example, { card1Code } from '../components/examples/Card1Example';
+import Card2Example, { card2Code } from '../components/examples/Card2Example';
+import Card3Example, { card3Code } from '../components/examples/Card3Example';
+import Card4Example, { card4Code } from '../components/examples/Card4Example';
+import Card5Example, { card5Code } from '../components/examples/Card5Example';
+import Card6Example, { card6Code } from '../components/examples/Card6Example';
+import Card7Example, { card7Code } from '../components/examples/Card7Example';
+// Buttons
+import Button1Example, { button1Code } from '../components/examples/Button1Example';
+import Button2Example, { button2Code } from '../components/examples/Button2Example';
+import Button3Example, { button3Code } from '../components/examples/Button3Example';
+import Button4Example, { button4Code } from '../components/examples/Button4Example';
+import Button5Example, { button5Code } from '../components/examples/Button5Example';
+import Button6Example, { button6Code } from '../components/examples/Button6Example';
+import Button7Example, { button7Code } from '../components/examples/Button7Example';
+// Badges
+import Badge1Example, { badge1Code } from '../components/examples/Badge1Example';
+import Badge2Example, { badge2Code } from '../components/examples/Badge2Example';
+import Badge3Example, { badge3Code } from '../components/examples/Badge3Example';
+import Badge4Example, { badge4Code } from '../components/examples/Badge4Example';
+import Badge5Example, { badge5Code } from '../components/examples/Badge5Example';
+import Badge6Example, { badge6Code } from '../components/examples/Badge6Example';
+// Alerts
+import Alert1Example, { alert1Code } from '../components/examples/Alert1Example';
+import Alert2Example, { alert2Code } from '../components/examples/Alert2Example';
+import Alert3Example, { alert3Code } from '../components/examples/Alert3Example';
+import Alert4Example, { alert4Code } from '../components/examples/Alert4Example';
+import Alert5Example, { alert5Code } from '../components/examples/Alert5Example';
+import Alert6Example, { alert6Code } from '../components/examples/Alert6Example';
+// Inputs
+import Input1Example, { input1Code } from '../components/examples/Input1Example';
+import Input2Example, { input2Code } from '../components/examples/Input2Example';
+import Input3Example, { input3Code } from '../components/examples/Input3Example';
+import Input4Example, { input4Code } from '../components/examples/Input4Example';
+import Input5Example, { input5Code } from '../components/examples/Input5Example';
+import Input6Example, { input6Code } from '../components/examples/Input6Example';
+import Button8Example, { button8Code } from '../components/examples/Button8Example';
+import Button9Example, { button9Code } from '../components/examples/Button9Example';
+import Button10Example, { button10Code } from '../components/examples/Button10Example';
+import Button11Example, { button11Code } from '../components/examples/Button11Example';
+import Button12Example, { button12Code } from '../components/examples/Button12Example';
+import Button13Example, { button13Code } from '../components/examples/Button13Example';
+import Button14Example, { button14Code } from '../components/examples/Button14Example';
+import Button15Example, { button15Code } from '../components/examples/Button15Example';
+import Card8Example, { card8Code } from '../components/examples/Card8Example';
+import Card9Example, { card9Code } from '../components/examples/Card9Example';
+import Card10Example, { card10Code } from '../components/examples/Card10Example';
+import Card11Example, { card11Code } from '../components/examples/Card11Example';
+import Card12Example, { card12Code } from '../components/examples/Card12Example';
+import Card13Example, { card13Code } from '../components/examples/Card13Example';
+import Card14Example, { card14Code } from '../components/examples/Card14Example';
+import Card15Example, { card15Code } from '../components/examples/Card15Example';
+import Alert7Example, { alert7Code } from '../components/examples/Alert7Example';
+import Alert8Example, { alert8Code } from '../components/examples/Alert8Example';
+import Alert9Example, { alert9Code } from '../components/examples/Alert9Example';
+import Alert10Example, { alert10Code } from '../components/examples/Alert10Example';
+import Alert11Example, { alert11Code } from '../components/examples/Alert11Example';
+import Alert12Example, { alert12Code } from '../components/examples/Alert12Example';
+import Alert13Example, { alert13Code } from '../components/examples/Alert13Example';
+import Alert14Example, { alert14Code } from '../components/examples/Alert14Example';
+import Alert15Example, { alert15Code } from '../components/examples/Alert15Example';
+import Badge7Example, { badge7Code } from '../components/examples/Badge7Example';
+import Badge8Example, { badge8Code } from '../components/examples/Badge8Example';
+import Badge9Example, { badge9Code } from '../components/examples/Badge9Example';
+import Badge10Example, { badge10Code } from '../components/examples/Badge10Example';
+import Badge11Example, { badge11Code } from '../components/examples/Badge11Example';
+import Badge12Example, { badge12Code } from '../components/examples/Badge12Example';
+import Badge13Example, { badge13Code } from '../components/examples/Badge13Example';
+import Badge14Example, { badge14Code } from '../components/examples/Badge14Example';
+import Badge15Example, { badge15Code } from '../components/examples/Badge15Example';
+import Input7Example, { input7Code } from '../components/examples/Input7Example';
+import Input8Example, { input8Code } from '../components/examples/Input8Example';
+import Input9Example, { input9Code } from '../components/examples/Input9Example';
+import Input10Example, { input10Code } from '../components/examples/Input10Example';
+import Input11Example, { input11Code } from '../components/examples/Input11Example';
+import Input12Example, { input12Code } from '../components/examples/Input12Example';
+import Input13Example, { input13Code } from '../components/examples/Input13Example';
+import Input14Example, { input14Code } from '../components/examples/Input14Example';
+import Input15Example, { input15Code } from '../components/examples/Input15Example';
+// Modals
+import Modal1Example, { modal1Code } from '../components/examples/Modal1Example';
+import Modal2Example, { modal2Code } from '../components/examples/Modal2Example';
+import Modal3Example, { modal3Code } from '../components/examples/Modal3Example';
+import Modal4Example, { modal4Code } from '../components/examples/Modal4Example';
+import Modal5Example, { modal5Code } from '../components/examples/Modal5Example';
+import Modal6Example, { modal6Code } from '../components/examples/Modal6Example';
+import Modal7Example, { modal7Code } from '../components/examples/Modal7Example';
+import Modal8Example, { modal8Code } from '../components/examples/Modal8Example';
+import Modal9Example, { modal9Code } from '../components/examples/Modal9Example';
+import Modal10Example, { modal10Code } from '../components/examples/Modal10Example';
+import Modal11Example, { modal11Code } from '../components/examples/Modal11Example';
+import Modal12Example, { modal12Code } from '../components/examples/Modal12Example';
+import Modal13Example, { modal13Code } from '../components/examples/Modal13Example';
+import Modal14Example, { modal14Code } from '../components/examples/Modal14Example';
+import Modal15Example, { modal15Code } from '../components/examples/Modal15Example';
+
+// Navigation
+import Nav1Example, { nav1Code } from '../components/examples/Nav1Example';
+import Nav2Example, { nav2Code } from '../components/examples/Nav2Example';
+import Nav3Example, { nav3Code } from '../components/examples/Nav3Example';
+import Nav4Example, { nav4Code } from '../components/examples/Nav4Example';
+import Nav5Example, { nav5Code } from '../components/examples/Nav5Example';
+import Nav6Example, { nav6Code } from '../components/examples/Nav6Example';
+import Nav7Example, { nav7Code } from '../components/examples/Nav7Example';
+import Nav8Example, { nav8Code } from '../components/examples/Nav8Example';
+import Nav9Example, { nav9Code } from '../components/examples/Nav9Example';
+import Nav10Example, { nav10Code } from '../components/examples/Nav10Example';
+import Nav11Example, { nav11Code } from '../components/examples/Nav11Example';
+import Nav12Example, { nav12Code } from '../components/examples/Nav12Example';
+import Nav13Example, { nav13Code } from '../components/examples/Nav13Example';
+import Nav14Example, { nav14Code } from '../components/examples/Nav14Example';
+import Nav15Example, { nav15Code } from '../components/examples/Nav15Example';
+
+// Tables
+import Table1Example, { table1Code } from '../components/examples/Table1Example';
+import Table2Example, { table2Code } from '../components/examples/Table2Example';
+import Table3Example, { table3Code } from '../components/examples/Table3Example';
+import Table4Example, { table4Code } from '../components/examples/Table4Example';
+import Table5Example, { table5Code } from '../components/examples/Table5Example';
+import Table6Example, { table6Code } from '../components/examples/Table6Example';
+import Table7Example, { table7Code } from '../components/examples/Table7Example';
+import Table8Example, { table8Code } from '../components/examples/Table8Example';
+import Table9Example, { table9Code } from '../components/examples/Table9Example';
+import Table10Example, { table10Code } from '../components/examples/Table10Example';
+import Table11Example, { table11Code } from '../components/examples/Table11Example';
+import Table12Example, { table12Code } from '../components/examples/Table12Example';
+import Table13Example, { table13Code } from '../components/examples/Table13Example';
+import Table14Example, { table14Code } from '../components/examples/Table14Example';
+import Table15Example, { table15Code } from '../components/examples/Table15Example';
+
+// Forms
+import Form1Example, { form1Code } from '../components/examples/Form1Example';
+import Form2Example, { form2Code } from '../components/examples/Form2Example';
+import Form3Example, { form3Code } from '../components/examples/Form3Example';
+import Form4Example, { form4Code } from '../components/examples/Form4Example';
+import Form5Example, { form5Code } from '../components/examples/Form5Example';
+import Form6Example, { form6Code } from '../components/examples/Form6Example';
+import Form7Example, { form7Code } from '../components/examples/Form7Example';
+import Form8Example, { form8Code } from '../components/examples/Form8Example';
+import Form9Example, { form9Code } from '../components/examples/Form9Example';
+import Form10Example, { form10Code } from '../components/examples/Form10Example';
+import Form11Example, { form11Code } from '../components/examples/Form11Example';
+import Form12Example, { form12Code } from '../components/examples/Form12Example';
+import Form13Example, { form13Code } from '../components/examples/Form13Example';
+import Form14Example, { form14Code } from '../components/examples/Form14Example';
+import Form15Example, { form15Code } from '../components/examples/Form15Example';
+
+// Loading
+import Loading1Example, { loading1Code } from '../components/examples/Loading1Example';
+import Loading2Example, { loading2Code } from '../components/examples/Loading2Example';
+import Loading3Example, { loading3Code } from '../components/examples/Loading3Example';
+import Loading4Example, { loading4Code } from '../components/examples/Loading4Example';
+import Loading5Example, { loading5Code } from '../components/examples/Loading5Example';
+import Loading6Example, { loading6Code } from '../components/examples/Loading6Example';
+import Loading7Example, { loading7Code } from '../components/examples/Loading7Example';
+import Loading8Example, { loading8Code } from '../components/examples/Loading8Example';
+import Loading9Example, { loading9Code } from '../components/examples/Loading9Example';
+import Loading10Example, { loading10Code } from '../components/examples/Loading10Example';
+import Loading11Example, { loading11Code } from '../components/examples/Loading11Example';
+import Loading12Example, { loading12Code } from '../components/examples/Loading12Example';
+import Loading13Example, { loading13Code } from '../components/examples/Loading13Example';
+import Loading14Example, { loading14Code } from '../components/examples/Loading14Example';
+import Loading15Example, { loading15Code } from '../components/examples/Loading15Example';
+
+// Tooltips
+import Tooltip1Example, { tooltip1Code } from '../components/examples/Tooltip1Example';
+import Tooltip2Example, { tooltip2Code } from '../components/examples/Tooltip2Example';
+import Tooltip3Example, { tooltip3Code } from '../components/examples/Tooltip3Example';
+import Tooltip4Example, { tooltip4Code } from '../components/examples/Tooltip4Example';
+import Tooltip5Example, { tooltip5Code } from '../components/examples/Tooltip5Example';
+import Tooltip6Example, { tooltip6Code } from '../components/examples/Tooltip6Example';
+import Tooltip7Example, { tooltip7Code } from '../components/examples/Tooltip7Example';
+import Tooltip8Example, { tooltip8Code } from '../components/examples/Tooltip8Example';
+import Tooltip9Example, { tooltip9Code } from '../components/examples/Tooltip9Example';
+import Tooltip10Example, { tooltip10Code } from '../components/examples/Tooltip10Example';
+import Tooltip11Example, { tooltip11Code } from '../components/examples/Tooltip11Example';
+import Tooltip12Example, { tooltip12Code } from '../components/examples/Tooltip12Example';
+import Tooltip13Example, { tooltip13Code } from '../components/examples/Tooltip13Example';
+import Tooltip14Example, { tooltip14Code } from '../components/examples/Tooltip14Example';
+import Tooltip15Example, { tooltip15Code } from '../components/examples/Tooltip15Example';
+
+// Accordions
+import Accordion1Example, { accordion1Code } from '../components/examples/Accordion1Example';
+import Accordion2Example, { accordion2Code } from '../components/examples/Accordion2Example';
+import Accordion3Example, { accordion3Code } from '../components/examples/Accordion3Example';
+import Accordion4Example, { accordion4Code } from '../components/examples/Accordion4Example';
+import Accordion5Example, { accordion5Code } from '../components/examples/Accordion5Example';
+import Accordion6Example, { accordion6Code } from '../components/examples/Accordion6Example';
+import Accordion7Example, { accordion7Code } from '../components/examples/Accordion7Example';
+import Accordion8Example, { accordion8Code } from '../components/examples/Accordion8Example';
+import Accordion9Example, { accordion9Code } from '../components/examples/Accordion9Example';
+import Accordion10Example, { accordion10Code } from '../components/examples/Accordion10Example';
+import Accordion11Example, { accordion11Code } from '../components/examples/Accordion11Example';
+import Accordion12Example, { accordion12Code } from '../components/examples/Accordion12Example';
+import Accordion13Example, { accordion13Code } from '../components/examples/Accordion13Example';
+import Accordion14Example, { accordion14Code } from '../components/examples/Accordion14Example';
+import Accordion15Example, { accordion15Code } from '../components/examples/Accordion15Example';
+
+// Carousels
+import Carousel1Example, { carousel1Code } from '../components/examples/Carousel1Example';
+import Carousel2Example, { carousel2Code } from '../components/examples/Carousel2Example';
+import Carousel3Example, { carousel3Code } from '../components/examples/Carousel3Example';
+import Carousel4Example, { carousel4Code } from '../components/examples/Carousel4Example';
+import Carousel5Example, { carousel5Code } from '../components/examples/Carousel5Example';
+import Carousel6Example, { carousel6Code } from '../components/examples/Carousel6Example';
+import Carousel7Example, { carousel7Code } from '../components/examples/Carousel7Example';
+import Carousel8Example, { carousel8Code } from '../components/examples/Carousel8Example';
+import Carousel9Example, { carousel9Code } from '../components/examples/Carousel9Example';
+import Carousel10Example, { carousel10Code } from '../components/examples/Carousel10Example';
+import Carousel11Example, { carousel11Code } from '../components/examples/Carousel11Example';
+import Carousel12Example, { carousel12Code } from '../components/examples/Carousel12Example';
+import Carousel13Example, { carousel13Code } from '../components/examples/Carousel13Example';
+import Carousel14Example, { carousel14Code } from '../components/examples/Carousel14Example';
+import Carousel15Example, { carousel15Code } from '../components/examples/Carousel15Example';
+
+// Timeline
+import Timeline1Example, { timeline1Code } from '../components/examples/Timeline1Example';
+import Timeline2Example, { timeline2Code } from '../components/examples/Timeline2Example';
+import Timeline3Example, { timeline3Code } from '../components/examples/Timeline3Example';
+import Timeline4Example, { timeline4Code } from '../components/examples/Timeline4Example';
+import Timeline5Example, { timeline5Code } from '../components/examples/Timeline5Example';
+import Timeline6Example, { timeline6Code } from '../components/examples/Timeline6Example';
+import Timeline7Example, { timeline7Code } from '../components/examples/Timeline7Example';
+import Timeline8Example, { timeline8Code } from '../components/examples/Timeline8Example';
+import Timeline9Example, { timeline9Code } from '../components/examples/Timeline9Example';
+import Timeline10Example, { timeline10Code } from '../components/examples/Timeline10Example';
+import Timeline11Example, { timeline11Code } from '../components/examples/Timeline11Example';
+import Timeline12Example, { timeline12Code } from '../components/examples/Timeline12Example';
+import Timeline13Example, { timeline13Code } from '../components/examples/Timeline13Example';
+import Timeline14Example, { timeline14Code } from '../components/examples/Timeline14Example';
+import Timeline15Example, { timeline15Code } from '../components/examples/Timeline15Example';
+
+// Stats
+import Stats1Example, { stats1Code } from '../components/examples/Stats1Example';
+import Stats2Example, { stats2Code } from '../components/examples/Stats2Example';
+import Stats3Example, { stats3Code } from '../components/examples/Stats3Example';
+import Stats4Example, { stats4Code } from '../components/examples/Stats4Example';
+import Stats5Example, { stats5Code } from '../components/examples/Stats5Example';
+import Stats6Example, { stats6Code } from '../components/examples/Stats6Example';
+import Stats7Example, { stats7Code } from '../components/examples/Stats7Example';
+import Stats8Example, { stats8Code } from '../components/examples/Stats8Example';
+import Stats9Example, { stats9Code } from '../components/examples/Stats9Example';
+import Stats10Example, { stats10Code } from '../components/examples/Stats10Example';
+import Stats11Example, { stats11Code } from '../components/examples/Stats11Example';
+import Stats12Example, { stats12Code } from '../components/examples/Stats12Example';
+import Stats13Example, { stats13Code } from '../components/examples/Stats13Example';
+import Stats14Example, { stats14Code } from '../components/examples/Stats14Example';
+import Stats15Example, { stats15Code } from '../components/examples/Stats15Example';
+
+// Notifications
+import Notification1Example, { notification1Code } from '../components/examples/Notification1Example';
+import Notification2Example, { notification2Code } from '../components/examples/Notification2Example';
+import Notification3Example, { notification3Code } from '../components/examples/Notification3Example';
+import Notification4Example, { notification4Code } from '../components/examples/Notification4Example';
+import Notification5Example, { notification5Code } from '../components/examples/Notification5Example';
+import Notification6Example, { notification6Code } from '../components/examples/Notification6Example';
+import Notification7Example, { notification7Code } from '../components/examples/Notification7Example';
+import Notification8Example, { notification8Code } from '../components/examples/Notification8Example';
+import Notification9Example, { notification9Code } from '../components/examples/Notification9Example';
+import Notification10Example, { notification10Code } from '../components/examples/Notification10Example';
+import Notification11Example, { notification11Code } from '../components/examples/Notification11Example';
+import Notification12Example, { notification12Code } from '../components/examples/Notification12Example';
+import Notification13Example, { notification13Code } from '../components/examples/Notification13Example';
+import Notification14Example, { notification14Code } from '../components/examples/Notification14Example';
+import Notification15Example, { notification15Code } from '../components/examples/Notification15Example';
+
+// Pagination
+import Pagination1Example, { pagination1Code } from '../components/examples/Pagination1Example';
+import Pagination2Example, { pagination2Code } from '../components/examples/Pagination2Example';
+import Pagination3Example, { pagination3Code } from '../components/examples/Pagination3Example';
+import Pagination4Example, { pagination4Code } from '../components/examples/Pagination4Example';
+import Pagination5Example, { pagination5Code } from '../components/examples/Pagination5Example';
+import Pagination6Example, { pagination6Code } from '../components/examples/Pagination6Example';
+import Pagination7Example, { pagination7Code } from '../components/examples/Pagination7Example';
+import Pagination8Example, { pagination8Code } from '../components/examples/Pagination8Example';
+import Pagination9Example, { pagination9Code } from '../components/examples/Pagination9Example';
+import Pagination10Example, { pagination10Code } from '../components/examples/Pagination10Example';
+import Pagination11Example, { pagination11Code } from '../components/examples/Pagination11Example';
+import Pagination12Example, { pagination12Code } from '../components/examples/Pagination12Example';
+import Pagination13Example, { pagination13Code } from '../components/examples/Pagination13Example';
+import Pagination14Example, { pagination14Code } from '../components/examples/Pagination14Example';
+import Pagination15Example, { pagination15Code } from '../components/examples/Pagination15Example';
+
+// Search
+import Search1Example, { search1Code } from '../components/examples/Search1Example';
+import Search2Example, { search2Code } from '../components/examples/Search2Example';
+import Search3Example, { search3Code } from '../components/examples/Search3Example';
+import Search4Example, { search4Code } from '../components/examples/Search4Example';
+import Search5Example, { search5Code } from '../components/examples/Search5Example';
+import Search6Example, { search6Code } from '../components/examples/Search6Example';
+import Search7Example, { search7Code } from '../components/examples/Search7Example';
+import Search8Example, { search8Code } from '../components/examples/Search8Example';
+import Search9Example, { search9Code } from '../components/examples/Search9Example';
+import Search10Example, { search10Code } from '../components/examples/Search10Example';
+import Search11Example, { search11Code } from '../components/examples/Search11Example';
+import Search12Example, { search12Code } from '../components/examples/Search12Example';
+import Search13Example, { search13Code } from '../components/examples/Search13Example';
+import Search14Example, { search14Code } from '../components/examples/Search14Example';
+import Search15Example, { search15Code } from '../components/examples/Search15Example';
+
+// Others
+import DropdownExample, { dropdownCode } from '../components/examples/DropdownExample';
+import CircularProgressExample, { circularProgressCode } from '../components/examples/CircularProgressExample';
+import LinearProgressExample, { linearProgressCode } from '../components/examples/LinearProgressExample';
+import CheckboxInputExample, { checkboxInputCode } from '../components/examples/CheckboxInputExample';
+import ToggleSwitchExample, { toggleSwitchCode } from '../components/examples/ToggleSwitchExample';
+import RadioButtonExample, { radioButtonCode } from '../components/examples/RadioButtonExample';
 ---
 
 <html lang="es">
@@ -35,7 +340,7 @@ import BadgeExample, { badgeCode } from '../components/examples/BadgeExample';
 						<div class="absolute inset-0 bg-blue-500/10 blur-[100px] rounded-full"></div>
 
 						<!-- Icon Container -->
-						<div class="relative w-48 h-48 md:w-64 md:h-64 rounded-2xl bg-gradient-to-br from-slate-800/40 to-slate-900/40 backdrop-blur-xl border border-slate-700/50 flex items-center justify-center shadow-2xl shadow-black/50 hover:border-blue-500/30 transition-all duration-500">
+						<div class="relative w-48 h-48 md:w-64 md:h-64 rounded-2xl bg-linear-to-br from-slate-800/40 to-slate-900/40 backdrop-blur-xl border border-slate-700/50 flex items-center justify-center shadow-2xl shadow-black/50 hover:border-blue-500/30 transition-all duration-500">
 							<!-- Replace with your image later -->
 							<svg
 								class="w-24 h-24 md:w-32 md:h-32 text-blue-400/80"
@@ -56,7 +361,7 @@ import BadgeExample, { badgeCode } from '../components/examples/BadgeExample';
 
 				<!-- Title -->
 				<h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
-					<span class="bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 bg-clip-text text-transparent">
+					<span class="bg-linear-to-r from-slate-200 via-slate-100 to-slate-200 bg-clip-text text-transparent">
 						Component Library
 					</span>
 				</h1>
@@ -113,77 +418,2704 @@ import BadgeExample, { badgeCode } from '../components/examples/BadgeExample';
 		</section>
 
 		<!-- Main Content -->
-		<main class="container mx-auto px-6 py-24 relative">
-			<!-- Stats -->
-			<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-24">
-				<div class="glass rounded-xl p-6 border border-slate-800/30 hover:border-slate-700/50 transition-all duration-500 group">
-					<div class="text-3xl font-bold text-slate-200 mb-2">4</div>
-					<div class="text-slate-400 text-sm font-medium tracking-wide">Componentes</div>
-				</div>
-				<div class="glass rounded-xl p-6 border border-slate-800/30 hover:border-slate-700/50 transition-all duration-500 group">
-					<div class="text-3xl font-bold text-slate-200 mb-2">100%</div>
-					<div class="text-slate-400 text-sm font-medium tracking-wide">Responsive</div>
-				</div>
-				<div class="glass rounded-xl p-6 border border-slate-800/30 hover:border-slate-700/50 transition-all duration-500 group">
-					<div class="text-3xl font-bold text-slate-200 mb-2">TypeScript</div>
-					<div class="text-slate-400 text-sm font-medium tracking-wide">Type Safe</div>
-				</div>
+		<main class="container mx-auto px-6 py-24 relative" id="componentes">
+			<div class="text-center mb-16">
+				<h2 class="text-3xl md:text-4xl font-bold mb-3 text-slate-100 tracking-tight">
+					Componentes Disponibles
+				</h2>
+				<p class="text-slate-400 text-base font-light">Explora y descarga componentes listos para usar</p>
 			</div>
 
-			<!-- Components Grid -->
-			<div class="mb-32" id="componentes">
-				<div class="text-center mb-16">
-					<h2 class="text-3xl md:text-4xl font-bold mb-3 text-slate-100 tracking-tight">
-						Componentes Disponibles
-					</h2>
-					<p class="text-slate-400 text-base font-light">Explora y descarga componentes listos para usar</p>
-				</div>
-				<div class="masonry-grid gap-6">
-					<!-- Button Component -->
-					<ComponentCard
-						client:load
-						title="Botones"
-						description="Colección de botones con diferentes estilos y estados. Incluye variantes primary, secondary, success y danger."
-						code={buttonCode}
-						category="UI Elements"
-					>
-						<ButtonExample client:load />
-					</ComponentCard>
+			<!-- Component Gallery with Filters -->
+			<ComponentGallery
+				client:load
+				components={[
+					{
+						id: 'button-1',
+						title: 'Button 1 - Solid',
+						description: 'Solid color buttons with primary, secondary, success and danger variants.',
+						code: button1Code,
+						category: 'Buttons',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'button-2',
+						title: 'Button 2 - Outline',
+						description: 'Outline buttons with transparent background and colored borders.',
+						code: button2Code,
+						category: 'Buttons',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'button-3',
+						title: 'Button 3 - Ghost',
+						description: 'Ghost buttons with no border and minimal background on hover.',
+						code: button3Code,
+						category: 'Buttons',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'button-4',
+						title: 'Button 4 - Gradient',
+						description: 'Gradient buttons with smooth color transitions and shadows.',
+						code: button4Code,
+						category: 'Buttons',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'button-5',
+						title: 'Button 5 - Icon Buttons',
+						description: 'Buttons with icons on left, right, or icon-only variants.',
+						code: button5Code,
+						category: 'Buttons',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'button-6',
+						title: 'Button 6 - Loading States',
+						description: 'Buttons with different loading indicators: spinner, dots, pulse.',
+						code: button6Code,
+						category: 'Buttons',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'button-7',
+						title: 'Button 7 - Sizes',
+						description: 'Buttons in different sizes: extra small, small, medium, and large.',
+						code: button7Code,
+						category: 'Buttons',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'card-1',
+						title: 'Card 1 - Classic',
+						description: 'Modern card design with gradient header and glassmorphism effect.',
+						code: card1Code,
+						category: 'Cards',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'card-2',
+						title: 'Card 2 - Horizontal',
+						description: 'Card with side image layout for compact display.',
+						code: card2Code,
+						category: 'Cards',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'card-3',
+						title: 'Card 3 - Glassmorphism',
+						description: 'Modern glass effect card with glowing border and blur.',
+						code: card3Code,
+						category: 'Cards',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'card-4',
+						title: 'Card 4 - Gradient Border',
+						description: 'Eye-catching card with animated gradient border effect.',
+						code: card4Code,
+						category: 'Cards',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'card-5',
+						title: 'Card 5 - Minimal',
+						description: 'A minimalist approach focusing on content and readability.',
+						code: card5Code,
+						category: 'Cards',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'card-6',
+						title: 'Card 6 - Hover 3D',
+						description: 'Interactive card with smooth 3D transform and animations.',
+						code: card6Code,
+						category: 'Cards',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'card-7',
+						title: 'Card 7 - Testimonial',
+						description: 'Testimonial card with profile avatar and star rating.',
+						code: card7Code,
+						category: 'Cards',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'alert-1',
+						title: 'Alert 1 - Info',
+						description: 'Informational alert with blue theme for general information messages.',
+						code: alert1Code,
+						category: 'Alerts',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'alert-2',
+						title: 'Alert 2 - Success',
+						description: 'Success alert with green theme for confirmation messages.',
+						code: alert2Code,
+						category: 'Alerts',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'alert-3',
+						title: 'Alert 3 - Warning',
+						description: 'Warning alert with yellow theme for cautionary messages.',
+						code: alert3Code,
+						category: 'Alerts',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'alert-4',
+						title: 'Alert 4 - Error',
+						description: 'Error alert with red theme for error messages.',
+						code: alert4Code,
+						category: 'Alerts',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'alert-5',
+						title: 'Alert 5 - With Actions',
+						description: 'Alert with action buttons for user interaction.',
+						code: alert5Code,
+						category: 'Alerts',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'alert-6',
+						title: 'Alert 6 - Dismissible',
+						description: 'Dismissible alert with close button and show/hide functionality.',
+						code: alert6Code,
+						category: 'Alerts',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'badge-1',
+						title: 'Badge 1 - Solid',
+						description: 'Solid color badges with different color variants.',
+						code: badge1Code,
+						category: 'Badges',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'badge-2',
+						title: 'Badge 2 - Outline',
+						description: 'Outline badges with transparent background and colored borders.',
+						code: badge2Code,
+						category: 'Badges',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'badge-3',
+						title: 'Badge 3 - Dot Status',
+						description: 'Status badges with animated dots for online, busy, away states.',
+						code: badge3Code,
+						category: 'Badges',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'badge-4',
+						title: 'Badge 4 - Pill',
+						description: 'Pill-shaped badges with rounded corners for status labels.',
+						code: badge4Code,
+						category: 'Badges',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'badge-5',
+						title: 'Badge 5 - With Icon',
+						description: 'Badges with icons for premium, verified, blocked states.',
+						code: badge5Code,
+						category: 'Badges',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'badge-6',
+						title: 'Badge 6 - Closeable',
+						description: 'Interactive badges with close button and remove functionality.',
+						code: badge6Code,
+						category: 'Badges',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'input-1',
+						title: 'Input 1 - Default',
+						description: 'Standard input fields with label for email and password.',
+						code: input1Code,
+						category: 'Inputs',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'input-2',
+						title: 'Input 2 - With Icon',
+						description: 'Input fields with left icons for email and URL inputs.',
+						code: input2Code,
+						category: 'Inputs',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'input-3',
+						title: 'Input 3 - Floating Label',
+						description: 'Modern inputs with floating label animation on focus.',
+						code: input3Code,
+						category: 'Inputs',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'input-4',
+						title: 'Input 4 - Search',
+						description: 'Search input with icon and keyboard shortcut indicator.',
+						code: input4Code,
+						category: 'Inputs',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'input-5',
+						title: 'Input 5 - Textarea',
+						description: 'Textarea component with character counter and max length.',
+						code: input5Code,
+						category: 'Inputs',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'input-6',
+						title: 'Input 6 - With Validation',
+						description: 'Form inputs with real-time validation and error messages.',
+						code: input6Code,
+						category: 'Inputs',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'dropdown',
+						title: 'Dropdowns',
+						description: 'Menús desplegables personalizados y nativos con animaciones suaves.',
+						code: dropdownCode,
+						category: 'UI Elements',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'circular-progress',
+						title: 'Circular Progress',
+						description: 'Barras de progreso circulares con diferentes tamaños y porcentajes.',
+						code: circularProgressCode,
+						category: 'Feedback',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'linear-progress',
+						title: 'Linear Progress',
+						description: 'Barras de progreso lineales con gradientes y transiciones suaves.',
+						code: linearProgressCode,
+						category: 'Feedback',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'checkbox-input',
+						title: 'Checkboxes',
+						description: 'Checkboxes personalizados con diferentes estilos y variantes.',
+						code: checkboxInputCode,
+						category: 'UI Elements',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'toggle-switch',
+						title: 'Toggle Switch',
+						description: 'Interruptores toggle para configuraciones on/off con animaciones.',
+						code: toggleSwitchCode,
+						category: 'UI Elements',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'radio-button',
+						title: 'Radio Buttons',
+						description: 'Radio buttons personalizados para selección única con estados interactivos.',
+						code: radioButtonCode,
+						category: 'UI Elements',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'button-8',
+						title: 'Button 8 - Rounded Full',
+						description: 'Fully rounded pill-shaped buttons with soft edges.',
+						code: button8Code,
+						category: 'Buttons',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'button-9',
+						title: 'Button 9 - With Badge',
+						description: 'Buttons with notification badges and counters.',
+						code: button9Code,
+						category: 'Buttons',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'button-10',
+						title: 'Button 10 - Split',
+						description: 'Split buttons with dropdown actions.',
+						code: button10Code,
+						category: 'Buttons',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'button-11',
+						title: 'Button 11 - Animated',
+						description: 'Buttons with hover animations and effects.',
+						code: button11Code,
+						category: 'Buttons',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'button-12',
+						title: 'Button 12 - Social',
+						description: 'Social media themed buttons.',
+						code: button12Code,
+						category: 'Buttons',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'button-13',
+						title: 'Button 13 - Floating Action',
+						description: 'Floating action buttons (FAB).',
+						code: button13Code,
+						category: 'Buttons',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'button-14',
+						title: 'Button 14 - Group',
+						description: 'Button groups and segmented controls.',
+						code: button14Code,
+						category: 'Buttons',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'button-15',
+						title: 'Button 15 - Neon Glow',
+						description: 'Futuristic neon glow effect buttons.',
+						code: button15Code,
+						category: 'Buttons',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'card-8',
+						title: 'Card 8 - Pricing',
+						description: 'Pricing card with features list and CTA',
+						code: card8Code,
+						category: 'Cards',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'card-9',
+						title: 'Card 9 - Product',
+						description: 'E-commerce product card with image',
+						code: card9Code,
+						category: 'Cards',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'card-10',
+						title: 'Card 10 - Stats',
+						description: 'Statistics card with metrics',
+						code: card10Code,
+						category: 'Cards',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'card-11',
+						title: 'Card 11 - Profile',
+						description: 'User profile card with avatar',
+						code: card11Code,
+						category: 'Cards',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'card-12',
+						title: 'Card 12 - Blog Post',
+						description: 'Blog post preview card',
+						code: card12Code,
+						category: 'Cards',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'card-13',
+						title: 'Card 13 - Feature',
+						description: 'Feature showcase card with icon',
+						code: card13Code,
+						category: 'Cards',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'card-14',
+						title: 'Card 14 - Image Overlay',
+						description: 'Card with image overlay on hover',
+						code: card14Code,
+						category: 'Cards',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'card-15',
+						title: 'Card 15 - Expandable',
+						description: 'Expandable card with more content',
+						code: card15Code,
+						category: 'Cards',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'alert-7',
+						title: 'Alert 7 - Toast',
+						description: 'Toast notification style alert',
+						code: alert7Code,
+						category: 'Alerts',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'alert-8',
+						title: 'Alert 8 - Banner',
+						description: 'Full-width banner alert',
+						code: alert8Code,
+						category: 'Alerts',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'alert-9',
+						title: 'Alert 9 - Inline',
+						description: 'Inline alert for forms',
+						code: alert9Code,
+						category: 'Alerts',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'alert-10',
+						title: 'Alert 10 - Modal',
+						description: 'Modal alert overlay',
+						code: alert10Code,
+						category: 'Alerts',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'alert-11',
+						title: 'Alert 11 - Gradient',
+						description: 'Alert with gradient background',
+						code: alert11Code,
+						category: 'Alerts',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'alert-12',
+						title: 'Alert 12 - Animated',
+						description: 'Alert with animations',
+						code: alert12Code,
+						category: 'Alerts',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'alert-13',
+						title: 'Alert 13 - Progress',
+						description: 'Alert with progress indicator',
+						code: alert13Code,
+						category: 'Alerts',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'alert-14',
+						title: 'Alert 14 - Action',
+						description: 'Alert with action buttons',
+						code: alert14Code,
+						category: 'Alerts',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'alert-15',
+						title: 'Alert 15 - Stacked',
+						description: 'Stackable notifications',
+						code: alert15Code,
+						category: 'Alerts',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'badge-7',
+						title: 'Badge 7 - Dot',
+						description: 'Simple dot badge indicator',
+						code: badge7Code,
+						category: 'Badges',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'badge-8',
+						title: 'Badge 8 - Pulse',
+						description: 'Badge with pulsing animation',
+						code: badge8Code,
+						category: 'Badges',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'badge-9',
+						title: 'Badge 9 - Icon',
+						description: 'Badge with icon inside',
+						code: badge9Code,
+						category: 'Badges',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'badge-10',
+						title: 'Badge 10 - Large',
+						description: 'Large badge with more content',
+						code: badge10Code,
+						category: 'Badges',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'badge-11',
+						title: 'Badge 11 - Removable',
+						description: 'Badge with close button',
+						code: badge11Code,
+						category: 'Badges',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'badge-12',
+						title: 'Badge 12 - Gradient',
+						description: 'Badge with gradient fill',
+						code: badge12Code,
+						category: 'Badges',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'badge-13',
+						title: 'Badge 13 - Bordered',
+						description: 'Outlined badge with no fill',
+						code: badge13Code,
+						category: 'Badges',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'badge-14',
+						title: 'Badge 14 - Pill Group',
+						description: 'Group of pill badges',
+						code: badge14Code,
+						category: 'Badges',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'badge-15',
+						title: 'Badge 15 - Notification',
+						description: 'Notification count badge',
+						code: badge15Code,
+						category: 'Badges',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'input-7',
+						title: 'Input 7 - Textarea',
+						description: 'Multi-line text area input',
+						code: input7Code,
+						category: 'Inputs',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'input-8',
+						title: 'Input 8 - Select',
+						description: 'Custom styled select dropdown',
+						code: input8Code,
+						category: 'Inputs',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'input-9',
+						title: 'Input 9 - File Upload',
+						description: 'File upload with preview',
+						code: input9Code,
+						category: 'Inputs',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'input-10',
+						title: 'Input 10 - Color Picker',
+						description: 'Color selection input',
+						code: input10Code,
+						category: 'Inputs',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'input-11',
+						title: 'Input 11 - Date Picker',
+						description: 'Date selection input',
+						code: input11Code,
+						category: 'Inputs',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'input-12',
+						title: 'Input 12 - Time Picker',
+						description: 'Time selection input',
+						code: input12Code,
+						category: 'Inputs',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'input-13',
+						title: 'Input 13 - Range Slider',
+						description: 'Numeric range slider',
+						code: input13Code,
+						category: 'Inputs',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'input-14',
+						title: 'Input 14 - Tag Input',
+						description: 'Multi-tag input field',
+						code: input14Code,
+						category: 'Inputs',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'input-15',
+						title: 'Input 15 - Auto-complete',
+						description: 'Autocomplete suggestions',
+						code: input15Code,
+						category: 'Inputs',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'modal-1',
+						title: 'Modal 1 - Basic',
+						description: 'Simple centered modal dialog',
+						code: modal1Code,
+						category: 'Modals',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'modal-2',
+						title: 'Modal 2 - Confirm',
+						description: 'Confirmation dialog modal',
+						code: modal2Code,
+						category: 'Modals',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'modal-3',
+						title: 'Modal 3 - Form',
+						description: 'Modal with embedded form',
+						code: modal3Code,
+						category: 'Modals',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'modal-4',
+						title: 'Modal 4 - Alert',
+						description: 'Alert style modal',
+						code: modal4Code,
+						category: 'Modals',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'modal-5',
+						title: 'Modal 5 - Fullscreen',
+						description: 'Full screen modal overlay',
+						code: modal5Code,
+						category: 'Modals',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'modal-6',
+						title: 'Modal 6 - Sidebar',
+						description: 'Slide-in sidebar modal',
+						code: modal6Code,
+						category: 'Modals',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'modal-7',
+						title: 'Modal 7 - Bottom Sheet',
+						description: 'Mobile bottom sheet',
+						code: modal7Code,
+						category: 'Modals',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'modal-8',
+						title: 'Modal 8 - Image Viewer',
+						description: 'Image lightbox modal',
+						code: modal8Code,
+						category: 'Modals',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'modal-9',
+						title: 'Modal 9 - Video',
+						description: 'Video player modal',
+						code: modal9Code,
+						category: 'Modals',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'modal-10',
+						title: 'Modal 10 - Multi-step',
+						description: 'Wizard style modal',
+						code: modal10Code,
+						category: 'Modals',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'modal-11',
+						title: 'Modal 11 - Drawer',
+						description: 'Side drawer modal',
+						code: modal11Code,
+						category: 'Modals',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'modal-12',
+						title: 'Modal 12 - Notification',
+						description: 'Notification modal',
+						code: modal12Code,
+						category: 'Modals',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'modal-13',
+						title: 'Modal 13 - Search',
+						description: 'Search modal overlay',
+						code: modal13Code,
+						category: 'Modals',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'modal-14',
+						title: 'Modal 14 - Menu',
+						description: 'Context menu modal',
+						code: modal14Code,
+						category: 'Modals',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'modal-15',
+						title: 'Modal 15 - Dialog',
+						description: 'Custom dialog modal',
+						code: modal15Code,
+						category: 'Modals',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'nav-1',
+						title: 'Nav 1 - Horizontal',
+						description: 'Basic horizontal navigation',
+						code: nav1Code,
+						category: 'Navs',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'nav-2',
+						title: 'Nav 2 - Vertical',
+						description: 'Vertical sidebar nav',
+						code: nav2Code,
+						category: 'Navs',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'nav-3',
+						title: 'Nav 3 - Dropdown',
+						description: 'Navigation with dropdowns',
+						code: nav3Code,
+						category: 'Navs',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'nav-4',
+						title: 'Nav 4 - Mega Menu',
+						description: 'Mega menu navigation',
+						code: nav4Code,
+						category: 'Navs',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'nav-5',
+						title: 'Nav 5 - Mobile',
+						description: 'Responsive mobile menu',
+						code: nav5Code,
+						category: 'Navs',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'nav-6',
+						title: 'Nav 6 - Tabs',
+						description: 'Tab-based navigation',
+						code: nav6Code,
+						category: 'Navs',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'nav-7',
+						title: 'Nav 7 - Breadcrumb',
+						description: 'Breadcrumb trail',
+						code: nav7Code,
+						category: 'Navs',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'nav-8',
+						title: 'Nav 8 - Sidebar',
+						description: 'Collapsible sidebar',
+						code: nav8Code,
+						category: 'Navs',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'nav-9',
+						title: 'Nav 9 - Top Bar',
+						description: 'Fixed top navigation',
+						code: nav9Code,
+						category: 'Navs',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'nav-10',
+						title: 'Nav 10 - Bottom',
+						description: 'Bottom navigation bar',
+						code: nav10Code,
+						category: 'Navs',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'nav-11',
+						title: 'Nav 11 - Pills',
+						description: 'Pill-style navigation',
+						code: nav11Code,
+						category: 'Navs',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'nav-12',
+						title: 'Nav 12 - Vertical Tabs',
+						description: 'Vertical tab menu',
+						code: nav12Code,
+						category: 'Navs',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'nav-13',
+						title: 'Nav 13 - With Icons',
+						description: 'Icon-based navigation',
+						code: nav13Code,
+						category: 'Navs',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'nav-14',
+						title: 'Nav 14 - Multi-level',
+						description: 'Multi-level dropdown',
+						code: nav14Code,
+						category: 'Navs',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'nav-15',
+						title: 'Nav 15 - Sticky',
+						description: 'Sticky navigation bar',
+						code: nav15Code,
+						category: 'Navs',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'table-1',
+						title: 'Table 1 - Basic',
+						description: 'Simple data table',
+						code: table1Code,
+						category: 'Tables',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'table-2',
+						title: 'Table 2 - Striped',
+						description: 'Striped row table',
+						code: table2Code,
+						category: 'Tables',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'table-3',
+						title: 'Table 3 - Bordered',
+						description: 'Bordered table',
+						code: table3Code,
+						category: 'Tables',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'table-4',
+						title: 'Table 4 - Hoverable',
+						description: 'Hover effect table',
+						code: table4Code,
+						category: 'Tables',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'table-5',
+						title: 'Table 5 - Sortable',
+						description: 'Sortable columns',
+						code: table5Code,
+						category: 'Tables',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'table-6',
+						title: 'Table 6 - Filterable',
+						description: 'Table with filters',
+						code: table6Code,
+						category: 'Tables',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'table-7',
+						title: 'Table 7 - Pagination',
+						description: 'Paginated table',
+						code: table7Code,
+						category: 'Tables',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'table-8',
+						title: 'Table 8 - Responsive',
+						description: 'Mobile responsive table',
+						code: table8Code,
+						category: 'Tables',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'table-9',
+						title: 'Table 9 - Expandable',
+						description: 'Expandable rows',
+						code: table9Code,
+						category: 'Tables',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'table-10',
+						title: 'Table 10 - Selectable',
+						description: 'Row selection table',
+						code: table10Code,
+						category: 'Tables',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'table-11',
+						title: 'Table 11 - Nested',
+						description: 'Nested table rows',
+						code: table11Code,
+						category: 'Tables',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'table-12',
+						title: 'Table 12 - Fixed Header',
+						description: 'Fixed header table',
+						code: table12Code,
+						category: 'Tables',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'table-13',
+						title: 'Table 13 - Summary',
+						description: 'Table with summary',
+						code: table13Code,
+						category: 'Tables',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'table-14',
+						title: 'Table 14 - Editable',
+						description: 'Inline editable cells',
+						code: table14Code,
+						category: 'Tables',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'table-15',
+						title: 'Table 15 - Compact',
+						description: 'Dense compact table',
+						code: table15Code,
+						category: 'Tables',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'form-1',
+						title: 'Form 1 - Login',
+						description: 'Login form layout',
+						code: form1Code,
+						category: 'Forms',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'form-2',
+						title: 'Form 2 - Register',
+						description: 'Registration form',
+						code: form2Code,
+						category: 'Forms',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'form-3',
+						title: 'Form 3 - Contact',
+						description: 'Contact form',
+						code: form3Code,
+						category: 'Forms',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'form-4',
+						title: 'Form 4 - Multi-step',
+						description: 'Wizard form',
+						code: form4Code,
+						category: 'Forms',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'form-5',
+						title: 'Form 5 - Inline',
+						description: 'Inline form layout',
+						code: form5Code,
+						category: 'Forms',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'form-6',
+						title: 'Form 6 - Floating Labels',
+						description: 'Floating label inputs',
+						code: form6Code,
+						category: 'Forms',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'form-7',
+						title: 'Form 7 - Grid',
+						description: 'Grid-based form',
+						code: form7Code,
+						category: 'Forms',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'form-8',
+						title: 'Form 8 - Validation',
+						description: 'Form with validation',
+						code: form8Code,
+						category: 'Forms',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'form-9',
+						title: 'Form 9 - File Upload',
+						description: 'File upload form',
+						code: form9Code,
+						category: 'Forms',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'form-10',
+						title: 'Form 10 - Search',
+						description: 'Search form',
+						code: form10Code,
+						category: 'Forms',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'form-11',
+						title: 'Form 11 - Newsletter',
+						description: 'Newsletter signup',
+						code: form11Code,
+						category: 'Forms',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'form-12',
+						title: 'Form 12 - Payment',
+						description: 'Payment form',
+						code: form12Code,
+						category: 'Forms',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'form-13',
+						title: 'Form 13 - Profile',
+						description: 'Profile settings form',
+						code: form13Code,
+						category: 'Forms',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'form-14',
+						title: 'Form 14 - Address',
+						description: 'Address entry form',
+						code: form14Code,
+						category: 'Forms',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'form-15',
+						title: 'Form 15 - Feedback',
+						description: 'Feedback form',
+						code: form15Code,
+						category: 'Forms',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'loading-1',
+						title: 'Loading 1 - Spinner',
+						description: 'Basic spinner loader',
+						code: loading1Code,
+						category: 'Loadings',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'loading-2',
+						title: 'Loading 2 - Dots',
+						description: 'Animated dots loader',
+						code: loading2Code,
+						category: 'Loadings',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'loading-3',
+						title: 'Loading 3 - Bars',
+						description: 'Loading bars',
+						code: loading3Code,
+						category: 'Loadings',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'loading-4',
+						title: 'Loading 4 - Progress',
+						description: 'Progress indicator',
+						code: loading4Code,
+						category: 'Loadings',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'loading-5',
+						title: 'Loading 5 - Skeleton',
+						description: 'Skeleton screen',
+						code: loading5Code,
+						category: 'Loadings',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'loading-6',
+						title: 'Loading 6 - Pulse',
+						description: 'Pulsing loader',
+						code: loading6Code,
+						category: 'Loadings',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'loading-7',
+						title: 'Loading 7 - Circle',
+						description: 'Circular progress',
+						code: loading7Code,
+						category: 'Loadings',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'loading-8',
+						title: 'Loading 8 - Linear',
+						description: 'Linear progress bar',
+						code: loading8Code,
+						category: 'Loadings',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'loading-9',
+						title: 'Loading 9 - Bounce',
+						description: 'Bouncing loader',
+						code: loading9Code,
+						category: 'Loadings',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'loading-10',
+						title: 'Loading 10 - Wave',
+						description: 'Wave animation',
+						code: loading10Code,
+						category: 'Loadings',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'loading-11',
+						title: 'Loading 11 - Rotate',
+						description: 'Rotating loader',
+						code: loading11Code,
+						category: 'Loadings',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'loading-12',
+						title: 'Loading 12 - Grow',
+						description: 'Growing loader',
+						code: loading12Code,
+						category: 'Loadings',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'loading-13',
+						title: 'Loading 13 - Fade',
+						description: 'Fade loader',
+						code: loading13Code,
+						category: 'Loadings',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'loading-14',
+						title: 'Loading 14 - Custom',
+						description: 'Custom loader',
+						code: loading14Code,
+						category: 'Loadings',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'loading-15',
+						title: 'Loading 15 - Full Page',
+						description: 'Full page loader',
+						code: loading15Code,
+						category: 'Loadings',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'tooltip-1',
+						title: 'Tooltip 1 - Basic',
+						description: 'Simple tooltip',
+						code: tooltip1Code,
+						category: 'Tooltips',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'tooltip-2',
+						title: 'Tooltip 2 - Arrow',
+						description: 'Tooltip with arrow',
+						code: tooltip2Code,
+						category: 'Tooltips',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'tooltip-3',
+						title: 'Tooltip 3 - Positions',
+						description: 'Multi-position tooltip',
+						code: tooltip3Code,
+						category: 'Tooltips',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'tooltip-4',
+						title: 'Tooltip 4 - Rich Content',
+						description: 'HTML content tooltip',
+						code: tooltip4Code,
+						category: 'Tooltips',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'tooltip-5',
+						title: 'Tooltip 5 - Delayed',
+						description: 'Delayed tooltip',
+						code: tooltip5Code,
+						category: 'Tooltips',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'tooltip-6',
+						title: 'Tooltip 6 - Interactive',
+						description: 'Interactive tooltip',
+						code: tooltip6Code,
+						category: 'Tooltips',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'tooltip-7',
+						title: 'Tooltip 7 - Large',
+						description: 'Large tooltip',
+						code: tooltip7Code,
+						category: 'Tooltips',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'tooltip-8',
+						title: 'Tooltip 8 - Colored',
+						description: 'Colored tooltips',
+						code: tooltip8Code,
+						category: 'Tooltips',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'tooltip-9',
+						title: 'Tooltip 9 - Dark',
+						description: 'Dark theme tooltip',
+						code: tooltip9Code,
+						category: 'Tooltips',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'tooltip-10',
+						title: 'Tooltip 10 - Light',
+						description: 'Light theme tooltip',
+						code: tooltip10Code,
+						category: 'Tooltips',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'tooltip-11',
+						title: 'Tooltip 11 - Icon',
+						description: 'Tooltip with icon',
+						code: tooltip11Code,
+						category: 'Tooltips',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'tooltip-12',
+						title: 'Tooltip 12 - Multi-line',
+						description: 'Multi-line tooltip',
+						code: tooltip12Code,
+						category: 'Tooltips',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'tooltip-13',
+						title: 'Tooltip 13 - Animated',
+						description: 'Animated tooltip',
+						code: tooltip13Code,
+						category: 'Tooltips',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'tooltip-14',
+						title: 'Tooltip 14 - Custom',
+						description: 'Custom styled tooltip',
+						code: tooltip14Code,
+						category: 'Tooltips',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'tooltip-15',
+						title: 'Tooltip 15 - Help',
+						description: 'Help tooltip',
+						code: tooltip15Code,
+						category: 'Tooltips',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'accordion-1',
+						title: 'Accordion 1 - Basic',
+						description: 'Simple accordion',
+						code: accordion1Code,
+						category: 'Accordions',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'accordion-2',
+						title: 'Accordion 2 - Multiple',
+						description: 'Multi-open accordion',
+						code: accordion2Code,
+						category: 'Accordions',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'accordion-3',
+						title: 'Accordion 3 - Arrow',
+						description: 'With arrow indicator',
+						code: accordion3Code,
+						category: 'Accordions',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'accordion-4',
+						title: 'Accordion 4 - Bordered',
+						description: 'Bordered accordion',
+						code: accordion4Code,
+						category: 'Accordions',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'accordion-5',
+						title: 'Accordion 5 - Flush',
+						description: 'Flush accordion',
+						code: accordion5Code,
+						category: 'Accordions',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'accordion-6',
+						title: 'Accordion 6 - Colored',
+						description: 'Colored headers',
+						code: accordion6Code,
+						category: 'Accordions',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'accordion-7',
+						title: 'Accordion 7 - Icons',
+						description: 'Icon indicators',
+						code: accordion7Code,
+						category: 'Accordions',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'accordion-8',
+						title: 'Accordion 8 - Nested',
+						description: 'Nested accordion',
+						code: accordion8Code,
+						category: 'Accordions',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'accordion-9',
+						title: 'Accordion 9 - Animated',
+						description: 'Smooth animations',
+						code: accordion9Code,
+						category: 'Accordions',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'accordion-10',
+						title: 'Accordion 10 - Always Open',
+						description: 'Always open variant',
+						code: accordion10Code,
+						category: 'Accordions',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'accordion-11',
+						title: 'Accordion 11 - FAQ',
+						description: 'FAQ style',
+						code: accordion11Code,
+						category: 'Accordions',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'accordion-12',
+						title: 'Accordion 12 - Large',
+						description: 'Large accordion',
+						code: accordion12Code,
+						category: 'Accordions',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'accordion-13',
+						title: 'Accordion 13 - Compact',
+						description: 'Compact accordion',
+						code: accordion13Code,
+						category: 'Accordions',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'accordion-14',
+						title: 'Accordion 14 - Custom',
+						description: 'Custom styled',
+						code: accordion14Code,
+						category: 'Accordions',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'accordion-15',
+						title: 'Accordion 15 - Gradient',
+						description: 'Gradient headers',
+						code: accordion15Code,
+						category: 'Accordions',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'carousel-1',
+						title: 'Carousel 1 - Basic',
+						description: 'Simple image carousel',
+						code: carousel1Code,
+						category: 'Carousels',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'carousel-2',
+						title: 'Carousel 2 - Auto Play',
+						description: 'Auto-playing carousel',
+						code: carousel2Code,
+						category: 'Carousels',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'carousel-3',
+						title: 'Carousel 3 - Thumbnails',
+						description: 'With thumbnails',
+						code: carousel3Code,
+						category: 'Carousels',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'carousel-4',
+						title: 'Carousel 4 - Fade',
+						description: 'Fade transition',
+						code: carousel4Code,
+						category: 'Carousels',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'carousel-5',
+						title: 'Carousel 5 - Vertical',
+						description: 'Vertical carousel',
+						code: carousel5Code,
+						category: 'Carousels',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'carousel-6',
+						title: 'Carousel 6 - Multiple',
+						description: 'Multiple slides',
+						code: carousel6Code,
+						category: 'Carousels',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'carousel-7',
+						title: 'Carousel 7 - Centered',
+						description: 'Centered slides',
+						code: carousel7Code,
+						category: 'Carousels',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'carousel-8',
+						title: 'Carousel 8 - Loop',
+						description: 'Infinite loop',
+						code: carousel8Code,
+						category: 'Carousels',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'carousel-9',
+						title: 'Carousel 9 - Controls',
+						description: 'Custom controls',
+						code: carousel9Code,
+						category: 'Carousels',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'carousel-10',
+						title: 'Carousel 10 - Indicators',
+						description: 'Dot indicators',
+						code: carousel10Code,
+						category: 'Carousels',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'carousel-11',
+						title: 'Carousel 11 - Caption',
+						description: 'With captions',
+						code: carousel11Code,
+						category: 'Carousels',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'carousel-12',
+						title: 'Carousel 12 - Responsive',
+						description: 'Responsive carousel',
+						code: carousel12Code,
+						category: 'Carousels',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'carousel-13',
+						title: 'Carousel 13 - Touch',
+						description: 'Touch swipe',
+						code: carousel13Code,
+						category: 'Carousels',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'carousel-14',
+						title: 'Carousel 14 - 3D',
+						description: '3D effect carousel',
+						code: carousel14Code,
+						category: 'Carousels',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'carousel-15',
+						title: 'Carousel 15 - Video',
+						description: 'Video carousel',
+						code: carousel15Code,
+						category: 'Carousels',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'timeline-1',
+						title: 'Timeline 1 - Vertical',
+						description: 'Vertical timeline',
+						code: timeline1Code,
+						category: 'Timelines',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'timeline-2',
+						title: 'Timeline 2 - Horizontal',
+						description: 'Horizontal timeline',
+						code: timeline2Code,
+						category: 'Timelines',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'timeline-3',
+						title: 'Timeline 3 - Centered',
+						description: 'Center-aligned timeline',
+						code: timeline3Code,
+						category: 'Timelines',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'timeline-4',
+						title: 'Timeline 4 - Left',
+						description: 'Left-aligned timeline',
+						code: timeline4Code,
+						category: 'Timelines',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'timeline-5',
+						title: 'Timeline 5 - Right',
+						description: 'Right-aligned timeline',
+						code: timeline5Code,
+						category: 'Timelines',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'timeline-6',
+						title: 'Timeline 6 - Alternating',
+						description: 'Alternating sides',
+						code: timeline6Code,
+						category: 'Timelines',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'timeline-7',
+						title: 'Timeline 7 - Icons',
+						description: 'With status icons',
+						code: timeline7Code,
+						category: 'Timelines',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'timeline-8',
+						title: 'Timeline 8 - Dates',
+						description: 'Date-based timeline',
+						code: timeline8Code,
+						category: 'Timelines',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'timeline-9',
+						title: 'Timeline 9 - Steps',
+						description: 'Step indicator',
+						code: timeline9Code,
+						category: 'Timelines',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'timeline-10',
+						title: 'Timeline 10 - Progress',
+						description: 'Progress timeline',
+						code: timeline10Code,
+						category: 'Timelines',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'timeline-11',
+						title: 'Timeline 11 - Animated',
+						description: 'Animated timeline',
+						code: timeline11Code,
+						category: 'Timelines',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'timeline-12',
+						title: 'Timeline 12 - Colored',
+						description: 'Color-coded events',
+						code: timeline12Code,
+						category: 'Timelines',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'timeline-13',
+						title: 'Timeline 13 - Compact',
+						description: 'Compact timeline',
+						code: timeline13Code,
+						category: 'Timelines',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'timeline-14',
+						title: 'Timeline 14 - Detailed',
+						description: 'Detailed timeline',
+						code: timeline14Code,
+						category: 'Timelines',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'timeline-15',
+						title: 'Timeline 15 - Modern',
+						description: 'Modern style',
+						code: timeline15Code,
+						category: 'Timelines',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'stats-1',
+						title: 'Stats 1 - Basic',
+						description: 'Simple stats card',
+						code: stats1Code,
+						category: 'Statss',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'stats-2',
+						title: 'Stats 2 - Grid',
+						description: 'Stats grid layout',
+						code: stats2Code,
+						category: 'Statss',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'stats-3',
+						title: 'Stats 3 - Cards',
+						description: 'Individual stat cards',
+						code: stats3Code,
+						category: 'Statss',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'stats-4',
+						title: 'Stats 4 - Icons',
+						description: 'Stats with icons',
+						code: stats4Code,
+						category: 'Statss',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'stats-5',
+						title: 'Stats 5 - Trend',
+						description: 'With trend indicators',
+						code: stats5Code,
+						category: 'Statss',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'stats-6',
+						title: 'Stats 6 - Progress',
+						description: 'Progress stats',
+						code: stats6Code,
+						category: 'Statss',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'stats-7',
+						title: 'Stats 7 - Large',
+						description: 'Large number display',
+						code: stats7Code,
+						category: 'Statss',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'stats-8',
+						title: 'Stats 8 - Compact',
+						description: 'Compact stats',
+						code: stats8Code,
+						category: 'Statss',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'stats-9',
+						title: 'Stats 9 - Colored',
+						description: 'Color-coded stats',
+						code: stats9Code,
+						category: 'Statss',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'stats-10',
+						title: 'Stats 10 - Gradient',
+						description: 'Gradient backgrounds',
+						code: stats10Code,
+						category: 'Statss',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'stats-11',
+						title: 'Stats 11 - Animated',
+						description: 'Animated counters',
+						code: stats11Code,
+						category: 'Statss',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'stats-12',
+						title: 'Stats 12 - Comparison',
+						description: 'Comparison stats',
+						code: stats12Code,
+						category: 'Statss',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'stats-13',
+						title: 'Stats 13 - Chart',
+						description: 'With mini charts',
+						code: stats13Code,
+						category: 'Statss',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'stats-14',
+						title: 'Stats 14 - Dashboard',
+						description: 'Dashboard stats',
+						code: stats14Code,
+						category: 'Statss',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'stats-15',
+						title: 'Stats 15 - KPI',
+						description: 'Key performance indicators',
+						code: stats15Code,
+						category: 'Statss',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'notification-1',
+						title: 'Notification 1 - Toast',
+						description: 'Toast notification',
+						code: notification1Code,
+						category: 'Notifications',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'notification-2',
+						title: 'Notification 2 - Alert',
+						description: 'Alert notification',
+						code: notification2Code,
+						category: 'Notifications',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'notification-3',
+						title: 'Notification 3 - Banner',
+						description: 'Top banner',
+						code: notification3Code,
+						category: 'Notifications',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'notification-4',
+						title: 'Notification 4 - Inline',
+						description: 'Inline message',
+						code: notification4Code,
+						category: 'Notifications',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'notification-5',
+						title: 'Notification 5 - Modal',
+						description: 'Modal notification',
+						code: notification5Code,
+						category: 'Notifications',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'notification-6',
+						title: 'Notification 6 - Badge',
+						description: 'Badge notification',
+						code: notification6Code,
+						category: 'Notifications',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'notification-7',
+						title: 'Notification 7 - Pill',
+						description: 'Pill notification',
+						code: notification7Code,
+						category: 'Notifications',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'notification-8',
+						title: 'Notification 8 - Stacked',
+						description: 'Stacked notifications',
+						code: notification8Code,
+						category: 'Notifications',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'notification-9',
+						title: 'Notification 9 - Position',
+						description: 'Custom positioning',
+						code: notification9Code,
+						category: 'Notifications',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'notification-10',
+						title: 'Notification 10 - Actions',
+						description: 'With action buttons',
+						code: notification10Code,
+						category: 'Notifications',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'notification-11',
+						title: 'Notification 11 - Auto-dismiss',
+						description: 'Auto-dismissible',
+						code: notification11Code,
+						category: 'Notifications',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'notification-12',
+						title: 'Notification 12 - Icon',
+						description: 'Icon notifications',
+						code: notification12Code,
+						category: 'Notifications',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'notification-13',
+						title: 'Notification 13 - Progress',
+						description: 'With progress',
+						code: notification13Code,
+						category: 'Notifications',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'notification-14',
+						title: 'Notification 14 - Rich',
+						description: 'Rich content',
+						code: notification14Code,
+						category: 'Notifications',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'notification-15',
+						title: 'Notification 15 - System',
+						description: 'System notification',
+						code: notification15Code,
+						category: 'Notifications',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'pagination-1',
+						title: 'Pagination 1 - Basic',
+						description: 'Simple pagination',
+						code: pagination1Code,
+						category: 'Paginations',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'pagination-2',
+						title: 'Pagination 2 - Numbers',
+						description: 'Page numbers',
+						code: pagination2Code,
+						category: 'Paginations',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'pagination-3',
+						title: 'Pagination 3 - Arrows',
+						description: 'Arrow navigation',
+						code: pagination3Code,
+						category: 'Paginations',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'pagination-4',
+						title: 'Pagination 4 - Dots',
+						description: 'With ellipsis',
+						code: pagination4Code,
+						category: 'Paginations',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'pagination-5',
+						title: 'Pagination 5 - Large',
+						description: 'Large pagination',
+						code: pagination5Code,
+						category: 'Paginations',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'pagination-6',
+						title: 'Pagination 6 - Small',
+						description: 'Small pagination',
+						code: pagination6Code,
+						category: 'Paginations',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'pagination-7',
+						title: 'Pagination 7 - Rounded',
+						description: 'Rounded buttons',
+						code: pagination7Code,
+						category: 'Paginations',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'pagination-8',
+						title: 'Pagination 8 - Bordered',
+						description: 'Bordered style',
+						code: pagination8Code,
+						category: 'Paginations',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'pagination-9',
+						title: 'Pagination 9 - Filled',
+						description: 'Filled buttons',
+						code: pagination9Code,
+						category: 'Paginations',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'pagination-10',
+						title: 'Pagination 10 - Minimal',
+						description: 'Minimal style',
+						code: pagination10Code,
+						category: 'Paginations',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'pagination-11',
+						title: 'Pagination 11 - Prev/Next',
+						description: 'Previous/Next only',
+						code: pagination11Code,
+						category: 'Paginations',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'pagination-12',
+						title: 'Pagination 12 - Info',
+						description: 'With page info',
+						code: pagination12Code,
+						category: 'Paginations',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'pagination-13',
+						title: 'Pagination 13 - Jump',
+						description: 'Jump to page',
+						code: pagination13Code,
+						category: 'Paginations',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'pagination-14',
+						title: 'Pagination 14 - Compact',
+						description: 'Compact pagination',
+						code: pagination14Code,
+						category: 'Paginations',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'pagination-15',
+						title: 'Pagination 15 - Modern',
+						description: 'Modern style',
+						code: pagination15Code,
+						category: 'Paginations',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'search-1',
+						title: 'Search 1 - Basic',
+						description: 'Simple search bar',
+						code: search1Code,
+						category: 'Search',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'search-2',
+						title: 'Search 2 - Icon',
+						description: 'With search icon',
+						code: search2Code,
+						category: 'Search',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'search-3',
+						title: 'Search 3 - Suggestions',
+						description: 'Auto-suggestions',
+						code: search3Code,
+						category: 'Search',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'search-4',
+						title: 'Search 4 - Filters',
+						description: 'With filters',
+						code: search4Code,
+						category: 'Search',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'search-5',
+						title: 'Search 5 - Advanced',
+						description: 'Advanced search',
+						code: search5Code,
+						category: 'Search',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'search-6',
+						title: 'Search 6 - Modal',
+						description: 'Modal search',
+						code: search6Code,
+						category: 'Search',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'search-7',
+						title: 'Search 7 - Inline',
+						description: 'Inline search',
+						code: search7Code,
+						category: 'Search',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'search-8',
+						title: 'Search 8 - Dropdown',
+						description: 'Dropdown results',
+						code: search8Code,
+						category: 'Search',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'search-9',
+						title: 'Search 9 - Live',
+						description: 'Live search results',
+						code: search9Code,
+						category: 'Search',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'search-10',
+						title: 'Search 10 - Voice',
+						description: 'Voice search',
+						code: search10Code,
+						category: 'Search',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'search-11',
+						title: 'Search 11 - Category',
+						description: 'Category search',
+						code: search11Code,
+						category: 'Search',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'search-12',
+						title: 'Search 12 - Tags',
+						description: 'Tag-based search',
+						code: search12Code,
+						category: 'Search',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'search-13',
+						title: 'Search 13 - Keyboard',
+						description: 'Keyboard shortcut',
+						code: search13Code,
+						category: 'Search',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'search-14',
+						title: 'Search 14 - Command',
+						description: 'Command palette search',
+						code: search14Code,
+						category: 'Search',
+						technologies: ['React', 'TypeScript']
+					},
+					{
+						id: 'search-15',
+						title: 'Search 15 - Global',
+						description: 'Global site search',
+						code: search15Code,
+						category: 'Search',
+						technologies: ['React', 'TypeScript']
+					}
+				]}
+			/>
+		</main>
 
-					<!-- Card Component -->
-					<ComponentCard
-						client:load
-						title="Tarjeta"
-						description="Componente de tarjeta moderno con imagen, título, descripción y botón de acción. Perfecto para listados."
-						code={cardCode}
-						category="Layouts"
-					>
-						<CardExample client:load />
-					</ComponentCard>
+		<!-- Spacer -->
+		<div class="container mx-auto px-6">
+			<div class="mb-32"></div>
 
-					<!-- Alert Component -->
-					<ComponentCard
-						client:load
-						title="Alertas"
-						description="Componentes de alerta para mensajes informativos, de éxito y error. Con bordes coloridos y iconos."
-						code={alertCode}
-						category="Feedback"
-					>
-						<AlertExample client:load />
-					</ComponentCard>
-
-					<!-- Badge Component -->
-					<ComponentCard
-						client:load
-						title="Badges"
-						description="Etiquetas pequeñas y coloridas para mostrar estados, categorías o información adicional."
-						code={badgeCode}
-						category="UI Elements"
-					>
-						<BadgeExample client:load />
-					</ComponentCard>
+			<!-- Info Section -->
+			<div id="guia" class="glass rounded-2xl p-10 md:p-16 mt-24 border border-slate-800/30">
+				<h2 class="text-2xl md:text-3xl font-bold mb-12 text-slate-100 text-center tracking-tight">
+					Cómo usar estos componentes
+				</h2>
+				<div class="grid md:grid-cols-2 gap-4">
+					<div class="flex items-start gap-4 p-6 rounded-xl bg-slate-900/20 border border-slate-800/30 hover:border-slate-700/50 transition-all duration-500">
+						<span class="shrink-0 w-8 h-8 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg flex items-center justify-center font-semibold text-sm">1</span>
+						<div>
+							<p class="text-slate-300 text-sm leading-relaxed"><span class="font-medium text-slate-200">Ver el código:</span> Haz clic en "Código" para visualizar el código completo del componente.</p>
+						</div>
+					</div>
+					<div class="flex items-start gap-4 p-6 rounded-xl bg-slate-900/20 border border-slate-800/30 hover:border-slate-700/50 transition-all duration-500">
+						<span class="shrink-0 w-8 h-8 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg flex items-center justify-center font-semibold text-sm">2</span>
+						<div>
+							<p class="text-slate-300 text-sm leading-relaxed"><span class="font-medium text-slate-200">Copiar:</span> Usa el botón "Copiar" para copiar el código al portapapeles.</p>
+						</div>
+					</div>
+					<div class="flex items-start gap-4 p-6 rounded-xl bg-slate-900/20 border border-slate-800/30 hover:border-slate-700/50 transition-all duration-500">
+						<span class="shrink-0 w-8 h-8 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg flex items-center justify-center font-semibold text-sm">3</span>
+						<div>
+							<p class="text-slate-300 text-sm leading-relaxed"><span class="font-medium text-slate-200">Descargar:</span> Descarga el componente como archivo .tsx listo para usar.</p>
+						</div>
+					</div>
+					<div class="flex items-start gap-4 p-6 rounded-xl bg-slate-900/20 border border-slate-800/30 hover:border-slate-700/50 transition-all duration-500">
+						<span class="shrink-0 w-8 h-8 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg flex items-center justify-center font-semibold text-sm">4</span>
+						<div>
+							<p class="text-slate-300 text-sm leading-relaxed"><span class="font-medium text-slate-200">Personalizar:</span> Modifica los estilos de Tailwind según tus necesidades.</p>
+						</div>
+					</div>
 				</div>
 			</div>
+		</main>
+
+		<!-- Footer -->
+		<footer class="relative border-t border-slate-800/30 mt-32">
+			<div class="container mx-auto px-6 py-12 text-center relative">
+				<div class="mb-6">
+					<h3 class="text-lg font-semibold text-slate-200 mb-2 tracking-tight">
+						ComponentLib
+					</h3>
+				</div>
+				<p class="text-slate-400 text-sm mb-1">Construido con <span class="text-slate-300">Astro</span>, <span class="text-slate-300">React</span> y <span class="text-slate-300">Tailwind CSS</span></p>
+				<p class="text-slate-500 text-xs">Componentes de código abierto y libres de usar</p>
+			</div>
+		</footer>
+	</body>
+</html>
+					client:load
+					title="Button 1 - Solid"
+					description="Solid color buttons with primary, secondary, success and danger variants."
+					code={button1Code}
+					category="Buttons"
+					technologies={['React', 'TypeScript']}
+				>
+					<Button1Example client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Button 2 - Outline"
+					description="Outline buttons with transparent background and colored borders."
+					code={button2Code}
+					category="Buttons"
+					technologies={['React', 'TypeScript']}
+				>
+					<Button2Example client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Button 3 - Ghost"
+					description="Ghost buttons with no border and minimal background on hover."
+					code={button3Code}
+					category="Buttons"
+					technologies={['React', 'TypeScript']}
+				>
+					<Button3Example client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Button 4 - Gradient"
+					description="Gradient buttons with smooth color transitions and shadows."
+					code={button4Code}
+					category="Buttons"
+					technologies={['React', 'TypeScript']}
+				>
+					<Button4Example client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Button 5 - Icon Buttons"
+					description="Buttons with icons on left, right, or icon-only variants."
+					code={button5Code}
+					category="Buttons"
+					technologies={['React', 'TypeScript']}
+				>
+					<Button5Example client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Button 6 - Loading States"
+					description="Buttons with different loading indicators: spinner, dots, pulse."
+					code={button6Code}
+					category="Buttons"
+					technologies={['React', 'TypeScript']}
+				>
+					<Button6Example client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Button 7 - Sizes"
+					description="Buttons in different sizes: extra small, small, medium, and large."
+					code={button7Code}
+					category="Buttons"
+					technologies={['React', 'TypeScript']}
+				>
+					<Button7Example client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Card 1 - Classic"
+					description="Modern card design with gradient header and glassmorphism effect."
+					code={card1Code}
+					category="Cards"
+					technologies={['React', 'TypeScript']}
+				>
+					<Card1Example client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Card 2 - Horizontal"
+					description="Card with side image layout for compact display."
+					code={card2Code}
+					category="Cards"
+					technologies={['React', 'TypeScript']}
+				>
+					<Card2Example client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Card 3 - Glassmorphism"
+					description="Modern glass effect card with glowing border and blur."
+					code={card3Code}
+					category="Cards"
+					technologies={['React', 'TypeScript']}
+				>
+					<Card3Example client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Card 4 - Gradient Border"
+					description="Eye-catching card with animated gradient border effect."
+					code={card4Code}
+					category="Cards"
+					technologies={['React', 'TypeScript']}
+				>
+					<Card4Example client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Card 5 - Minimal"
+					description="A minimalist approach focusing on content and readability."
+					code={card5Code}
+					category="Cards"
+					technologies={['React', 'TypeScript']}
+				>
+					<Card5Example client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Card 6 - Hover 3D"
+					description="Interactive card with smooth 3D transform and animations."
+					code={card6Code}
+					category="Cards"
+					technologies={['React', 'TypeScript']}
+				>
+					<Card6Example client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Card 7 - Testimonial"
+					description="Testimonial card with profile avatar and star rating."
+					code={card7Code}
+					category="Cards"
+					technologies={['React', 'TypeScript']}
+				>
+					<Card7Example client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Alert 1 - Info"
+					description="Informational alert with blue theme for general information messages."
+					code={alert1Code}
+					category="Alerts"
+					technologies={['React', 'TypeScript']}
+				>
+					<Alert1Example client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Alert 2 - Success"
+					description="Success alert with green theme for confirmation messages."
+					code={alert2Code}
+					category="Alerts"
+					technologies={['React', 'TypeScript']}
+				>
+					<Alert2Example client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Alert 3 - Warning"
+					description="Warning alert with yellow theme for cautionary messages."
+					code={alert3Code}
+					category="Alerts"
+					technologies={['React', 'TypeScript']}
+				>
+					<Alert3Example client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Alert 4 - Error"
+					description="Error alert with red theme for error messages."
+					code={alert4Code}
+					category="Alerts"
+					technologies={['React', 'TypeScript']}
+				>
+					<Alert4Example client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Alert 5 - With Actions"
+					description="Alert with action buttons for user interaction."
+					code={alert5Code}
+					category="Alerts"
+					technologies={['React', 'TypeScript']}
+				>
+					<Alert5Example client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Alert 6 - Dismissible"
+					description="Dismissible alert with close button and show/hide functionality."
+					code={alert6Code}
+					category="Alerts"
+					technologies={['React', 'TypeScript']}
+				>
+					<Alert6Example client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Badge 1 - Solid"
+					description="Solid color badges with different color variants."
+					code={badge1Code}
+					category="Badges"
+					technologies={['React', 'TypeScript']}
+				>
+					<Badge1Example client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Badge 2 - Outline"
+					description="Outline badges with transparent background and colored borders."
+					code={badge2Code}
+					category="Badges"
+					technologies={['React', 'TypeScript']}
+				>
+					<Badge2Example client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Badge 3 - Dot Status"
+					description="Status badges with animated dots for online, busy, away states."
+					code={badge3Code}
+					category="Badges"
+					technologies={['React', 'TypeScript']}
+				>
+					<Badge3Example client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Badge 4 - Pill"
+					description="Pill-shaped badges with rounded corners for status labels."
+					code={badge4Code}
+					category="Badges"
+					technologies={['React', 'TypeScript']}
+				>
+					<Badge4Example client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Badge 5 - With Icon"
+					description="Badges with icons for premium, verified, blocked states."
+					code={badge5Code}
+					category="Badges"
+					technologies={['React', 'TypeScript']}
+				>
+					<Badge5Example client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Badge 6 - Closeable"
+					description="Interactive badges with close button and remove functionality."
+					code={badge6Code}
+					category="Badges"
+					technologies={['React', 'TypeScript']}
+				>
+					<Badge6Example client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Input 1 - Default"
+					description="Standard input fields with label for email and password."
+					code={input1Code}
+					category="Inputs"
+					technologies={['React', 'TypeScript']}
+				>
+					<Input1Example client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Input 2 - With Icon"
+					description="Input fields with left icons for email and URL inputs."
+					code={input2Code}
+					category="Inputs"
+					technologies={['React', 'TypeScript']}
+				>
+					<Input2Example client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Input 3 - Floating Label"
+					description="Modern inputs with floating label animation on focus."
+					code={input3Code}
+					category="Inputs"
+					technologies={['React', 'TypeScript']}
+				>
+					<Input3Example client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Input 4 - Search"
+					description="Search input with icon and keyboard shortcut indicator."
+					code={input4Code}
+					category="Inputs"
+					technologies={['React', 'TypeScript']}
+				>
+					<Input4Example client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Input 5 - Textarea"
+					description="Textarea component with character counter and max length."
+					code={input5Code}
+					category="Inputs"
+					technologies={['React', 'TypeScript']}
+				>
+					<Input5Example client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Input 6 - With Validation"
+					description="Form inputs with real-time validation and error messages."
+					code={input6Code}
+					category="Inputs"
+					technologies={['React', 'TypeScript']}
+				>
+					<Input6Example client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Dropdowns"
+					description="Menús desplegables personalizados y nativos con animaciones suaves."
+					code={dropdownCode}
+					category="UI Elements"
+					technologies={['React', 'TypeScript']}
+				>
+					<DropdownExample client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Circular Progress"
+					description="Barras de progreso circulares con diferentes tamaños y porcentajes."
+					code={circularProgressCode}
+					category="Feedback"
+					technologies={['React', 'TypeScript']}
+				>
+					<CircularProgressExample client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Linear Progress"
+					description="Barras de progreso lineales con gradientes y transiciones suaves."
+					code={linearProgressCode}
+					category="Feedback"
+					technologies={['React', 'TypeScript']}
+				>
+					<LinearProgressExample client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Checkboxes"
+					description="Checkboxes personalizados con diferentes estilos y variantes."
+					code={checkboxInputCode}
+					category="UI Elements"
+					technologies={['React', 'TypeScript']}
+				>
+					<CheckboxInputExample client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Toggle Switch"
+					description="Interruptores toggle para configuraciones on/off con animaciones."
+					code={toggleSwitchCode}
+					category="UI Elements"
+					technologies={['React', 'TypeScript']}
+				>
+					<ToggleSwitchExample client:load />
+				</ComponentCard>
+
+				<ComponentCard
+					client:load
+					title="Radio Buttons"
+					description="Radio buttons personalizados para selección única con estados interactivos."
+					code={radioButtonCode}
+					category="UI Elements"
+					technologies={['React', 'TypeScript']}
+				>
+					<RadioButtonExample client:load />
+				</ComponentCard>
+			</ComponentGallery>
+		</main>
+
+		<!-- Spacer -->
+		<div class="container mx-auto px-6">
+			<div class="mb-32"></div>
 
 			<!-- Info Section -->
 			<div id="guia" class="glass rounded-2xl p-10 md:p-16 mt-24 border border-slate-800/30">
