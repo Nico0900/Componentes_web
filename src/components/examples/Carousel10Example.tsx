@@ -129,7 +129,7 @@ export default function Carousel10Example() {
               key={slide.id}
               className="min-w-full h-72 flex items-center justify-center"
             >
-              <div className={\\`w-full h-full bg-gradient-to-br \${slide.color} flex flex-col items-center justify-center\\`}>
+              <div className={\`w-full h-full bg-gradient-to-br \${slide.color} flex flex-col items-center justify-center\`}>
                 <h2 className="text-5xl font-bold text-white mb-2">{slide.title}</h2>
                 <p className="text-xl text-white/80">{slide.subtitle}</p>
               </div>
@@ -163,11 +163,11 @@ export default function Carousel10Example() {
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={\\`transition-all duration-300 rounded-full \${
+              className={\`transition-all duration-300 rounded-full \${
                 currentSlide === index
                   ? 'bg-white w-10 h-3'
                   : 'bg-white/50 hover:bg-white/70 w-3 h-3'
-              }\\`}
+              }\`}
               aria-label={\`Go to slide \${index + 1}\`}
             />
           ))}

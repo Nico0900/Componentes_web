@@ -154,7 +154,7 @@ export default function Carousel11Example() {
               key={slide.id}
               className="min-w-full h-80 flex items-end"
             >
-              <div className={\\`w-full h-full bg-gradient-to-br \${slide.color} relative\\`}>
+              <div className={\`w-full h-full bg-gradient-to-br \${slide.color} relative\`}>
                 {/* Caption Overlay */}
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-8">
                   <h2 className="text-4xl font-bold text-white mb-2">{slide.title}</h2>
@@ -191,11 +191,11 @@ export default function Carousel11Example() {
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={\\`w-2 h-2 rounded-full transition-all duration-300 \${
+              className={\`w-2 h-2 rounded-full transition-all duration-300 \${
                 currentSlide === index
                   ? 'bg-white w-8'
                   : 'bg-white/50 hover:bg-white/70'
-              }\\`}
+              }\`}
             />
           ))}
         </div>

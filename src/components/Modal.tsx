@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { createPortal } from 'react-dom';
 
 interface ModalProps {
   isOpen: boolean;
@@ -11,6 +12,7 @@ interface ModalProps {
   onDownload: () => void;
   onCopy: () => void;
   children?: React.ReactNode;
+  gridSize?: 'normal' | 'wide' | 'tall' | 'large';
 }
 
 export default function Modal({
@@ -23,7 +25,8 @@ export default function Modal({
   technologies = [],
   onDownload,
   onCopy,
-  children
+  children,
+  gridSize = 'normal'
 }: ModalProps) {
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
@@ -43,10 +46,18 @@ export default function Modal({
     };
   }, [isOpen, onClose]);
 
+  // Responsive width based on card gridSize
+  const modalWidthClass = {
+    'normal': 'max-w-6xl',
+    'wide': 'max-w-7xl',
+    'tall': 'max-w-6xl',
+    'large': 'max-w-[90rem]',
+  }[gridSize];
+
   if (!isOpen) return null;
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+  return createPortal(
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4">
       {/* Backdrop */}
       <div
         className="absolute inset-0 bg-black/90 backdrop-blur-lg animate-fade-in"
@@ -54,7 +65,7 @@ export default function Modal({
       />
 
       {/* Modal */}
-      <div className="relative glass rounded-2xl shadow-2xl max-w-7xl w-full max-h-[90vh] flex flex-col border border-slate-800/50 animate-scale-in">
+      <div className={`relative glass rounded-2xl shadow-2xl ${modalWidthClass} w-full max-h-[90vh] flex flex-col border border-slate-800/50 animate-scale-in`}>
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-5 border-b border-slate-800/50 rounded-t-2xl">
           <div className="flex-1">
@@ -87,24 +98,26 @@ export default function Modal({
 
         {/* Content - Two Columns */}
         <div className="flex-1 overflow-hidden flex flex-col lg:flex-row min-h-0">
-          {/* Left Column - Component Preview */}
-          <div className="w-full lg:w-1/2 border-r border-slate-800/50 flex flex-col min-h-0">
-            {/* Preview Header */}
-            <div className="px-6 py-4 border-b border-slate-800/30 bg-slate-900/30 shrink-0">
-              <h3 className="text-sm font-semibold text-slate-300 uppercase tracking-wider">
-                Vista Previa
-              </h3>
-            </div>
-            {/* Preview Content */}
-            <div className="flex-1 overflow-auto p-8 bg-slate-950/30 min-h-0">
-              <div className="h-full flex items-center justify-center">
-                {children}
+          {/* Left Column - Component Preview (only if children exist) */}
+          {children && (
+            <div className="w-full lg:w-1/2 border-r border-slate-800/50 flex flex-col min-h-0">
+              {/* Preview Header */}
+              <div className="px-6 py-4 border-b border-slate-800/30 bg-slate-900/30 shrink-0">
+                <h3 className="text-sm font-semibold text-slate-300 uppercase tracking-wider">
+                  Vista Previa
+                </h3>
+              </div>
+              {/* Preview Content */}
+              <div className="flex-1 overflow-auto p-8 bg-slate-950/30 min-h-0">
+                <div className="h-full flex items-center justify-center">
+                  {children}
+                </div>
               </div>
             </div>
-          </div>
+          )}
 
           {/* Right Column - Code */}
-          <div className="w-full lg:w-1/2 flex flex-col min-h-0">
+          <div className={`w-full ${children ? 'lg:w-1/2' : ''} flex flex-col min-h-0`}>
             {/* Code Header */}
             <div className="px-6 py-4 border-b border-slate-800/30 bg-slate-900/30 shrink-0">
               <div className="flex items-center justify-between">
@@ -185,6 +198,7 @@ export default function Modal({
           </div>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }

@@ -89,11 +89,11 @@ export default function Form4Example() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-slate-300 mb-2">
+                  <label htmlFor="lastName-form4" className="block text-sm font-medium text-slate-300 mb-2">
                     Last Name
                   </label>
                   <input
-                    id="lastName"
+                    id="lastName-form4"
                     name="lastName"
                     type="text"
                     value={formData.lastName}
@@ -157,11 +157,11 @@ export default function Form4Example() {
                 />
               </div>
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-slate-300 mb-2">
+                <label htmlFor="phone-form4" className="block text-sm font-medium text-slate-300 mb-2">
                   Phone Number
                 </label>
                 <input
-                  id="phone"
+                  id="phone-form4"
                   name="phone"
                   type="tel"
                   value={formData.phone}

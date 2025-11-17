@@ -1,22 +1,15 @@
 import { useState } from 'react';
 
 export default function Modal7Example() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <div className="flex justify-center items-center p-6">
-      <button
-        onClick={() => setIsOpen(true)}
-        className="px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors duration-200"
-      >
-        Open Bottom Sheet
-      </button>
-
+    <div className="flex justify-center items-center p-6 relative min-h-[400px]">
       {isOpen && (
-        <div className="fixed inset-0 z-50 animate-fadeIn">
+        <div className="absolute inset-0 z-50 animate-fadeIn">
           <div
-            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
-            onClick={() => setIsOpen(false)}
+            className="absolute inset-0 bg-slate-950/10"
+            
           />
 
           <div className="absolute bottom-0 left-0 right-0 bg-slate-800 rounded-t-3xl shadow-2xl border-t border-slate-700 max-h-[80vh] overflow-auto animate-slideUp">
@@ -28,7 +21,6 @@ export default function Modal7Example() {
               <div className="flex items-center justify-between">
                 <h3 className="text-xl font-bold text-slate-100">Bottom Sheet</h3>
                 <button
-                  onClick={() => setIsOpen(false)}
                   className="text-slate-400 hover:text-slate-200 transition-colors"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -75,20 +67,16 @@ export default function Modal7Example() {
   );
 }
 
-export const modal7Code = \`import { useState } from 'react';
+export const modal7Code = `import { useState } from 'react';
 
 export default function Modal7Example() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <div className="flex justify-center items-center p-6">
-      <button onClick={() => setIsOpen(true)} className="px-6 py-3 bg-cyan-600 text-white rounded-lg">
-        Open Bottom Sheet
-      </button>
-
+    <div className="flex justify-center items-center p-6 relative min-h-[400px]">
       {isOpen && (
-        <div className="fixed inset-0 z-50">
-          <div className="absolute inset-0 bg-black/60" onClick={() => setIsOpen(false)} />
+        <div className="absolute inset-0 z-50">
+          <div className="absolute inset-0 bg-slate-900/80"  />
           <div className="absolute bottom-0 left-0 right-0 bg-slate-800 rounded-t-3xl max-h-[80vh] overflow-auto">
             <div className="flex justify-center pt-3 pb-2">
               <div className="w-12 h-1.5 bg-slate-600 rounded-full" />
@@ -102,4 +90,4 @@ export default function Modal7Example() {
       )}
     </div>
   );
-}\`;
+}`;

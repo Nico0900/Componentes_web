@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 export default function Table9Example() {
   const [expandedRows, setExpandedRows] = useState<number[]>([]);
@@ -60,8 +60,8 @@ export default function Table9Example() {
             </thead>
             <tbody>
               {projects.map((project) => (
-                <>
-                  <tr key={project.id} className="border-t border-slate-700/30">
+                <React.Fragment key={project.id}>
+                  <tr className="border-t border-slate-700/30">
                     <td className="px-6 py-4 text-sm">
                       <button
                         onClick={() => toggleRow(project.id)}
@@ -124,7 +124,7 @@ export default function Table9Example() {
                       </td>
                     </tr>
                   )}
-                </>
+                </React.Fragment>
               ))}
             </tbody>
           </table>
@@ -134,7 +134,7 @@ export default function Table9Example() {
   );
 }
 
-export const table9Code = `import { useState } from 'react';
+export const table9Code = `import React, { useState } from 'react';
 
 export default function Table9Example() {
   const [expandedRows, setExpandedRows] = useState<number[]>([]);
@@ -196,8 +196,8 @@ export default function Table9Example() {
             </thead>
             <tbody>
               {projects.map((project) => (
-                <>
-                  <tr key={project.id} className="border-t border-slate-700/30">
+                <React.Fragment key={project.id}>
+                  <tr className="border-t border-slate-700/30">
                     <td className="px-6 py-4 text-sm">
                       <button
                         onClick={() => toggleRow(project.id)}
@@ -260,7 +260,7 @@ export default function Table9Example() {
                       </td>
                     </tr>
                   )}
-                </>
+                </React.Fragment>
               ))}
             </tbody>
           </table>

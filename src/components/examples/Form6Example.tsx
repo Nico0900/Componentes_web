@@ -33,7 +33,7 @@ export default function Form6Example() {
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="relative">
             <input
-              id="name"
+              id="name-form6"
               name="name"
               type="text"
               value={formData.name}
@@ -45,7 +45,7 @@ export default function Form6Example() {
               placeholder=" "
             />
             <label
-              htmlFor="name"
+              htmlFor="name-form6"
               className={`absolute left-4 transition-all duration-300 pointer-events-none ${
                 isFloating('name')
                   ? 'top-2 text-xs text-teal-400'
@@ -58,7 +58,7 @@ export default function Form6Example() {
 
           <div className="relative">
             <input
-              id="email"
+              id="email-form6"
               name="email"
               type="email"
               value={formData.email}
@@ -70,7 +70,7 @@ export default function Form6Example() {
               placeholder=" "
             />
             <label
-              htmlFor="email"
+              htmlFor="email-form6"
               className={`absolute left-4 transition-all duration-300 pointer-events-none ${
                 isFloating('email')
                   ? 'top-2 text-xs text-teal-400'
@@ -83,7 +83,7 @@ export default function Form6Example() {
 
           <div className="relative">
             <input
-              id="password"
+              id="password-form6"
               name="password"
               type="password"
               value={formData.password}
@@ -95,7 +95,7 @@ export default function Form6Example() {
               placeholder=" "
             />
             <label
-              htmlFor="password"
+              htmlFor="password-form6"
               className={`absolute left-4 transition-all duration-300 pointer-events-none ${
                 isFloating('password')
                   ? 'top-2 text-xs text-teal-400'
@@ -108,7 +108,7 @@ export default function Form6Example() {
 
           <div className="relative">
             <input
-              id="phone"
+              id="phone-form6"
               name="phone"
               type="tel"
               value={formData.phone}
@@ -120,7 +120,7 @@ export default function Form6Example() {
               placeholder=" "
             />
             <label
-              htmlFor="phone"
+              htmlFor="phone-form6"
               className={`absolute left-4 transition-all duration-300 pointer-events-none ${
                 isFloating('phone')
                   ? 'top-2 text-xs text-teal-400'

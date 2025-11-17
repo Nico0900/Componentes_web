@@ -1,5 +1,7 @@
 import { useState, useMemo } from 'react';
 import ComponentCard from './ComponentCard';
+import LazyCard from './LazyCard';
+import { componentsData } from '../data/componentsData';
 
 // Import all component examples
 import Button1Example from './examples/Button1Example';
@@ -9,14 +11,6 @@ import Button4Example from './examples/Button4Example';
 import Button5Example from './examples/Button5Example';
 import Button6Example from './examples/Button6Example';
 import Button7Example from './examples/Button7Example';
-import Button8Example from './examples/Button8Example';
-import Button9Example from './examples/Button9Example';
-import Button10Example from './examples/Button10Example';
-import Button11Example from './examples/Button11Example';
-import Button12Example from './examples/Button12Example';
-import Button13Example from './examples/Button13Example';
-import Button14Example from './examples/Button14Example';
-import Button15Example from './examples/Button15Example';
 
 import Card1Example from './examples/Card1Example';
 import Card2Example from './examples/Card2Example';
@@ -25,14 +19,6 @@ import Card4Example from './examples/Card4Example';
 import Card5Example from './examples/Card5Example';
 import Card6Example from './examples/Card6Example';
 import Card7Example from './examples/Card7Example';
-import Card8Example from './examples/Card8Example';
-import Card9Example from './examples/Card9Example';
-import Card10Example from './examples/Card10Example';
-import Card11Example from './examples/Card11Example';
-import Card12Example from './examples/Card12Example';
-import Card13Example from './examples/Card13Example';
-import Card14Example from './examples/Card14Example';
-import Card15Example from './examples/Card15Example';
 
 import Alert1Example from './examples/Alert1Example';
 import Alert2Example from './examples/Alert2Example';
@@ -40,15 +26,7 @@ import Alert3Example from './examples/Alert3Example';
 import Alert4Example from './examples/Alert4Example';
 import Alert5Example from './examples/Alert5Example';
 import Alert6Example from './examples/Alert6Example';
-import Alert7Example from './examples/Alert7Example';
-import Alert8Example from './examples/Alert8Example';
-import Alert9Example from './examples/Alert9Example';
-import Alert10Example from './examples/Alert10Example';
-import Alert11Example from './examples/Alert11Example';
-import Alert12Example from './examples/Alert12Example';
-import Alert13Example from './examples/Alert13Example';
-import Alert14Example from './examples/Alert14Example';
-import Alert15Example from './examples/Alert15Example';
+
 
 import Badge1Example from './examples/Badge1Example';
 import Badge2Example from './examples/Badge2Example';
@@ -56,15 +34,6 @@ import Badge3Example from './examples/Badge3Example';
 import Badge4Example from './examples/Badge4Example';
 import Badge5Example from './examples/Badge5Example';
 import Badge6Example from './examples/Badge6Example';
-import Badge7Example from './examples/Badge7Example';
-import Badge8Example from './examples/Badge8Example';
-import Badge9Example from './examples/Badge9Example';
-import Badge10Example from './examples/Badge10Example';
-import Badge11Example from './examples/Badge11Example';
-import Badge12Example from './examples/Badge12Example';
-import Badge13Example from './examples/Badge13Example';
-import Badge14Example from './examples/Badge14Example';
-import Badge15Example from './examples/Badge15Example';
 
 import Input1Example from './examples/Input1Example';
 import Input2Example from './examples/Input2Example';
@@ -72,15 +41,6 @@ import Input3Example from './examples/Input3Example';
 import Input4Example from './examples/Input4Example';
 import Input5Example from './examples/Input5Example';
 import Input6Example from './examples/Input6Example';
-import Input7Example from './examples/Input7Example';
-import Input8Example from './examples/Input8Example';
-import Input9Example from './examples/Input9Example';
-import Input10Example from './examples/Input10Example';
-import Input11Example from './examples/Input11Example';
-import Input12Example from './examples/Input12Example';
-import Input13Example from './examples/Input13Example';
-import Input14Example from './examples/Input14Example';
-import Input15Example from './examples/Input15Example';
 
 // Modals
 import Modal1Example from './examples/Modal1Example';
@@ -147,8 +107,6 @@ import Form10Example from './examples/Form10Example';
 import Form11Example from './examples/Form11Example';
 import Form12Example from './examples/Form12Example';
 import Form13Example from './examples/Form13Example';
-import Form14Example from './examples/Form14Example';
-import Form15Example from './examples/Form15Example';
 
 // Loading
 import Loading1Example from './examples/Loading1Example';
@@ -166,6 +124,120 @@ import Loading12Example from './examples/Loading12Example';
 import Loading13Example from './examples/Loading13Example';
 import Loading14Example from './examples/Loading14Example';
 import Loading15Example from './examples/Loading15Example';
+import Loading16Example from './examples/Loading16Example';
+import Loading17Example from './examples/Loading17Example';
+import Loading18Example from './examples/Loading18Example';
+import Loading19Example from './examples/Loading19Example';
+import Loading20Example from './examples/Loading20Example';
+import Loading21Example from './examples/Loading21Example';
+import Loading22Example from './examples/Loading22Example';
+import Loading23Example from './examples/Loading23Example';
+import Loading24Example from './examples/Loading24Example';
+import Loading25Example from './examples/Loading25Example';
+import Loading26Example from './examples/Loading26Example';
+import Loading27Example from './examples/Loading27Example';
+import Loading28Example from './examples/Loading28Example';
+import Loading29Example from './examples/Loading29Example';
+import Loading30Example from './examples/Loading30Example';
+import Loading31Example from './examples/Loading31Example';
+import Loading32Example from './examples/Loading32Example';
+import Loading33Example from './examples/Loading33Example';
+import Loading34Example from './examples/Loading34Example';
+import Loading35Example from './examples/Loading35Example';
+import Loading36Example from './examples/Loading36Example';
+import Loading37Example from './examples/Loading37Example';
+import Loading38Example from './examples/Loading38Example';
+import Loading39Example from './examples/Loading39Example';
+import Loading40Example from './examples/Loading40Example';
+import Loading41Example from './examples/Loading41Example';
+import Loading42Example from './examples/Loading42Example';
+import Loading43Example from './examples/Loading43Example';
+import Loading44Example from './examples/Loading44Example';
+import Loading45Example from './examples/Loading45Example';
+import Loading46Example from './examples/Loading46Example';
+import Loading47Example from './examples/Loading47Example';
+import Loading48Example from './examples/Loading48Example';
+import Loading49Example from './examples/Loading49Example';
+import Loading50Example from './examples/Loading50Example';
+import Loading51Example from './examples/Loading51Example';
+import Loading52Example from './examples/Loading52Example';
+import Loading53Example from './examples/Loading53Example';
+import Loading54Example from './examples/Loading54Example';
+import Loading55Example from './examples/Loading55Example';
+import Loading56Example from './examples/Loading56Example';
+import Loading57Example from './examples/Loading57Example';
+import Loading58Example from './examples/Loading58Example';
+import Loading59Example from './examples/Loading59Example';
+import Loading60Example from './examples/Loading60Example';
+import Loading61Example from './examples/Loading61Example';
+import Loading62Example from './examples/Loading62Example';
+import Loading63Example from './examples/Loading63Example';
+import Loading64Example from './examples/Loading64Example';
+import Loading65Example from './examples/Loading65Example';
+import Loading66Example from './examples/Loading66Example';
+import Loading67Example from './examples/Loading67Example';
+import Loading68Example from './examples/Loading68Example';
+import Loading69Example from './examples/Loading69Example';
+import Loading70Example from './examples/Loading70Example';
+import Loading71Example from './examples/Loading71Example';
+import Loading72Example from './examples/Loading72Example';
+import Loading73Example from './examples/Loading73Example';
+import Loading74Example from './examples/Loading74Example';
+import Loading75Example from './examples/Loading75Example';
+import Loading76Example from './examples/Loading76Example';
+import Loading77Example from './examples/Loading77Example';
+import Loading78Example from './examples/Loading78Example';
+import Loading79Example from './examples/Loading79Example';
+import Loading80Example from './examples/Loading80Example';
+import Loading81Example from './examples/Loading81Example';
+import Loading82Example from './examples/Loading82Example';
+import Loading83Example from './examples/Loading83Example';
+import Loading84Example from './examples/Loading84Example';
+import Loading85Example from './examples/Loading85Example';
+import Loading86Example from './examples/Loading86Example';
+import Loading87Example from './examples/Loading87Example';
+import Loading88Example from './examples/Loading88Example';
+import Loading89Example from './examples/Loading89Example';
+import Loading90Example from './examples/Loading90Example';
+import Loading91Example from './examples/Loading91Example';
+import Loading92Example from './examples/Loading92Example';
+import Loading93Example from './examples/Loading93Example';
+import Loading94Example from './examples/Loading94Example';
+import Loading95Example from './examples/Loading95Example';
+import Loading96Example from './examples/Loading96Example';
+import Loading97Example from './examples/Loading97Example';
+import Loading98Example from './examples/Loading98Example';
+import Loading99Example from './examples/Loading99Example';
+import Loading100Example from './examples/Loading100Example';
+import Loading101Example from './examples/Loading101Example';
+import Loading102Example from './examples/Loading102Example';
+import Loading103Example from './examples/Loading103Example';
+import Loading104Example from './examples/Loading104Example';
+import Loading105Example from './examples/Loading105Example';
+import Loading106Example from './examples/Loading106Example';
+import Loading107Example from './examples/Loading107Example';
+import Loading108Example from './examples/Loading108Example';
+import Loading109Example from './examples/Loading109Example';
+import Loading110Example from './examples/Loading110Example';
+import Loading111Example from './examples/Loading111Example';
+import Loading112Example from './examples/Loading112Example';
+import Loading113Example from './examples/Loading113Example';
+import Loading114Example from './examples/Loading114Example';
+import Loading115Example from './examples/Loading115Example';
+import Loading116Example from './examples/Loading116Example';
+import Loading117Example from './examples/Loading117Example';
+import Loading118Example from './examples/Loading118Example';
+import Loading119Example from './examples/Loading119Example';
+import Loading120Example from './examples/Loading120Example';
+import Loading121Example from './examples/Loading121Example';
+import Loading122Example from './examples/Loading122Example';
+import Loading123Example from './examples/Loading123Example';
+import Loading124Example from './examples/Loading124Example';
+import Loading125Example from './examples/Loading125Example';
+import Loading126Example from './examples/Loading126Example';
+import Loading127Example from './examples/Loading127Example';
+import Loading128Example from './examples/Loading128Example';
+import Loading129Example from './examples/Loading129Example';
 
 // Tooltips
 import Tooltip1Example from './examples/Tooltip1Example';
@@ -261,13 +333,6 @@ import Notification5Example from './examples/Notification5Example';
 import Notification6Example from './examples/Notification6Example';
 import Notification7Example from './examples/Notification7Example';
 import Notification8Example from './examples/Notification8Example';
-import Notification9Example from './examples/Notification9Example';
-import Notification10Example from './examples/Notification10Example';
-import Notification11Example from './examples/Notification11Example';
-import Notification12Example from './examples/Notification12Example';
-import Notification13Example from './examples/Notification13Example';
-import Notification14Example from './examples/Notification14Example';
-import Notification15Example from './examples/Notification15Example';
 
 // Pagination
 import Pagination1Example from './examples/Pagination1Example';
@@ -311,6 +376,43 @@ import CheckboxInputExample from './examples/CheckboxInputExample';
 import ToggleSwitchExample from './examples/ToggleSwitchExample';
 import RadioButtonExample from './examples/RadioButtonExample';
 
+// JavaScript Components
+import ButtonJS1Example from './examples/ButtonJS1Example';
+import ButtonJS2Example from './examples/ButtonJS2Example';
+import ButtonJS3Example from './examples/ButtonJS3Example';
+import ButtonJS4Example from './examples/ButtonJS4Example';
+import ButtonJS5Example from './examples/ButtonJS5Example';
+import ButtonJS6Example from './examples/ButtonJS6Example';
+import CardJS1Example from './examples/CardJS1Example';
+import CardJS2Example from './examples/CardJS2Example';
+import CardJS3Example from './examples/CardJS3Example';
+import CardJS4Example from './examples/CardJS4Example';
+import CardJS5Example from './examples/CardJS5Example';
+import CardJS6Example from './examples/CardJS6Example';
+import AlertJS1Example from './examples/AlertJS1Example';
+import AlertJS2Example from './examples/AlertJS2Example';
+import AlertJS3Example from './examples/AlertJS3Example';
+import AlertJS4Example from './examples/AlertJS4Example';
+import AlertJS5Example from './examples/AlertJS5Example';
+import AlertJS6Example from './examples/AlertJS6Example';
+import BadgeJS1Example from './examples/BadgeJS1Example';
+import BadgeJS2Example from './examples/BadgeJS2Example';
+import BadgeJS3Example from './examples/BadgeJS3Example';
+import InputJS1Example from './examples/InputJS1Example';
+import InputJS2Example from './examples/InputJS2Example';
+import InputJS3Example from './examples/InputJS3Example';
+import ModalJS1Example from './examples/ModalJS1Example';
+import ModalJS2Example from './examples/ModalJS2Example';
+import ModalJS3Example from './examples/ModalJS3Example';
+import FormJS1Example from './examples/FormJS1Example';
+import FormJS2Example from './examples/FormJS2Example';
+import FormJS3Example from './examples/FormJS3Example';
+import LoadingJS1Example from './examples/LoadingJS1Example';
+import LoadingJS2Example from './examples/LoadingJS2Example';
+import LoadingJS3Example from './examples/LoadingJS3Example';
+import TableJS1Example from './examples/TableJS1Example';
+import TableJS2Example from './examples/TableJS2Example';
+
 // Component mapping by ID
 const componentMap: Record<string, React.ComponentType> = {
   'button-1': Button1Example,
@@ -320,14 +422,6 @@ const componentMap: Record<string, React.ComponentType> = {
   'button-5': Button5Example,
   'button-6': Button6Example,
   'button-7': Button7Example,
-  'button-8': Button8Example,
-  'button-9': Button9Example,
-  'button-10': Button10Example,
-  'button-11': Button11Example,
-  'button-12': Button12Example,
-  'button-13': Button13Example,
-  'button-14': Button14Example,
-  'button-15': Button15Example,
   'card-1': Card1Example,
   'card-2': Card2Example,
   'card-3': Card3Example,
@@ -335,59 +429,25 @@ const componentMap: Record<string, React.ComponentType> = {
   'card-5': Card5Example,
   'card-6': Card6Example,
   'card-7': Card7Example,
-  'card-8': Card8Example,
-  'card-9': Card9Example,
-  'card-10': Card10Example,
-  'card-11': Card11Example,
-  'card-12': Card12Example,
-  'card-13': Card13Example,
-  'card-14': Card14Example,
-  'card-15': Card15Example,
   'alert-1': Alert1Example,
   'alert-2': Alert2Example,
   'alert-3': Alert3Example,
   'alert-4': Alert4Example,
   'alert-5': Alert5Example,
   'alert-6': Alert6Example,
-  'alert-7': Alert7Example,
-  'alert-8': Alert8Example,
-  'alert-9': Alert9Example,
-  'alert-10': Alert10Example,
-  'alert-11': Alert11Example,
-  'alert-12': Alert12Example,
-  'alert-13': Alert13Example,
-  'alert-14': Alert14Example,
-  'alert-15': Alert15Example,
+
   'badge-1': Badge1Example,
   'badge-2': Badge2Example,
   'badge-3': Badge3Example,
   'badge-4': Badge4Example,
   'badge-5': Badge5Example,
   'badge-6': Badge6Example,
-  'badge-7': Badge7Example,
-  'badge-8': Badge8Example,
-  'badge-9': Badge9Example,
-  'badge-10': Badge10Example,
-  'badge-11': Badge11Example,
-  'badge-12': Badge12Example,
-  'badge-13': Badge13Example,
-  'badge-14': Badge14Example,
-  'badge-15': Badge15Example,
   'input-1': Input1Example,
   'input-2': Input2Example,
   'input-3': Input3Example,
   'input-4': Input4Example,
   'input-5': Input5Example,
   'input-6': Input6Example,
-  'input-7': Input7Example,
-  'input-8': Input8Example,
-  'input-9': Input9Example,
-  'input-10': Input10Example,
-  'input-11': Input11Example,
-  'input-12': Input12Example,
-  'input-13': Input13Example,
-  'input-14': Input14Example,
-  'input-15': Input15Example,
   'modal-1': Modal1Example,
   'modal-2': Modal2Example,
   'modal-3': Modal3Example,
@@ -446,8 +506,6 @@ const componentMap: Record<string, React.ComponentType> = {
   'form-11': Form11Example,
   'form-12': Form12Example,
   'form-13': Form13Example,
-  'form-14': Form14Example,
-  'form-15': Form15Example,
   'loading-1': Loading1Example,
   'loading-2': Loading2Example,
   'loading-3': Loading3Example,
@@ -463,6 +521,120 @@ const componentMap: Record<string, React.ComponentType> = {
   'loading-13': Loading13Example,
   'loading-14': Loading14Example,
   'loading-15': Loading15Example,
+  'loading-16': Loading16Example,
+  'loading-17': Loading17Example,
+  'loading-18': Loading18Example,
+  'loading-19': Loading19Example,
+  'loading-20': Loading20Example,
+  'loading-21': Loading21Example,
+  'loading-22': Loading22Example,
+  'loading-23': Loading23Example,
+  'loading-24': Loading24Example,
+  'loading-25': Loading25Example,
+  'loading-26': Loading26Example,
+  'loading-27': Loading27Example,
+  'loading-28': Loading28Example,
+  'loading-29': Loading29Example,
+  'loading-30': Loading30Example,
+  'loading-31': Loading31Example,
+  'loading-32': Loading32Example,
+  'loading-33': Loading33Example,
+  'loading-34': Loading34Example,
+  'loading-35': Loading35Example,
+  'loading-36': Loading36Example,
+  'loading-37': Loading37Example,
+  'loading-38': Loading38Example,
+  'loading-39': Loading39Example,
+  'loading-40': Loading40Example,
+  'loading-41': Loading41Example,
+  'loading-42': Loading42Example,
+  'loading-43': Loading43Example,
+  'loading-44': Loading44Example,
+  'loading-45': Loading45Example,
+  'loading-46': Loading46Example,
+  'loading-47': Loading47Example,
+  'loading-48': Loading48Example,
+  'loading-49': Loading49Example,
+  'loading-50': Loading50Example,
+  'loading-51': Loading51Example,
+  'loading-52': Loading52Example,
+  'loading-53': Loading53Example,
+  'loading-54': Loading54Example,
+  'loading-55': Loading55Example,
+  'loading-56': Loading56Example,
+  'loading-57': Loading57Example,
+  'loading-58': Loading58Example,
+  'loading-59': Loading59Example,
+  'loading-60': Loading60Example,
+  'loading-61': Loading61Example,
+  'loading-62': Loading62Example,
+  'loading-63': Loading63Example,
+  'loading-64': Loading64Example,
+  'loading-65': Loading65Example,
+  'loading-66': Loading66Example,
+  'loading-67': Loading67Example,
+  'loading-68': Loading68Example,
+  'loading-69': Loading69Example,
+  'loading-70': Loading70Example,
+  'loading-71': Loading71Example,
+  'loading-72': Loading72Example,
+  'loading-73': Loading73Example,
+  'loading-74': Loading74Example,
+  'loading-75': Loading75Example,
+  'loading-76': Loading76Example,
+  'loading-77': Loading77Example,
+  'loading-78': Loading78Example,
+  'loading-79': Loading79Example,
+  'loading-80': Loading80Example,
+  'loading-81': Loading81Example,
+  'loading-82': Loading82Example,
+  'loading-83': Loading83Example,
+  'loading-84': Loading84Example,
+  'loading-85': Loading85Example,
+  'loading-86': Loading86Example,
+  'loading-87': Loading87Example,
+  'loading-88': Loading88Example,
+  'loading-89': Loading89Example,
+  'loading-90': Loading90Example,
+  'loading-91': Loading91Example,
+  'loading-92': Loading92Example,
+  'loading-93': Loading93Example,
+  'loading-94': Loading94Example,
+  'loading-95': Loading95Example,
+  'loading-96': Loading96Example,
+  'loading-97': Loading97Example,
+  'loading-98': Loading98Example,
+  'loading-99': Loading99Example,
+  'loading-100': Loading100Example,
+  'loading-101': Loading101Example,
+  'loading-102': Loading102Example,
+  'loading-103': Loading103Example,
+  'loading-104': Loading104Example,
+  'loading-105': Loading105Example,
+  'loading-106': Loading106Example,
+  'loading-107': Loading107Example,
+  'loading-108': Loading108Example,
+  'loading-109': Loading109Example,
+  'loading-110': Loading110Example,
+  'loading-111': Loading111Example,
+  'loading-112': Loading112Example,
+  'loading-113': Loading113Example,
+  'loading-114': Loading114Example,
+  'loading-115': Loading115Example,
+  'loading-116': Loading116Example,
+  'loading-117': Loading117Example,
+  'loading-118': Loading118Example,
+  'loading-119': Loading119Example,
+  'loading-120': Loading120Example,
+  'loading-121': Loading121Example,
+  'loading-122': Loading122Example,
+  'loading-123': Loading123Example,
+  'loading-124': Loading124Example,
+  'loading-125': Loading125Example,
+  'loading-126': Loading126Example,
+  'loading-127': Loading127Example,
+  'loading-128': Loading128Example,
+  'loading-129': Loading129Example,
   'tooltip-1': Tooltip1Example,
   'tooltip-2': Tooltip2Example,
   'tooltip-3': Tooltip3Example,
@@ -546,13 +718,6 @@ const componentMap: Record<string, React.ComponentType> = {
   'notification-6': Notification6Example,
   'notification-7': Notification7Example,
   'notification-8': Notification8Example,
-  'notification-9': Notification9Example,
-  'notification-10': Notification10Example,
-  'notification-11': Notification11Example,
-  'notification-12': Notification12Example,
-  'notification-13': Notification13Example,
-  'notification-14': Notification14Example,
-  'notification-15': Notification15Example,
   'pagination-1': Pagination1Example,
   'pagination-2': Pagination2Example,
   'pagination-3': Pagination3Example,
@@ -589,24 +754,49 @@ const componentMap: Record<string, React.ComponentType> = {
   'checkbox-input': CheckboxInputExample,
   'toggle-switch': ToggleSwitchExample,
   'radio-button': RadioButtonExample,
+
+  // JavaScript Components
+  'button-js-1': ButtonJS1Example,
+  'button-js-2': ButtonJS2Example,
+  'button-js-3': ButtonJS3Example,
+  'button-js-4': ButtonJS4Example,
+  'button-js-5': ButtonJS5Example,
+  'button-js-6': ButtonJS6Example,
+  'card-js-1': CardJS1Example,
+  'card-js-2': CardJS2Example,
+  'card-js-3': CardJS3Example,
+  'card-js-4': CardJS4Example,
+  'card-js-5': CardJS5Example,
+  'card-js-6': CardJS6Example,
+  'alert-js-1': AlertJS1Example,
+  'alert-js-2': AlertJS2Example,
+  'alert-js-3': AlertJS3Example,
+  'alert-js-4': AlertJS4Example,
+  'alert-js-5': AlertJS5Example,
+  'alert-js-6': AlertJS6Example,
+  'badge-js-1': BadgeJS1Example,
+  'badge-js-2': BadgeJS2Example,
+  'badge-js-3': BadgeJS3Example,
+  'input-js-1': InputJS1Example,
+  'input-js-2': InputJS2Example,
+  'input-js-3': InputJS3Example,
+  'modal-js-1': ModalJS1Example,
+  'modal-js-2': ModalJS2Example,
+  'modal-js-3': ModalJS3Example,
+  'form-js-1': FormJS1Example,
+  'form-js-2': FormJS2Example,
+  'form-js-3': FormJS3Example,
+  'loading-js-1': LoadingJS1Example,
+  'loading-js-2': LoadingJS2Example,
+  'loading-js-3': LoadingJS3Example,
+  'table-js-1': TableJS1Example,
+  'table-js-2': TableJS2Example,
 };
 
-interface ComponentItem {
-  id: string;
-  title: string;
-  description: string;
-  code: string;
-  category: string;
-  technologies: string[];
-}
+const TECHNOLOGIES = ['JavaScript', 'TypeScript', 'React', 'Vite', 'Astro'];
 
-interface ComponentGalleryProps {
-  components: ComponentItem[];
-}
-
-const TECHNOLOGIES = ['HTML + CSS', 'JavaScript', 'TypeScript', 'React', 'Vite', 'Astro'];
-
-export default function ComponentGallery({ components }: ComponentGalleryProps) {
+export default function ComponentGallery() {
+  const components = componentsData;
   const [selectedTechnology, setSelectedTechnology] = useState<string | null>(null);
   const [selectedComponent, setSelectedComponent] = useState<string>('All');
 
@@ -617,11 +807,18 @@ export default function ComponentGallery({ components }: ComponentGalleryProps) 
   }, [components]);
 
   const filteredComponents = useMemo(() => {
-    return components.filter((component) => {
+    const filtered = components.filter((component) => {
       const matchesTechnology = !selectedTechnology || component.technologies.includes(selectedTechnology);
       const matchesComponent = selectedComponent === 'All' || component.category === selectedComponent;
       return matchesTechnology && matchesComponent;
     });
+
+    // Randomize order when "All" is selected
+    if (selectedComponent === 'All') {
+      return [...filtered].sort(() => Math.random() - 0.5);
+    }
+
+    return filtered;
   }, [components, selectedTechnology, selectedComponent]);
 
   return (
@@ -665,28 +862,68 @@ export default function ComponentGallery({ components }: ComponentGalleryProps) 
         ))}
       </div>
 
-      {/* Components Grid - Responsive */}
+      {/* Components Grid - Masonry Layout */}
       {filteredComponents.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full auto-rows-fr">
-          {filteredComponents.map((item) => {
-            const Component = componentMap[item.id];
-            return (
-              <ComponentCard
-                key={item.id}
-                title={item.title}
-                description={item.description}
-                code={item.code}
-                category={item.category}
-                technologies={item.technologies}
-              >
-                {Component && <Component />}
-              </ComponentCard>
-            );
-          })}
+        <div
+          className="w-full"
+          style={{
+            columnCount: 1,
+            columnGap: '2rem',
+          }}
+        >
+          <style>{`
+            @media (min-width: 768px) {
+              .masonry-container {
+                column-count: 2;
+              }
+            }
+            @media (min-width: 1280px) {
+              .masonry-container {
+                column-count: 3;
+              }
+            }
+            .masonry-item {
+              break-inside: avoid;
+              margin-bottom: 2rem;
+              display: inline-block;
+              width: 100%;
+            }
+          `}</style>
+          <div className="masonry-container">
+            {filteredComponents.map((item, index) => {
+              const Component = componentMap[item.id];
+              const gridSize = item.gridSize || 'normal';
+              // Limit delay to max 150ms after first 6 items
+              const delay = Math.min(index * 25, 150);
+
+              return (
+                <div key={item.id} className="masonry-item">
+                  <LazyCard delay={delay}>
+                    <ComponentCard
+                      title={item.title}
+                      description={item.description}
+                      code={item.code}
+                      category={item.category}
+                      technologies={item.technologies}
+                      gridSize={gridSize}
+                    >
+                      {Component && <Component />}
+                    </ComponentCard>
+                  </LazyCard>
+                </div>
+              );
+            })}
+          </div>
         </div>
       ) : (
-        <div className="w-full text-center py-16">
-          <p className="text-slate-400 text-lg">No se encontraron componentes con estos filtros</p>
+        <div className="w-full text-center py-20">
+          <div className="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-slate-800/50 border border-slate-700/50">
+            <svg className="w-8 h-8 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+            </svg>
+          </div>
+          <p className="text-slate-400 text-base font-medium">No se encontraron componentes con estos filtros</p>
+          <p className="text-slate-500 text-sm mt-2">Intenta ajustar los filtros de búsqueda</p>
         </div>
       )}
     </div>

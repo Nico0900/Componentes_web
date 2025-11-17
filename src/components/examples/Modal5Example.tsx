@@ -1,24 +1,16 @@
 import { useState } from 'react';
 
 export default function Modal5Example() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <div className="flex justify-center items-center p-6">
-      <button
-        onClick={() => setIsOpen(true)}
-        className="px-6 py-3 bg-violet-600 hover:bg-violet-700 text-white font-medium rounded-lg transition-colors duration-200"
-      >
-        Open Fullscreen Modal
-      </button>
-
+    <div className="flex justify-center items-center p-6 relative min-h-[400px]">
       {isOpen && (
-        <div className="fixed inset-0 z-50 bg-slate-900 animate-fadeIn overflow-auto">
+        <div className="absolute inset-0 z-50 bg-slate-950/15 animate-fadeIn overflow-auto">
           <div className="sticky top-0 bg-slate-800/95 backdrop-blur-sm border-b border-slate-700 z-10">
             <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
               <h2 className="text-2xl font-bold text-slate-100">Fullscreen Modal</h2>
               <button
-                onClick={() => setIsOpen(false)}
                 className="p-2 text-slate-400 hover:text-slate-200 hover:bg-slate-700 rounded-lg transition-colors"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -64,13 +56,11 @@ export default function Modal5Example() {
           <div className="sticky bottom-0 bg-slate-800/95 backdrop-blur-sm border-t border-slate-700 mt-8">
             <div className="max-w-6xl mx-auto px-6 py-4 flex justify-end gap-3">
               <button
-                onClick={() => setIsOpen(false)}
                 className="px-6 py-2 bg-slate-700 hover:bg-slate-600 text-slate-200 rounded-lg transition-colors"
               >
                 Cancel
               </button>
               <button
-                onClick={() => setIsOpen(false)}
                 className="px-6 py-2 bg-violet-600 hover:bg-violet-700 text-white rounded-lg transition-colors"
               >
                 Save
@@ -83,23 +73,19 @@ export default function Modal5Example() {
   );
 }
 
-export const modal5Code = \`import { useState } from 'react';
+export const modal5Code = `import { useState } from 'react';
 
 export default function Modal5Example() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <div className="flex justify-center items-center p-6">
-      <button onClick={() => setIsOpen(true)} className="px-6 py-3 bg-violet-600 text-white rounded-lg">
-        Open Fullscreen Modal
-      </button>
-
+    <div className="flex justify-center items-center p-6 relative min-h-[400px]">
       {isOpen && (
-        <div className="fixed inset-0 z-50 bg-slate-900 overflow-auto">
+        <div className="absolute inset-0 z-50 bg-slate-900 overflow-auto">
           <div className="sticky top-0 bg-slate-800 border-b border-slate-700">
             <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
               <h2 className="text-2xl font-bold text-slate-100">Fullscreen Modal</h2>
-              <button onClick={() => setIsOpen(false)} className="text-slate-400 hover:text-slate-200">✕</button>
+              <button  className="text-slate-400 hover:text-slate-200">✕</button>
             </div>
           </div>
           <div className="max-w-6xl mx-auto px-6 py-8">
@@ -109,4 +95,4 @@ export default function Modal5Example() {
       )}
     </div>
   );
-}\`;
+}`;

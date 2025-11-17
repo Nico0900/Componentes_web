@@ -1,24 +1,13 @@
 import { useState } from 'react';
 
 export default function Modal9Example() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <div className="flex justify-center items-center p-6">
-      <button
-        onClick={() => setIsOpen(true)}
-        className="px-6 py-3 bg-rose-600 hover:bg-rose-700 text-white font-medium rounded-lg transition-colors duration-200 flex items-center gap-2"
-      >
-        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M8 5v14l11-7z" />
-        </svg>
-        Play Video
-      </button>
-
+    <div className="flex justify-center items-center p-6 relative min-h-[400px]">
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/95 animate-fadeIn">
+        <div className="absolute inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/10 animate-fadeIn">
           <button
-            onClick={() => setIsOpen(false)}
             className="absolute top-4 right-4 z-10 p-2 bg-slate-800/80 hover:bg-slate-700 text-white rounded-lg transition-colors"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -30,9 +19,9 @@ export default function Modal9Example() {
             <div className="relative aspect-video bg-black">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
                 title="Video Player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               />
             </div>
@@ -64,21 +53,16 @@ export default function Modal9Example() {
   );
 }
 
-export const modal9Code = \`import { useState } from 'react';
+export const modal9Code = `import { useState } from 'react';
 
 export default function Modal9Example() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <div className="flex justify-center items-center p-6">
-      <button onClick={() => setIsOpen(true)} className="px-6 py-3 bg-rose-600 text-white rounded-lg flex items-center gap-2">
-        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
-        Play Video
-      </button>
-
+    <div className="flex justify-center items-center p-6 relative min-h-[400px]">
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/95">
-          <button onClick={() => setIsOpen(false)} className="absolute top-4 right-4 text-white">✕</button>
+        <div className="absolute inset-0 z-50 flex items-center justify-center bg-slate-950/10">
+          <button  className="absolute top-4 right-4 text-white">✕</button>
           <div className="relative w-full max-w-4xl bg-slate-900 rounded-lg overflow-hidden">
             <div className="aspect-video bg-black">
               <iframe className="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video" allowFullScreen />
@@ -92,4 +76,4 @@ export default function Modal9Example() {
       )}
     </div>
   );
-}\`;
+}`;

@@ -178,7 +178,7 @@ export default function Carousel13Example() {
               key={slide.id}
               className="min-w-full h-64 flex items-center justify-center"
             >
-              <div className={\\`w-full h-full bg-gradient-to-br \${slide.color} flex flex-col items-center justify-center\\`}>
+              <div className={\`w-full h-full bg-gradient-to-br \${slide.color} flex flex-col items-center justify-center\`}>
                 <h2 className="text-5xl font-bold text-white mb-3">{slide.title}</h2>
                 <p className="text-white/80 text-lg">
                   {isDragging ? 'Dragging...' : 'Drag to swipe'}
@@ -193,9 +193,9 @@ export default function Carousel13Example() {
           {slides.map((_, index) => (
             <div
               key={index}
-              className={\\`w-2 h-2 rounded-full transition-all duration-300 \${
+              className={\`w-2 h-2 rounded-full transition-all duration-300 \${
                 currentSlide === index ? 'bg-white w-8' : 'bg-white/50'
-              }\\`}
+              }\`}
             />
           ))}
         </div>

@@ -92,7 +92,7 @@ export const loading8Code = `export default function Loading8Example() {
   return (
     <div className="flex flex-col gap-8 items-center justify-center p-8 w-full max-w-md">
       <style>
-        {\`
+        {\\\`
           @keyframes linear-progress {
             0% { width: 0%; }
             50% { width: 70%; }
@@ -104,7 +104,7 @@ export const loading8Code = `export default function Loading8Example() {
             border-radius: 9999px;
             animation: linear-progress 2s ease-in-out infinite;
           }
-        \`}
+        \\\`}
       </style>
 
       {/* Basic Linear */}

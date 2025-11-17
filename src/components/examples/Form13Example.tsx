@@ -130,11 +130,11 @@ export default function Form13Example() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div>
-              <label htmlFor="location" className="block text-sm font-medium text-slate-300 mb-2">
+              <label htmlFor="location-form13" className="block text-sm font-medium text-slate-300 mb-2">
                 Location
               </label>
               <input
-                id="location"
+                id="location-form13"
                 name="location"
                 type="text"
                 value={formData.location}

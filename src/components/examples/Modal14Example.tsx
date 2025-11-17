@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export default function Modal14Example() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   const handleContextMenu = (e: React.MouseEvent) => {
@@ -35,20 +35,20 @@ export default function Modal14Example() {
         <>
           <div
             className="fixed inset-0 z-40"
-            onClick={() => setIsOpen(false)}
+            
           />
           <div
             className="fixed z-50 bg-slate-800 border border-slate-700 rounded-lg shadow-2xl py-2 min-w-[200px] animate-scaleIn"
-            style={{ left: \`\${position.x}px\`, top: \`\${position.y}px\` }}
+            style={{ left: `${position.x}px`, top: `${position.y}px` }}
           >
             {menuItems.map((item, index) => (
               <button
                 key={index}
                 onClick={() => {
-                  alert(\`\${item.label} clicked!\`);
+                  alert(`${item.label} clicked!`);
                   setIsOpen(false);
                 }}
-                className={\`w-full flex items-center gap-3 px-4 py-2 hover:bg-slate-700 transition-colors \${item.color || 'text-slate-200'}\`}
+                className={`w-full flex items-center gap-3 px-4 py-2 hover:bg-slate-700 transition-colors ${item.color || 'text-slate-200'}`}
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={item.icon} />
@@ -63,10 +63,10 @@ export default function Modal14Example() {
   );
 }
 
-export const modal14Code = \`import { useState } from 'react';
+export const modal14Code = `import { useState } from 'react';
 
 export default function Modal14Example() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   const handleContextMenu = (e: React.MouseEvent) => {
@@ -90,10 +90,10 @@ export default function Modal14Example() {
 
       {isOpen && (
         <>
-          <div className="fixed inset-0 z-40" onClick={() => setIsOpen(false)} />
-          <div className="fixed z-50 bg-slate-800 border border-slate-700 rounded-lg shadow-2xl py-2 min-w-[200px]" style={{ left: \\\`\\\${position.x}px\\\`, top: \\\`\\\${position.y}px\\\` }}>
+          <div className="absolute inset-0 z-40"  />
+          <div className="fixed z-50 bg-slate-800 border border-slate-700 rounded-lg shadow-2xl py-2 min-w-[200px]" style={{ left: \`\${position.x}px\`, top: \`\${position.y}px\` }}>
             {menuItems.map((item, i) => (
-              <button key={i} onClick={() => setIsOpen(false)} className={\\\`w-full flex items-center gap-3 px-4 py-2 hover:bg-slate-700 \\\${item.color || 'text-slate-200'}\\\`}>
+              <button key={i}  className={\`w-full flex items-center gap-3 px-4 py-2 hover:bg-slate-700 \${item.color || 'text-slate-200'}\`}>
                 <span>{item.label}</span>
               </button>
             ))}
@@ -102,4 +102,4 @@ export default function Modal14Example() {
       )}
     </div>
   );
-}\`;
+}`;

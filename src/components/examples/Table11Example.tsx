@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default function Table11Example() {
   const departments = [
     {
@@ -50,8 +52,8 @@ export default function Table11Example() {
             </thead>
             <tbody>
               {departments.map((dept) => (
-                <>
-                  <tr key={dept.id} className="border-t border-slate-700/30 bg-slate-800/30">
+                <React.Fragment key={dept.id}>
+                  <tr className="border-t border-slate-700/30 bg-slate-800/30">
                     <td className="px-6 py-4 text-sm text-slate-100 font-semibold">{dept.name}</td>
                     <td className="px-6 py-4 text-sm text-slate-300">{dept.headCount}</td>
                     <td className="px-6 py-4 text-sm text-emerald-400 font-semibold">{dept.budget}</td>
@@ -70,7 +72,7 @@ export default function Table11Example() {
                       <td className="px-6 py-3 text-sm text-slate-400">{team.lead}</td>
                     </tr>
                   ))}
-                </>
+                </React.Fragment>
               ))}
             </tbody>
           </table>
@@ -132,8 +134,8 @@ export const table11Code = `export default function Table11Example() {
             </thead>
             <tbody>
               {departments.map((dept) => (
-                <>
-                  <tr key={dept.id} className="border-t border-slate-700/30 bg-slate-800/30">
+                <React.Fragment key={dept.id}>
+                  <tr className="border-t border-slate-700/30 bg-slate-800/30">
                     <td className="px-6 py-4 text-sm text-slate-100 font-semibold">{dept.name}</td>
                     <td className="px-6 py-4 text-sm text-slate-300">{dept.headCount}</td>
                     <td className="px-6 py-4 text-sm text-emerald-400 font-semibold">{dept.budget}</td>
@@ -152,7 +154,7 @@ export const table11Code = `export default function Table11Example() {
                       <td className="px-6 py-3 text-sm text-slate-400">{team.lead}</td>
                     </tr>
                   ))}
-                </>
+                </React.Fragment>
               ))}
             </tbody>
           </table>

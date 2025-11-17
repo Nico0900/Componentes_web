@@ -148,9 +148,9 @@ export default function Carousel14Example() {
                   transformStyle: 'preserve-3d',
                 }}
               >
-                <div className={\\`w-80 h-72 rounded-2xl bg-gradient-to-br \${slide.color} flex items-center justify-center shadow-2xl \${
+                <div className={\`w-80 h-72 rounded-2xl bg-gradient-to-br \${slide.color} flex items-center justify-center shadow-2xl \${
                   isActive ? 'ring-4 ring-white/50' : ''
-                }\\`}>
+                }\`}>
                   <h2 className="text-4xl font-bold text-white">{slide.title}</h2>
                 </div>
               </div>
@@ -183,11 +183,11 @@ export default function Carousel14Example() {
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={\\`w-2 h-2 rounded-full transition-all duration-300 \${
+              className={\`w-2 h-2 rounded-full transition-all duration-300 \${
                 currentSlide === index
                   ? 'bg-white w-8'
                   : 'bg-white/50 hover:bg-white/70'
-              }\\`}
+              }\`}
             />
           ))}
         </div>

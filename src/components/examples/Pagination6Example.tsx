@@ -12,22 +12,28 @@ export default function Pagination6Example() {
     if (currentPage < totalPages) setCurrentPage(currentPage + 1);
   };
 
+  const renderPageButton = (page: number) => (
+    <button
+      key={page}
+      onClick={() => setCurrentPage(page)}
+      className={`w-10 h-10 rounded transition-all duration-200 ${
+        currentPage === page
+          ? 'bg-blue-500 text-white'
+          : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/50'
+      }`}
+    >
+      {page}
+    </button>
+  );
+
   const renderPageNumbers = () => {
     const pages = [];
-    for (let i = 1; i <= totalPages; i++) {
-      pages.push(
-        <button
-          key={i}
-          onClick={() => setCurrentPage(i)}
-          className={`w-6 h-6 text-xs rounded transition-all duration-200 ${
-            currentPage === i
-              ? 'bg-blue-500 text-white'
-              : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/50'
-          }`}
-        >
-          {i}
-        </button>
-      );
+    const maxVisible = 5;
+    const start = Math.max(1, Math.min(currentPage - 2, totalPages - maxVisible + 1));
+    const end = Math.min(totalPages, start + maxVisible - 1);
+
+    for (let i = start; i <= end; i++) {
+      pages.push(renderPageButton(i));
     }
     return pages;
   };
@@ -67,22 +73,28 @@ export default function Pagination6Example() {
     if (currentPage < totalPages) setCurrentPage(currentPage + 1);
   };
 
+  const renderPageButton = (page: number) => (
+    <button
+      key={page}
+      onClick={() => setCurrentPage(page)}
+      className={\`w-10 h-10 rounded transition-all duration-200 \${
+        currentPage === page
+          ? 'bg-blue-500 text-white'
+          : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/50'
+      }\`}
+    >
+      {page}
+    </button>
+  );
+
   const renderPageNumbers = () => {
     const pages = [];
-    for (let i = 1; i <= totalPages; i++) {
-      pages.push(
-        <button
-          key={i}
-          onClick={() => setCurrentPage(i)}
-          className={\`w-6 h-6 text-xs rounded transition-all duration-200 \${
-            currentPage === i
-              ? 'bg-blue-500 text-white'
-              : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/50'
-          }\`}
-        >
-          {i}
-        </button>
-      );
+    const maxVisible = 5;
+    const start = Math.max(1, Math.min(currentPage - 2, totalPages - maxVisible + 1));
+    const end = Math.min(totalPages, start + maxVisible - 1);
+
+    for (let i = start; i <= end; i++) {
+      pages.push(renderPageButton(i));
     }
     return pages;
   };

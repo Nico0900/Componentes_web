@@ -9,6 +9,7 @@ interface ComponentCardProps {
   category?: string;
   technologies?: string[];
   children?: React.ReactNode;
+  gridSize?: 'normal' | 'wide' | 'tall' | 'large';
 }
 
 interface ToastState {
@@ -17,20 +18,189 @@ interface ToastState {
   type: 'success' | 'error';
 }
 
-// Tech Icon Component for Cards (grayscale version)
-function TechIconSmall({ name }: { name: string }) {
-  const iconClass = "w-5 h-5 opacity-60 grayscale";
+// Category Icon Component for Cards (colorful version)
+function CategoryIcon({ category }: { category: string }) {
+  const iconClass = "w-6 h-6";
 
-  switch (name) {
-    case 'HTML + CSS':
+  switch (category) {
+    case 'Buttons':
       return (
-        <svg className={iconClass} viewBox="0 0 452 520">
-          <path fill="#E34F26" d="M41 460L0 0h451l-41 460-185 52"/>
-          <path fill="#EF652A" d="M226 472l149-41 35-394H226"/>
-          <path fill="#EBEBEB" d="M226 208h-75l-5-58h80V94H84l15 171h127zm0 147l-64-17-4-45h-56l7 89 117 32z"/>
-          <path fill="#FFF" d="M226 265h69l-7 73-62 17v59l115-32 16-174H226zm0-171v56h136l5-56z"/>
+        <svg className={iconClass} viewBox="0 0 24 24" fill="none">
+          <rect x="4" y="9" width="16" height="6" rx="2" fill="#3b82f6" stroke="#60a5fa" strokeWidth="1.5"/>
+          <circle cx="8" cy="12" r="1" fill="white"/>
         </svg>
       );
+    case 'Cards':
+      return (
+        <svg className={iconClass} viewBox="0 0 24 24" fill="none">
+          <rect x="4" y="5" width="16" height="14" rx="2" fill="#8b5cf6" stroke="#a78bfa" strokeWidth="1.5"/>
+          <line x1="6" y1="9" x2="18" y2="9" stroke="#c4b5fd" strokeWidth="1.5"/>
+          <circle cx="7" cy="7" r="0.5" fill="#e9d5ff"/>
+          <circle cx="9" cy="7" r="0.5" fill="#e9d5ff"/>
+        </svg>
+      );
+    case 'Alerts':
+      return (
+        <svg className={iconClass} viewBox="0 0 24 24" fill="none">
+          <path d="M12 2L2 20h20L12 2z" fill="#f59e0b" stroke="#fbbf24" strokeWidth="1.5"/>
+          <line x1="12" y1="10" x2="12" y2="14" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+          <circle cx="12" cy="17" r="0.8" fill="white"/>
+        </svg>
+      );
+    case 'Badges':
+      return (
+        <svg className={iconClass} viewBox="0 0 24 24" fill="none">
+          <rect x="4" y="10" width="16" height="4" rx="2" fill="#10b981" stroke="#34d399" strokeWidth="1.5"/>
+          <circle cx="8" cy="12" r="1" fill="white"/>
+        </svg>
+      );
+    case 'Inputs':
+      return (
+        <svg className={iconClass} viewBox="0 0 24 24" fill="none">
+          <rect x="3" y="8" width="18" height="8" rx="2" fill="#6366f1" stroke="#818cf8" strokeWidth="1.5"/>
+          <line x1="6" y1="12" x2="6.5" y2="12" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+        </svg>
+      );
+    case 'Loading':
+      return (
+        <svg className={iconClass} viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="8" stroke="#ec4899" strokeWidth="2" strokeDasharray="4 4" fill="none"/>
+          <circle cx="12" cy="4" r="2" fill="#f472b6"/>
+        </svg>
+      );
+    case 'Modals':
+      return (
+        <svg className={iconClass} viewBox="0 0 24 24" fill="none">
+          <rect x="5" y="6" width="14" height="12" rx="2" fill="#0ea5e9" stroke="#38bdf8" strokeWidth="1.5"/>
+          <rect x="7" y="4" width="10" height="2" rx="1" fill="#7dd3fc"/>
+          <circle cx="17" cy="8" r="1" fill="white"/>
+        </svg>
+      );
+    case 'Navs':
+      return (
+        <svg className={iconClass} viewBox="0 0 24 24" fill="none">
+          <rect x="3" y="5" width="18" height="3" rx="1" fill="#8b5cf6"/>
+          <rect x="3" y="11" width="10" height="2" rx="1" fill="#a78bfa"/>
+          <rect x="3" y="16" width="14" height="2" rx="1" fill="#c4b5fd"/>
+        </svg>
+      );
+    case 'Tables':
+      return (
+        <svg className={iconClass} viewBox="0 0 24 24" fill="none">
+          <rect x="4" y="5" width="16" height="14" rx="1" stroke="#06b6d4" strokeWidth="1.5" fill="none"/>
+          <line x1="4" y1="9" x2="20" y2="9" stroke="#22d3ee" strokeWidth="1.5"/>
+          <line x1="12" y1="9" x2="12" y2="19" stroke="#22d3ee" strokeWidth="1.5"/>
+        </svg>
+      );
+    case 'Forms':
+      return (
+        <svg className={iconClass} viewBox="0 0 24 24" fill="none">
+          <rect x="5" y="4" width="14" height="16" rx="2" fill="#6366f1" stroke="#818cf8" strokeWidth="1.5"/>
+          <line x1="8" y1="8" x2="16" y2="8" stroke="#c7d2fe" strokeWidth="1.5" strokeLinecap="round"/>
+          <line x1="8" y1="12" x2="16" y2="12" stroke="#c7d2fe" strokeWidth="1.5" strokeLinecap="round"/>
+          <line x1="8" y1="16" x2="13" y2="16" stroke="#c7d2fe" strokeWidth="1.5" strokeLinecap="round"/>
+        </svg>
+      );
+    case 'Accordions':
+      return (
+        <svg className={iconClass} viewBox="0 0 24 24" fill="none">
+          <rect x="4" y="5" width="16" height="3" rx="1" fill="#14b8a6"/>
+          <rect x="4" y="10" width="16" height="3" rx="1" fill="#2dd4bf"/>
+          <rect x="4" y="16" width="16" height="3" rx="1" fill="#5eead4"/>
+          <path d="M18 7L16 7" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
+        </svg>
+      );
+    case 'Carousels':
+      return (
+        <svg className={iconClass} viewBox="0 0 24 24" fill="none">
+          <rect x="6" y="6" width="12" height="12" rx="2" fill="#f59e0b" stroke="#fbbf24" strokeWidth="1.5"/>
+          <path d="M10 12l4-3v6l-4-3z" fill="white"/>
+          <circle cx="4" cy="12" r="1.5" fill="#fed7aa"/>
+          <circle cx="20" cy="12" r="1.5" fill="#fed7aa"/>
+        </svg>
+      );
+    case 'Feedback':
+      return (
+        <svg className={iconClass} viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="8" fill="#10b981" stroke="#34d399" strokeWidth="1.5"/>
+          <path d="M8 12l2 2l4-4" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      );
+    case 'Notifications':
+      return (
+        <svg className={iconClass} viewBox="0 0 24 24" fill="none">
+          <path d="M12 5C10.3 5 9 6.3 9 8v3c0 1-1 2-2 2v1h10v-1c-1 0-2-1-2-2V8c0-1.7-1.3-3-3-3z" fill="#ef4444" stroke="#f87171" strokeWidth="1.5"/>
+          <circle cx="12" cy="17" r="1" fill="#fca5a5"/>
+          <circle cx="16" cy="7" r="2" fill="#dc2626"/>
+        </svg>
+      );
+    case 'Paginations':
+      return (
+        <svg className={iconClass} viewBox="0 0 24 24" fill="none">
+          <rect x="4" y="10" width="3" height="4" rx="1" fill="#3b82f6"/>
+          <rect x="9" y="10" width="3" height="4" rx="1" fill="#60a5fa"/>
+          <rect x="14" y="10" width="3" height="4" rx="1" fill="#93c5fd"/>
+          <circle cx="19" cy="12" r="1" fill="#dbeafe"/>
+        </svg>
+      );
+    case 'Search':
+      return (
+        <svg className={iconClass} viewBox="0 0 24 24" fill="none">
+          <circle cx="10" cy="10" r="6" stroke="#8b5cf6" strokeWidth="2" fill="none"/>
+          <line x1="14.5" y1="14.5" x2="19" y2="19" stroke="#a78bfa" strokeWidth="2" strokeLinecap="round"/>
+          <circle cx="10" cy="10" r="3" fill="#c4b5fd" opacity="0.5"/>
+        </svg>
+      );
+    case 'Stats':
+      return (
+        <svg className={iconClass} viewBox="0 0 24 24" fill="none">
+          <rect x="5" y="14" width="3" height="5" rx="1" fill="#06b6d4"/>
+          <rect x="10" y="10" width="3" height="9" rx="1" fill="#22d3ee"/>
+          <rect x="15" y="6" width="3" height="13" rx="1" fill="#67e8f9"/>
+        </svg>
+      );
+    case 'Timelines':
+      return (
+        <svg className={iconClass} viewBox="0 0 24 24" fill="none">
+          <line x1="7" y1="6" x2="7" y2="18" stroke="#a855f7" strokeWidth="2"/>
+          <circle cx="7" cy="6" r="2" fill="#c084fc"/>
+          <circle cx="7" cy="12" r="2" fill="#d8b4fe"/>
+          <circle cx="7" cy="18" r="2" fill="#e9d5ff"/>
+          <line x1="9" y1="6" x2="17" y2="6" stroke="#e9d5ff" strokeWidth="1.5"/>
+          <line x1="9" y1="12" x2="17" y2="12" stroke="#e9d5ff" strokeWidth="1.5"/>
+        </svg>
+      );
+    case 'Tooltips':
+      return (
+        <svg className={iconClass} viewBox="0 0 24 24" fill="none">
+          <rect x="6" y="4" width="12" height="7" rx="1.5" fill="#64748b" stroke="#94a3b8" strokeWidth="1.5"/>
+          <path d="M12 11L10 13h4l-2-2z" fill="#94a3b8"/>
+          <circle cx="12" cy="7" r="1.5" fill="white"/>
+        </svg>
+      );
+    case 'UI Elements':
+      return (
+        <svg className={iconClass} viewBox="0 0 24 24" fill="none">
+          <rect x="5" y="5" width="6" height="6" rx="1" fill="#f43f5e"/>
+          <rect x="13" y="5" width="6" height="6" rx="1" fill="#fb7185"/>
+          <rect x="5" y="13" width="6" height="6" rx="1" fill="#fda4af"/>
+          <rect x="13" y="13" width="6" height="6" rx="1" fill="#fecdd3"/>
+        </svg>
+      );
+    default:
+      return (
+        <svg className={iconClass} viewBox="0 0 24 24" fill="none">
+          <rect x="5" y="5" width="14" height="14" rx="2" fill="#6b7280" stroke="#9ca3af" strokeWidth="1.5"/>
+        </svg>
+      );
+  }
+}
+
+// Tech Icon Component for Cards (colorful version)
+function TechIconSmall({ name }: { name: string }) {
+  const iconClass = "w-5 h-5 opacity-80";
+
+  switch (name) {
     case 'JavaScript':
       return (
         <svg className={iconClass} viewBox="0 0 256 256">
@@ -98,10 +268,19 @@ export default function ComponentCard({
   code,
   category = 'General',
   technologies = [],
-  children
+  children,
+  gridSize = 'normal'
 }: ComponentCardProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [toast, setToast] = useState<ToastState>({ show: false, message: '', type: 'success' });
+
+  // Dynamic height based on grid size
+  const heightClasses = {
+    'normal': 'min-h-[380px]',
+    'wide': 'min-h-[380px]',
+    'tall': 'min-h-[780px]', // Double height for tall
+    'large': 'min-h-[780px]', // Double height for large
+  }[gridSize];
 
   const handleDownload = () => {
     const blob = new Blob([code], { type: 'text/plain' });
@@ -127,26 +306,39 @@ export default function ComponentCard({
 
   return (
     <>
-      <div className="group relative bg-slate-900/30 backdrop-blur-xl rounded-2xl border border-slate-800/50 hover:border-blue-500/30 transition-all duration-500 overflow-hidden hover:shadow-2xl hover:shadow-blue-500/10 min-h-[400px] hover:scale-[1.02] cursor-pointer">
+      <div
+        onClick={() => setIsModalOpen(true)}
+        className="group relative bg-slate-900/30 backdrop-blur-xl rounded-3xl border border-slate-800/50 hover:border-blue-500/30 transition-all duration-300 overflow-hidden hover:shadow-2xl hover:shadow-blue-500/10 cursor-pointer flex flex-col"
+      >
         {/* Glow effect on hover */}
-        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
           <div className="absolute inset-0 bg-linear-to-br from-blue-500/5 via-transparent to-purple-500/5" />
         </div>
 
+        {/* Category Badge - Top Right */}
+        <div className="absolute top-4 right-4 z-20 pointer-events-none">
+          <div
+            className="p-2.5 bg-slate-800/90 backdrop-blur-sm border border-slate-700/50 rounded-lg shadow-lg"
+            title={category}
+          >
+            <CategoryIcon category={category} />
+          </div>
+        </div>
+
         {/* Preview Area */}
-        <div className="p-10 h-full flex items-center justify-center relative z-10">
-          <div className="w-full transform group-hover:scale-105 transition-transform duration-500">
+        <div className={`p-12 flex-1 flex items-center justify-center relative z-10 ${heightClasses}`}>
+          <div className="w-full">
             {children}
           </div>
         </div>
 
         {/* Technologies Badge - Bottom Left */}
         {technologies.length > 0 && (
-          <div className="absolute bottom-3 left-3 flex gap-2 z-20">
+          <div className="absolute bottom-4 left-4 flex gap-2 z-20 pointer-events-none">
             {technologies.map((tech) => (
               <div
                 key={tech}
-                className="p-1.5 bg-slate-800/80 backdrop-blur-sm border border-slate-700/50 rounded-md hover:bg-slate-700/80 hover:scale-110 transition-all duration-300"
+                className="p-2 bg-slate-800/90 backdrop-blur-sm border border-slate-700/50 rounded-lg shadow-lg"
                 title={tech}
               >
                 <TechIconSmall name={tech} />
@@ -155,39 +347,19 @@ export default function ComponentCard({
           </div>
         )}
 
-        {/* Info Overlay - Appears on Hover */}
-        <div className="absolute inset-x-0 bottom-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out bg-linear-to-t from-slate-900/95 via-slate-900/90 to-transparent backdrop-blur-xl px-6 py-6 pt-20 z-20">
-          {/* Title & Category */}
-          <div className="mb-4">
-            <div className="flex items-center justify-between mb-2">
-              <h3 className="text-base font-semibold text-slate-100 tracking-tight">{title}</h3>
-              <span className="text-xs text-slate-500 font-medium uppercase tracking-wider">{category}</span>
-            </div>
-            <p className="text-slate-400 text-sm leading-relaxed line-clamp-2">{description}</p>
-          </div>
-
-          {/* Actions */}
-          <div className="flex gap-2">
-            <button
-              onClick={() => setIsModalOpen(true)}
-              className="flex-1 bg-blue-600/80 hover:bg-blue-600 text-white text-sm py-2.5 px-4 rounded-xl transition-all duration-300 shadow-lg shadow-blue-900/30 hover:shadow-blue-900/50 font-medium transform hover:scale-105"
-            >
-              Ver Más
-            </button>
-            <button
-              onClick={handleCopyCode}
-              className="flex-1 bg-slate-800/60 hover:bg-slate-700/70 text-slate-300 hover:text-white text-sm py-2.5 px-4 rounded-xl transition-all duration-300 border border-slate-700/30 hover:border-blue-500/30 font-medium transform hover:scale-105"
-            >
-              Copiar
-            </button>
-            <button
-              onClick={handleDownload}
-              className="flex-1 bg-slate-800/60 hover:bg-slate-700/70 text-slate-300 hover:text-white text-sm py-2.5 px-4 rounded-xl transition-all duration-300 border border-slate-700/30 hover:border-blue-500/30 font-medium transform hover:scale-105"
-            >
-              Descargar
-            </button>
-          </div>
-        </div>
+        {/* Download Button - Bottom Right */}
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            handleDownload();
+          }}
+          className="absolute bottom-4 right-4 z-20 p-3 bg-slate-800/90 hover:bg-slate-700/90 backdrop-blur-sm border border-slate-700/50 rounded-lg transition-all duration-300 shadow-lg hover:scale-110 group/btn"
+          title="Descargar componente"
+        >
+          <svg className="w-5 h-5 text-slate-300 group-hover/btn:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+          </svg>
+        </button>
       </div>
 
       {/* Modal */}

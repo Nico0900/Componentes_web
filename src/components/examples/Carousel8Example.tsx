@@ -128,7 +128,7 @@ export default function Carousel8Example() {
               key={\`\${slide.id}-\${index}\`}
               className="min-w-full h-64 flex items-center justify-center"
             >
-              <div className={\\`w-full h-full bg-gradient-to-br \${slide.color} flex items-center justify-center\\`}>
+              <div className={\`w-full h-full bg-gradient-to-br \${slide.color} flex items-center justify-center\`}>
                 <h2 className="text-4xl font-bold text-white">{slide.title}</h2>
               </div>
             </div>

@@ -212,7 +212,7 @@ export default function Carousel15Example() {
               className="min-w-full h-96 flex items-center justify-center relative"
             >
               {/* Video Placeholder */}
-              <div className={\\`w-full h-full bg-gradient-to-br \${video.color} flex items-center justify-center relative\\`}>
+              <div className={\`w-full h-full bg-gradient-to-br \${video.color} flex items-center justify-center relative\`}>
                 {/* Play Overlay */}
                 {isPlaying !== index && (
                   <button
@@ -283,13 +283,13 @@ export default function Carousel15Example() {
                 setCurrentSlide(index);
                 setIsPlaying(null);
               }}
-              className={\\`w-16 h-12 rounded overflow-hidden transition-all duration-300 \${
+              className={\`w-16 h-12 rounded overflow-hidden transition-all duration-300 \${
                 currentSlide === index
                   ? 'ring-2 ring-white scale-110'
                   : 'opacity-60 hover:opacity-100'
-              }\\`}
+              }\`}
             >
-              <div className={\\`w-full h-full bg-gradient-to-br \${video.color} flex items-center justify-center\\`}>
+              <div className={\`w-full h-full bg-gradient-to-br \${video.color} flex items-center justify-center\`}>
                 <span className="text-xs font-bold text-white">{index + 1}</span>
               </div>
             </button>

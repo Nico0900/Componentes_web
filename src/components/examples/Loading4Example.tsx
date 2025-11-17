@@ -72,7 +72,7 @@ export const loading4Code = `export default function Loading4Example() {
   return (
     <div className="flex flex-col gap-8 items-center justify-center p-8 w-full max-w-md">
       <style>
-        {\`
+        {\\\`
           @keyframes progress {
             0% { transform: translateX(-100%); }
             100% { transform: translateX(400%); }
@@ -93,7 +93,7 @@ export const loading4Code = `export default function Loading4Example() {
             background: linear-gradient(90deg, transparent, #8b5cf6, transparent);
             animation: progress 1.5s infinite;
           }
-        \`}
+        \\\`}
       </style>
 
       {/* Basic Progress */}
@@ -119,11 +119,11 @@ export const loading4Code = `export default function Loading4Example() {
       <div className="w-full">
         <div className="progress-bar h-2 w-full" style={{ backgroundColor: 'rgba(59, 130, 246, 0.2)' }}>
           <style>
-            {\`
+            {\\\`
               .progress-bar::after {
                 background: linear-gradient(90deg, transparent, #3b82f6, transparent);
               }
-            \`}
+            \\\`}
           </style>
         </div>
       </div>

@@ -50,11 +50,11 @@ export default function Form3Example() {
         <form onSubmit={handleSubmit} className="space-y-5">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">
+              <label htmlFor="name-form3" className="block text-sm font-medium text-slate-300 mb-2">
                 Your Name
               </label>
               <input
-                id="name"
+                id="name-form3"
                 name="name"
                 type="text"
                 value={formData.name}

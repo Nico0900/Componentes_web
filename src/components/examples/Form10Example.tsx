@@ -101,11 +101,11 @@ export default function Form10Example() {
             </div>
 
             <div>
-              <label htmlFor="location" className="block text-sm font-medium text-slate-300 mb-2">
+              <label htmlFor="location-form10" className="block text-sm font-medium text-slate-300 mb-2">
                 Location
               </label>
               <input
-                id="location"
+                id="location-form10"
                 name="location"
                 type="text"
                 value={filters.location}

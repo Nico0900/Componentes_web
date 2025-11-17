@@ -32,15 +32,14 @@ export default function Modal8Example() {
             onClick={() => openImage(index)}
             className="relative w-24 h-24 rounded-lg overflow-hidden border-2 border-slate-700 hover:border-pink-500 transition-colors"
           >
-            <img src={src} alt={\`Thumbnail \${index + 1}\`} className="w-full h-full object-cover" />
+            <img src={src} alt={`Thumbnail ${index + 1}`} className="w-full h-full object-cover" />
           </button>
         ))}
       </div>
 
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/95 animate-fadeIn">
+        <div className="absolute inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/10 animate-fadeIn">
           <button
-            onClick={() => setIsOpen(false)}
             className="absolute top-4 right-4 z-10 p-2 bg-slate-800/80 hover:bg-slate-700 text-white rounded-lg transition-colors"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +59,7 @@ export default function Modal8Example() {
           <div className="relative max-w-5xl max-h-[90vh] animate-scaleIn">
             <img
               src={images[selectedImage]}
-              alt={\`Image \${selectedImage + 1}\`}
+              alt={`Image ${selectedImage + 1}`}
               className="max-w-full max-h-[90vh] object-contain rounded-lg"
             />
 
@@ -83,7 +82,7 @@ export default function Modal8Example() {
   );
 }
 
-export const modal8Code = \`import { useState } from 'react';
+export const modal8Code = `import { useState } from 'react';
 
 export default function Modal8Example() {
   const [isOpen, setIsOpen] = useState(false);
@@ -103,14 +102,14 @@ export default function Modal8Example() {
       <div className="flex gap-4">
         {images.map((src, i) => (
           <button key={i} onClick={() => openImage(i)} className="w-24 h-24 rounded-lg border-2 border-slate-700 hover:border-pink-500">
-            <img src={src} alt={\\\`Thumb \\\${i + 1}\\\`} className="w-full h-full object-cover" />
+            <img src={src} alt={\`Thumb \${i + 1}\`} className="w-full h-full object-cover" />
           </button>
         ))}
       </div>
 
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/95">
-          <button onClick={() => setIsOpen(false)} className="absolute top-4 right-4 text-white">✕</button>
+        <div className="absolute inset-0 z-50 flex items-center justify-center bg-slate-950/10">
+          <button  className="absolute top-4 right-4 text-white">✕</button>
           <button onClick={prevImage} className="absolute left-4 text-white">←</button>
           <img src={images[selectedImage]} alt="Image" className="max-w-full max-h-[90vh] rounded-lg" />
           <button onClick={nextImage} className="absolute right-4 text-white">→</button>
@@ -118,4 +117,4 @@ export default function Modal8Example() {
       )}
     </div>
   );
-}\`;
+}`;

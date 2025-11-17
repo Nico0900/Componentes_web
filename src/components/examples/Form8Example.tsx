@@ -151,11 +151,11 @@ export default function Form8Example() {
           </div>
 
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-slate-300 mb-2">
+            <label htmlFor="password-form8" className="block text-sm font-medium text-slate-300 mb-2">
               Password
             </label>
             <input
-              id="password"
+              id="password-form8"
               name="password"
               type="password"
               value={formData.password}

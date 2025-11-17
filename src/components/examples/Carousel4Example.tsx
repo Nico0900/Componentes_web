@@ -102,11 +102,11 @@ export default function Carousel4Example() {
         {slides.map((slide, index) => (
           <div
             key={slide.id}
-            className={\\`absolute inset-0 transition-opacity duration-1000 ease-in-out \${
+            className={\`absolute inset-0 transition-opacity duration-1000 ease-in-out \${
               currentSlide === index ? 'opacity-100' : 'opacity-0'
-            }\\`}
+            }\`}
           >
-            <div className={\\`w-full h-full bg-gradient-to-br \${slide.color} flex flex-col items-center justify-center\\`}>
+            <div className={\`w-full h-full bg-gradient-to-br \${slide.color} flex flex-col items-center justify-center\`}>
               <h2 className="text-5xl font-bold text-white mb-2">{slide.title}</h2>
               <p className="text-xl text-white/80">{slide.subtitle}</p>
             </div>
@@ -139,11 +139,11 @@ export default function Carousel4Example() {
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={\\`w-2 h-2 rounded-full transition-all duration-300 \${
+              className={\`w-2 h-2 rounded-full transition-all duration-300 \${
                 currentSlide === index
                   ? 'bg-white w-8'
                   : 'bg-white/50 hover:bg-white/70'
-              }\\`}
+              }\`}
             />
           ))}
         </div>

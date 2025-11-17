@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export default function Modal10Example() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [currentStep, setCurrentStep] = useState(1);
 
   const nextStep = () => {
@@ -19,26 +19,18 @@ export default function Modal10Example() {
   };
 
   return (
-    <div className="flex justify-center items-center p-6">
-      <button
-        onClick={() => setIsOpen(true)}
-        className="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-lg transition-colors duration-200"
-      >
-        Open Multi-Step Wizard
-      </button>
-
+    <div className="flex justify-center items-center p-6 relative min-h-[400px]">
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 animate-fadeIn">
+        <div className="absolute inset-0 z-50 flex items-center justify-center p-4 animate-fadeIn">
           <div
-            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
-            onClick={() => setIsOpen(false)}
+            className="absolute inset-0 bg-slate-950/10"
+            
           />
 
           <div className="relative bg-slate-800 rounded-2xl shadow-2xl max-w-2xl w-full border border-slate-700 animate-slideUp">
             <div className="px-6 py-4 border-b border-slate-700 flex items-center justify-between">
               <h3 className="text-xl font-bold text-slate-100">Setup Wizard</h3>
               <button
-                onClick={() => setIsOpen(false)}
                 className="text-slate-400 hover:text-slate-200 transition-colors"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -53,13 +45,13 @@ export default function Modal10Example() {
                   <div key={step} className="flex items-center flex-1">
                     <div className="flex flex-col items-center flex-1">
                       <div
-                        className={\`w-10 h-10 rounded-full flex items-center justify-center font-semibold transition-colors \${
+                        className={`w-10 h-10 rounded-full flex items-center justify-center font-semibold transition-colors ${
                           step === currentStep
                             ? 'bg-purple-600 text-white'
                             : step < currentStep
                             ? 'bg-purple-600 text-white'
                             : 'bg-slate-700 text-slate-400'
-                        }\`}
+                        }`}
                       >
                         {step < currentStep ? (
                           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -73,9 +65,9 @@ export default function Modal10Example() {
                     </div>
                     {step < 3 && (
                       <div
-                        className={\`h-1 flex-1 mx-2 rounded transition-colors \${
+                        className={`h-1 flex-1 mx-2 rounded transition-colors ${
                           step < currentStep ? 'bg-purple-600' : 'bg-slate-700'
-                        }\`}
+                        }`}
                       />
                     )}
                   </div>
@@ -173,10 +165,10 @@ export default function Modal10Example() {
   );
 }
 
-export const modal10Code = \`import { useState } from 'react';
+export const modal10Code = `import { useState } from 'react';
 
 export default function Modal10Example() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [currentStep, setCurrentStep] = useState(1);
 
   const nextStep = () => { if (currentStep < 3) setCurrentStep(currentStep + 1); };
@@ -184,20 +176,16 @@ export default function Modal10Example() {
   const handleComplete = () => { alert('Completed!'); setIsOpen(false); setCurrentStep(1); };
 
   return (
-    <div className="flex justify-center items-center p-6">
-      <button onClick={() => setIsOpen(true)} className="px-6 py-3 bg-purple-600 text-white rounded-lg">
-        Open Multi-Step Wizard
-      </button>
-
+    <div className="flex justify-center items-center p-6 relative min-h-[400px]">
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-          <div className="absolute inset-0 bg-black/60" onClick={() => setIsOpen(false)} />
+        <div className="absolute inset-0 z-50 flex items-center justify-center p-4">
+          <div className="absolute inset-0 bg-slate-900/80"  />
           <div className="relative bg-slate-800 rounded-2xl max-w-2xl w-full border border-slate-700">
             <h3 className="px-6 py-4 text-xl font-bold text-slate-100 border-b border-slate-700">Setup Wizard</h3>
             <div className="p-6">
               <div className="flex items-center justify-between mb-8">
                 {[1, 2, 3].map((step) => (
-                  <div key={step} className={\\\`w-10 h-10 rounded-full flex items-center justify-center \\\${step <= currentStep ? 'bg-purple-600 text-white' : 'bg-slate-700 text-slate-400'}\\\`}>
+                  <div key={step} className={\`w-10 h-10 rounded-full flex items-center justify-center \${step <= currentStep ? 'bg-purple-600 text-white' : 'bg-slate-700 text-slate-400'}\`}>
                     {step}
                   </div>
                 ))}
@@ -217,4 +205,4 @@ export default function Modal10Example() {
       )}
     </div>
   );
-}\`;
+}`;

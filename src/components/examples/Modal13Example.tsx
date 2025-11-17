@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export default function Modal13Example() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
 
   const searchResults = [
@@ -16,19 +16,9 @@ export default function Modal13Example() {
   );
 
   return (
-    <div className="flex justify-center items-center p-6">
-      <button
-        onClick={() => setIsOpen(true)}
-        className="px-6 py-3 bg-fuchsia-600 hover:bg-fuchsia-700 text-white font-medium rounded-lg transition-colors duration-200 flex items-center gap-2"
-      >
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-        </svg>
-        Open Search
-      </button>
-
+    <div className="flex justify-center items-center p-6 relative min-h-[400px]">
       {isOpen && (
-        <div className="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-sm animate-fadeIn">
+        <div className="absolute inset-0 z-50 bg-slate-950/10 animate-fadeIn">
           <div className="flex items-start justify-center p-4 pt-20">
             <div className="w-full max-w-2xl bg-slate-800 rounded-2xl shadow-2xl border border-slate-700 animate-slideUp">
               <div className="p-6 border-b border-slate-700">
@@ -45,7 +35,6 @@ export default function Modal13Example() {
                     className="flex-1 bg-transparent text-lg text-slate-100 placeholder-slate-400 outline-none"
                   />
                   <button
-                    onClick={() => setIsOpen(false)}
                     className="text-slate-400 hover:text-slate-200 transition-colors"
                   >
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -62,7 +51,7 @@ export default function Modal13Example() {
                       <button
                         key={result.id}
                         onClick={() => {
-                          alert(\`Selected: \${result.title}\`);
+                          alert(`Selected: ${result.title}`);
                           setIsOpen(false);
                         }}
                         className="w-full flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors text-left"
@@ -98,10 +87,10 @@ export default function Modal13Example() {
   );
 }
 
-export const modal13Code = \`import { useState } from 'react';
+export const modal13Code = `import { useState } from 'react';
 
 export default function Modal13Example() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
 
   const searchResults = [
@@ -110,16 +99,9 @@ export default function Modal13Example() {
   ].filter(item => searchQuery === '' || item.title.toLowerCase().includes(searchQuery.toLowerCase()));
 
   return (
-    <div className="flex justify-center items-center p-6">
-      <button onClick={() => setIsOpen(true)} className="px-6 py-3 bg-fuchsia-600 text-white rounded-lg flex items-center gap-2">
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-        </svg>
-        Open Search
-      </button>
-
+    <div className="flex justify-center items-center p-6 relative min-h-[400px]">
       {isOpen && (
-        <div className="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-sm">
+        <div className="absolute inset-0 z-50 bg-slate-950/10">
           <div className="flex items-start justify-center p-4 pt-20">
             <div className="w-full max-w-2xl bg-slate-800 rounded-2xl shadow-2xl border border-slate-700">
               <div className="p-6 border-b border-slate-700">
@@ -128,12 +110,12 @@ export default function Modal13Example() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
                   <input type="text" autoFocus value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Search..." className="flex-1 bg-transparent text-lg text-slate-100 outline-none" />
-                  <button onClick={() => setIsOpen(false)} className="text-slate-400">✕</button>
+                  <button  className="text-slate-400">✕</button>
                 </div>
               </div>
               <div className="max-h-96 overflow-auto p-2">
                 {searchResults.map((result) => (
-                  <button key={result.id} onClick={() => setIsOpen(false)} className="w-full p-3 rounded-lg hover:bg-slate-700 text-left">
+                  <button key={result.id}  className="w-full p-3 rounded-lg hover:bg-slate-700 text-left">
                     <div className="text-sm text-slate-100">{result.title}</div>
                     <div className="text-xs text-slate-400">{result.category}</div>
                   </button>
@@ -145,4 +127,4 @@ export default function Modal13Example() {
       )}
     </div>
   );
-}\`;
+}`;

@@ -1,17 +1,10 @@
 import { useState } from 'react';
 
 export default function Modal12Example() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <div className="flex justify-center items-center p-6">
-      <button
-        onClick={() => setIsOpen(true)}
-        className="px-6 py-3 bg-sky-600 hover:bg-sky-700 text-white font-medium rounded-lg transition-colors duration-200"
-      >
-        Show Notification
-      </button>
-
+    <div className="flex justify-center items-center p-6 relative min-h-[400px]">
       {isOpen && (
         <div className="fixed top-4 right-4 z-50 max-w-sm w-full animate-slideInRight">
           <div className="bg-slate-800 border border-slate-700 rounded-lg shadow-2xl p-4">
@@ -26,7 +19,6 @@ export default function Modal12Example() {
                 <div className="flex items-start justify-between mb-1">
                   <h4 className="text-sm font-semibold text-slate-100">New Notification</h4>
                   <button
-                    onClick={() => setIsOpen(false)}
                     className="text-slate-400 hover:text-slate-200 transition-colors ml-2"
                   >
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -39,13 +31,11 @@ export default function Modal12Example() {
                 </p>
                 <div className="flex gap-2">
                   <button
-                    onClick={() => setIsOpen(false)}
                     className="text-xs px-3 py-1.5 bg-sky-600 hover:bg-sky-700 text-white rounded transition-colors"
                   >
                     View
                   </button>
                   <button
-                    onClick={() => setIsOpen(false)}
                     className="text-xs px-3 py-1.5 bg-slate-700 hover:bg-slate-600 text-slate-200 rounded transition-colors"
                   >
                     Dismiss
@@ -64,17 +54,13 @@ export default function Modal12Example() {
   );
 }
 
-export const modal12Code = \`import { useState } from 'react';
+export const modal12Code = `import { useState } from 'react';
 
 export default function Modal12Example() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <div className="flex justify-center items-center p-6">
-      <button onClick={() => setIsOpen(true)} className="px-6 py-3 bg-sky-600 text-white rounded-lg">
-        Show Notification
-      </button>
-
+    <div className="flex justify-center items-center p-6 relative min-h-[400px]">
       {isOpen && (
         <div className="fixed top-4 right-4 z-50 max-w-sm w-full">
           <div className="bg-slate-800 border border-slate-700 rounded-lg shadow-2xl p-4">
@@ -87,12 +73,12 @@ export default function Modal12Example() {
               <div className="flex-1">
                 <div className="flex items-start justify-between mb-1">
                   <h4 className="text-sm font-semibold text-slate-100">New Notification</h4>
-                  <button onClick={() => setIsOpen(false)} className="text-slate-400 hover:text-slate-200">✕</button>
+                  <button  className="text-slate-400 hover:text-slate-200">✕</button>
                 </div>
                 <p className="text-sm text-slate-400 mb-3">You have a new message!</p>
                 <div className="flex gap-2">
-                  <button onClick={() => setIsOpen(false)} className="text-xs px-3 py-1.5 bg-sky-600 text-white rounded">View</button>
-                  <button onClick={() => setIsOpen(false)} className="text-xs px-3 py-1.5 bg-slate-700 text-slate-200 rounded">Dismiss</button>
+                  <button  className="text-xs px-3 py-1.5 bg-sky-600 text-white rounded">View</button>
+                  <button  className="text-xs px-3 py-1.5 bg-slate-700 text-slate-200 rounded">Dismiss</button>
                 </div>
               </div>
             </div>
@@ -101,4 +87,4 @@ export default function Modal12Example() {
       )}
     </div>
   );
-}\`;
+}`;

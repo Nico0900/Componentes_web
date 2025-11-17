@@ -115,7 +115,7 @@ export default function Carousel3Example() {
               key={slide.id}
               className="min-w-full h-80 flex items-center justify-center"
             >
-              <div className={\\`w-full h-full bg-gradient-to-br \${slide.color} flex items-center justify-center\\`}>
+              <div className={\`w-full h-full bg-gradient-to-br \${slide.color} flex items-center justify-center\`}>
                 <h2 className="text-5xl font-bold text-white">{slide.title}</h2>
               </div>
             </div>
@@ -148,13 +148,13 @@ export default function Carousel3Example() {
           <button
             key={slide.id}
             onClick={() => setCurrentSlide(index)}
-            className={\\`relative overflow-hidden rounded-lg transition-all duration-300 \${
+            className={\`relative overflow-hidden rounded-lg transition-all duration-300 \${
               currentSlide === index
                 ? 'ring-2 ring-blue-500 scale-110'
                 : 'opacity-60 hover:opacity-100'
-            }\\`}
+            }\`}
           >
-            <div className={\\`w-20 h-16 bg-gradient-to-br \${slide.color} flex items-center justify-center\\`}>
+            <div className={\`w-20 h-16 bg-gradient-to-br \${slide.color} flex items-center justify-center\`}>
               <span className="text-xs font-bold text-white">{index + 1}</span>
             </div>
           </button>

@@ -111,7 +111,7 @@ export default function Carousel9Example() {
               key={slide.id}
               className="min-w-full h-72 flex flex-col items-center justify-center p-8"
             >
-              <div className={\\`w-full h-full bg-gradient-to-br \${slide.color} rounded-xl flex flex-col items-center justify-center shadow-xl\\`}>
+              <div className={\`w-full h-full bg-gradient-to-br \${slide.color} rounded-xl flex flex-col items-center justify-center shadow-xl\`}>
                 <h2 className="text-5xl font-bold text-white mb-3">{slide.title}</h2>
                 <p className="text-xl text-white/80">{slide.description}</p>
               </div>
@@ -145,11 +145,11 @@ export default function Carousel9Example() {
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={\\`transition-all duration-300 rounded-full \${
+              className={\`transition-all duration-300 rounded-full \${
                 currentSlide === index
                   ? 'bg-gradient-to-r from-purple-500 to-pink-500 w-12 h-3'
                   : 'bg-white/40 hover:bg-white/60 w-3 h-3'
-              }\\`}
+              }\`}
             />
           ))}
         </div>

@@ -1,29 +1,21 @@
 import { useState } from 'react';
 
 export default function Modal6Example() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <div className="flex justify-center items-center p-6">
-      <button
-        onClick={() => setIsOpen(true)}
-        className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition-colors duration-200"
-      >
-        Open Sidebar Modal
-      </button>
-
+    <div className="flex justify-center items-center p-6 relative min-h-[400px]">
       {isOpen && (
-        <div className="fixed inset-0 z-50 animate-fadeIn">
+        <div className="absolute inset-0 z-50 animate-fadeIn">
           <div
-            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
-            onClick={() => setIsOpen(false)}
+            className="absolute inset-0 bg-slate-950/10"
+            
           />
 
           <div className="absolute right-0 top-0 h-full w-full max-w-md bg-slate-800 border-l border-slate-700 shadow-2xl animate-slideInRight overflow-auto">
             <div className="sticky top-0 bg-slate-800 border-b border-slate-700 px-6 py-4 flex items-center justify-between">
               <h3 className="text-xl font-bold text-slate-100">Sidebar Panel</h3>
               <button
-                onClick={() => setIsOpen(false)}
                 className="text-slate-400 hover:text-slate-200 transition-colors"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -69,13 +61,11 @@ export default function Modal6Example() {
             <div className="sticky bottom-0 bg-slate-800 border-t border-slate-700 p-6">
               <div className="flex gap-3">
                 <button
-                  onClick={() => setIsOpen(false)}
                   className="flex-1 px-4 py-2 bg-slate-700 hover:bg-slate-600 text-slate-200 rounded-lg transition-colors"
                 >
                   Cancel
                 </button>
                 <button
-                  onClick={() => setIsOpen(false)}
                   className="flex-1 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition-colors"
                 >
                   Save
@@ -89,20 +79,16 @@ export default function Modal6Example() {
   );
 }
 
-export const modal6Code = \`import { useState } from 'react';
+export const modal6Code = `import { useState } from 'react';
 
 export default function Modal6Example() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <div className="flex justify-center items-center p-6">
-      <button onClick={() => setIsOpen(true)} className="px-6 py-3 bg-indigo-600 text-white rounded-lg">
-        Open Sidebar Modal
-      </button>
-
+    <div className="flex justify-center items-center p-6 relative min-h-[400px]">
       {isOpen && (
-        <div className="fixed inset-0 z-50">
-          <div className="absolute inset-0 bg-black/60" onClick={() => setIsOpen(false)} />
+        <div className="absolute inset-0 z-50">
+          <div className="absolute inset-0 bg-slate-900/80"  />
           <div className="absolute right-0 top-0 h-full w-full max-w-md bg-slate-800 border-l border-slate-700 overflow-auto">
             <h3 className="p-6 text-xl font-bold text-slate-100 border-b border-slate-700">Sidebar Panel</h3>
             <div className="p-6">
@@ -113,4 +99,4 @@ export default function Modal6Example() {
       )}
     </div>
   );
-}\`;
+}`;

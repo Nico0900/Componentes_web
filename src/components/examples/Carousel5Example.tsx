@@ -117,7 +117,7 @@ export default function Carousel5Example() {
               key={slide.id}
               className="h-96 flex items-center justify-center flex-shrink-0"
             >
-              <div className={\\`w-full h-full bg-gradient-to-br \${slide.color} flex items-center justify-center\\`}>
+              <div className={\`w-full h-full bg-gradient-to-br \${slide.color} flex items-center justify-center\`}>
                 <h2 className="text-4xl font-bold text-white">{slide.title}</h2>
               </div>
             </div>
@@ -150,11 +150,11 @@ export default function Carousel5Example() {
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={\\`w-2 h-2 rounded-full transition-all duration-300 \${
+              className={\`w-2 h-2 rounded-full transition-all duration-300 \${
                 currentSlide === index
                   ? 'bg-white h-8'
                   : 'bg-white/50 hover:bg-white/70'
-              }\\`}
+              }\`}
             />
           ))}
         </div>

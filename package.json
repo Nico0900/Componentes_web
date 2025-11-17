@@ -18,5 +18,8 @@
     "react-dom": "^19.2.0",
     "react-masonry-css": "^1.0.16",
     "tailwindcss": "^4.1.17"
+  },
+  "devDependencies": {
+    "terser": "^5.44.1"
   }
 }

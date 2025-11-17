@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export default function Modal3Example() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -16,26 +16,18 @@ export default function Modal3Example() {
   };
 
   return (
-    <div className="flex justify-center items-center p-6">
-      <button
-        onClick={() => setIsOpen(true)}
-        className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg transition-colors duration-200"
-      >
-        Open Form Modal
-      </button>
-
+    <div className="flex justify-center items-center p-6 relative min-h-[400px]">
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 animate-fadeIn">
+        <div className="absolute inset-0 z-50 flex items-center justify-center p-4 animate-fadeIn">
           <div
-            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
-            onClick={() => setIsOpen(false)}
+            className="absolute inset-0 bg-slate-950/10"
+
           />
 
           <div className="relative bg-slate-800 rounded-2xl shadow-2xl max-w-lg w-full p-6 border border-slate-700 animate-slideUp">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-xl font-bold text-slate-100">Contact Form</h3>
               <button
-                onClick={() => setIsOpen(false)}
                 className="text-slate-400 hover:text-slate-200 transition-colors"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -93,7 +85,7 @@ export default function Modal3Example() {
               <div className="flex gap-3 pt-2">
                 <button
                   type="button"
-                  onClick={() => setIsOpen(false)}
+                  
                   className="flex-1 px-4 py-2 bg-slate-700 hover:bg-slate-600 text-slate-200 rounded-lg transition-colors"
                 >
                   Cancel
@@ -113,27 +105,23 @@ export default function Modal3Example() {
   );
 }
 
-export const modal3Code = \`import { useState } from 'react';
+export const modal3Code = `import { useState } from 'react';
 
 export default function Modal3Example() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert(\\\`Form submitted!\\\\nName: \\\${formData.name}\\\`);
+    alert(\`Form submitted!\\nName: \${formData.name}\`);
     setIsOpen(false);
   };
 
   return (
-    <div className="flex justify-center items-center p-6">
-      <button onClick={() => setIsOpen(true)} className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg">
-        Open Form Modal
-      </button>
-
+    <div className="flex justify-center items-center p-6 relative min-h-[400px]">
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setIsOpen(false)} />
+        <div className="absolute inset-0 z-50 flex items-center justify-center p-4">
+          <div className="absolute inset-0 bg-slate-900/80 backdrop-blur-sm"  />
           <div className="relative bg-slate-800 rounded-2xl shadow-2xl max-w-lg w-full p-6 border border-slate-700">
             <h3 className="text-xl font-bold text-slate-100 mb-4">Contact Form</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -147,4 +135,4 @@ export default function Modal3Example() {
       )}
     </div>
   );
-}\`;
+}`;

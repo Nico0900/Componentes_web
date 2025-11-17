@@ -27,7 +27,7 @@ export default function Input6Example() {
   };
 
   return (
-    <div className="w-full max-w-sm mx-auto space-y-4">
+    <form className="w-full max-w-sm mx-auto space-y-4">
       <div>
         <label className="block text-sm font-medium text-slate-300 mb-2">
           Email Address
@@ -79,7 +79,7 @@ export default function Input6Example() {
           </p>
         )}
       </div>
-    </div>
+    </form>
   );
 }
 
@@ -112,7 +112,7 @@ export default function Input6Example() {
   };
 
   return (
-    <div className="w-full max-w-sm mx-auto space-y-4">
+    <form className="w-full max-w-sm mx-auto space-y-4">
       <div>
         <label className="block text-sm font-medium text-slate-300 mb-2">
           Email Address

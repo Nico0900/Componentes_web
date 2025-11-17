@@ -14,7 +14,7 @@ export default function Pagination4Example() {
 
   const renderPageNumbers = () => {
     const pages = [];
-    const maxVisible = 7;
+    const maxVisible = 5;
 
     if (totalPages <= maxVisible) {
       for (let i = 1; i <= totalPages; i++) {
@@ -110,7 +110,7 @@ export default function Pagination4Example() {
 
   const renderPageNumbers = () => {
     const pages = [];
-    const maxVisible = 7;
+    const maxVisible = 5;
 
     if (totalPages <= maxVisible) {
       for (let i = 1; i <= totalPages; i++) {

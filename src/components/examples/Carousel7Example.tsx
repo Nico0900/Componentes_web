@@ -117,16 +117,16 @@ export default function Carousel7Example() {
             return (
               <div
                 key={slide.id}
-                className={\\`absolute transition-all duration-500 ease-out \${
+                className={\`absolute transition-all duration-500 ease-out \${
                   isActive ? 'z-20 scale-100' : 'z-10 scale-75 opacity-40'
-                }\\`}
+                }\`}
                 style={{
                   transform: \`translateX(\${offset * 280}px) scale(\${isActive ? 1 : 0.75})\`,
                 }}
               >
-                <div className={\\`w-64 h-80 rounded-xl bg-gradient-to-br \${slide.color} flex items-center justify-center border-4 \${
+                <div className={\`w-64 h-80 rounded-xl bg-gradient-to-br \${slide.color} flex items-center justify-center border-4 \${
                   isActive ? 'border-white shadow-2xl' : 'border-transparent'
-                }\\`}>
+                }\`}>
                   <h2 className="text-3xl font-bold text-white">{slide.title}</h2>
                 </div>
               </div>
@@ -159,9 +159,9 @@ export default function Carousel7Example() {
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={\\`w-2 h-2 rounded-full transition-all duration-300 \${
+              className={\`w-2 h-2 rounded-full transition-all duration-300 \${
                 currentSlide === index ? 'bg-white w-8' : 'bg-white/50'
-              }\\`}
+              }\`}
             />
           ))}
         </div>

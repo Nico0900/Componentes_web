@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export default function Modal2Example() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   const handleConfirm = () => {
     alert('Action confirmed!');
@@ -9,20 +9,13 @@ export default function Modal2Example() {
   };
 
   return (
-    <div className="flex justify-center items-center p-6">
-      <button
-        onClick={() => setIsOpen(true)}
-        className="px-6 py-3 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-lg transition-colors duration-200"
-      >
-        Open Confirm Modal
-      </button>
-
+    <div className="flex justify-center items-center p-6 relative min-h-[400px]">
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 animate-fadeIn">
+        <div className="absolute inset-0 z-50 flex items-center justify-center p-4 animate-fadeIn">
           {/* Overlay */}
           <div
-            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
-            onClick={() => setIsOpen(false)}
+            className="absolute inset-0 bg-slate-950/10"
+
           />
 
           {/* Modal */}
@@ -42,7 +35,6 @@ export default function Modal2Example() {
 
               <div className="flex gap-3 w-full">
                 <button
-                  onClick={() => setIsOpen(false)}
                   className="flex-1 px-4 py-2 bg-slate-700 hover:bg-slate-600 text-slate-200 rounded-lg transition-colors"
                 >
                   Cancel
@@ -65,7 +57,7 @@ export default function Modal2Example() {
 export const modal2Code = `import { useState } from 'react';
 
 export default function Modal2Example() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   const handleConfirm = () => {
     alert('Action confirmed!');
@@ -73,19 +65,12 @@ export default function Modal2Example() {
   };
 
   return (
-    <div className="flex justify-center items-center p-6">
-      <button
-        onClick={() => setIsOpen(true)}
-        className="px-6 py-3 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-lg transition-colors duration-200"
-      >
-        Open Confirm Modal
-      </button>
-
+    <div className="flex justify-center items-center p-6 relative min-h-[400px]">
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div className="absolute inset-0 z-50 flex items-center justify-center p-4">
           <div
-            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
-            onClick={() => setIsOpen(false)}
+            className="absolute inset-0 bg-slate-900/80 backdrop-blur-sm"
+            
           />
 
           <div className="relative bg-slate-800 rounded-2xl shadow-2xl max-w-md w-full p-6 border border-slate-700">
@@ -103,7 +88,6 @@ export default function Modal2Example() {
 
               <div className="flex gap-3 w-full">
                 <button
-                  onClick={() => setIsOpen(false)}
                   className="flex-1 px-4 py-2 bg-slate-700 hover:bg-slate-600 text-slate-200 rounded-lg transition-colors"
                 >
                   Cancel

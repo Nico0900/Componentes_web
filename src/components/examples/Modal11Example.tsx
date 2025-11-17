@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export default function Modal11Example() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [activeItem, setActiveItem] = useState('dashboard');
 
   const menuItems = [
@@ -12,22 +12,12 @@ export default function Modal11Example() {
   ];
 
   return (
-    <div className="flex justify-center items-center p-6">
-      <button
-        onClick={() => setIsOpen(true)}
-        className="px-6 py-3 bg-teal-600 hover:bg-teal-700 text-white font-medium rounded-lg transition-colors duration-200 flex items-center gap-2"
-      >
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-        Open Drawer
-      </button>
-
+    <div className="flex justify-center items-center p-6 relative min-h-[400px]">
       {isOpen && (
-        <div className="fixed inset-0 z-50 animate-fadeIn">
+        <div className="absolute inset-0 z-50 animate-fadeIn">
           <div
-            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
-            onClick={() => setIsOpen(false)}
+            className="absolute inset-0 bg-slate-950/10"
+            
           />
 
           <div className="absolute left-0 top-0 h-full w-full max-w-xs bg-slate-800 shadow-2xl animate-slideInLeft overflow-auto">
@@ -35,7 +25,6 @@ export default function Modal11Example() {
               <div className="flex items-center justify-between mb-1">
                 <h3 className="text-xl font-bold text-slate-100">Navigation</h3>
                 <button
-                  onClick={() => setIsOpen(false)}
                   className="text-slate-400 hover:text-slate-200 transition-colors"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -63,11 +52,11 @@ export default function Modal11Example() {
                 <button
                   key={item.id}
                   onClick={() => setActiveItem(item.id)}
-                  className={\`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-colors \${
+                  className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${
                     activeItem === item.id
                       ? 'bg-teal-600 text-white'
                       : 'text-slate-300 hover:bg-slate-700'
-                  }\`}
+                  }`}
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={item.icon} />
@@ -79,7 +68,6 @@ export default function Modal11Example() {
 
             <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-slate-700 bg-slate-800">
               <button
-                onClick={() => setIsOpen(false)}
                 className="w-full px-4 py-3 bg-slate-700 hover:bg-slate-600 text-slate-200 rounded-lg transition-colors flex items-center justify-center gap-2"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -95,10 +83,10 @@ export default function Modal11Example() {
   );
 }
 
-export const modal11Code = \`import { useState } from 'react';
+export const modal11Code = `import { useState } from 'react';
 
 export default function Modal11Example() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [activeItem, setActiveItem] = useState('dashboard');
 
   const menuItems = [
@@ -107,24 +95,17 @@ export default function Modal11Example() {
   ];
 
   return (
-    <div className="flex justify-center items-center p-6">
-      <button onClick={() => setIsOpen(true)} className="px-6 py-3 bg-teal-600 text-white rounded-lg flex items-center gap-2">
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-        Open Drawer
-      </button>
-
+    <div className="flex justify-center items-center p-6 relative min-h-[400px]">
       {isOpen && (
-        <div className="fixed inset-0 z-50">
-          <div className="absolute inset-0 bg-black/60" onClick={() => setIsOpen(false)} />
+        <div className="absolute inset-0 z-50">
+          <div className="absolute inset-0 bg-slate-900/80"  />
           <div className="absolute left-0 top-0 h-full w-full max-w-xs bg-slate-800 overflow-auto">
             <div className="p-6 border-b border-slate-700">
               <h3 className="text-xl font-bold text-slate-100">Navigation</h3>
             </div>
             <nav className="p-4 space-y-1">
               {menuItems.map((item) => (
-                <button key={item.id} onClick={() => setActiveItem(item.id)} className={\\\`w-full flex items-center gap-3 px-4 py-3 rounded-lg \\\${activeItem === item.id ? 'bg-teal-600 text-white' : 'text-slate-300 hover:bg-slate-700'}\\\`}>
+                <button key={item.id} onClick={() => setActiveItem(item.id)} className={\`w-full flex items-center gap-3 px-4 py-3 rounded-lg \${activeItem === item.id ? 'bg-teal-600 text-white' : 'text-slate-300 hover:bg-slate-700'}\`}>
                   <span>{item.label}</span>
                 </button>
               ))}
@@ -134,4 +115,4 @@ export default function Modal11Example() {
       )}
     </div>
   );
-}\`;
+}`;

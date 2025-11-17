@@ -115,11 +115,11 @@ export default function Form2Example() {
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-2">
+              <label htmlFor="email-form2" className="block text-sm font-medium text-slate-300 mb-2">
                 Email Address
               </label>
               <input
-                id="email"
+                id="email-form2"
                 name="email"
                 type="email"
                 value={formData.email}
@@ -131,11 +131,11 @@ export default function Form2Example() {
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-slate-300 mb-2">
+              <label htmlFor="password-form2" className="block text-sm font-medium text-slate-300 mb-2">
                 Password
               </label>
               <input
-                id="password"
+                id="password-form2"
                 name="password"
                 type="password"
                 value={formData.password}

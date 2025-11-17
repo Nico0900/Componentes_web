@@ -75,7 +75,7 @@ export default function Navbar() {
               </svg>
             </div>
             <span className="text-lg font-semibold text-slate-200 tracking-tight">
-              ComponentLib
+              BibliotecaUI
             </span>
           </a>
 

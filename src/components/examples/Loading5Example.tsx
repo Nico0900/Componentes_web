@@ -1,6 +1,6 @@
 export default function Loading5Example() {
   return (
-    <div className="flex flex-col gap-8 p-8 w-full max-w-md">
+    <div className="flex items-center justify-center p-8">
       <style>
         {`
           @keyframes shimmer {
@@ -22,7 +22,7 @@ export default function Loading5Example() {
       </style>
 
       {/* Card Skeleton */}
-      <div className="bg-slate-800/40 rounded-xl p-4 border border-slate-700/50">
+      <div className="bg-slate-800/40 rounded-xl p-4 border border-slate-700/50 w-full max-w-md">
         <div className="flex items-center gap-3 mb-4">
           <div className="skeleton w-12 h-12 rounded-full"></div>
           <div className="flex-1 space-y-2">
@@ -36,50 +36,15 @@ export default function Loading5Example() {
           <div className="skeleton h-3 w-2/3 rounded"></div>
         </div>
       </div>
-
-      {/* List Skeleton */}
-      <div className="space-y-3">
-        <div className="flex items-center gap-3">
-          <div className="skeleton w-10 h-10 rounded-lg"></div>
-          <div className="flex-1 space-y-2">
-            <div className="skeleton h-3 w-full rounded"></div>
-            <div className="skeleton h-2 w-2/3 rounded"></div>
-          </div>
-        </div>
-        <div className="flex items-center gap-3">
-          <div className="skeleton w-10 h-10 rounded-lg"></div>
-          <div className="flex-1 space-y-2">
-            <div className="skeleton h-3 w-full rounded"></div>
-            <div className="skeleton h-2 w-2/3 rounded"></div>
-          </div>
-        </div>
-        <div className="flex items-center gap-3">
-          <div className="skeleton w-10 h-10 rounded-lg"></div>
-          <div className="flex-1 space-y-2">
-            <div className="skeleton h-3 w-full rounded"></div>
-            <div className="skeleton h-2 w-2/3 rounded"></div>
-          </div>
-        </div>
-      </div>
-
-      {/* Text Skeleton */}
-      <div className="space-y-3">
-        <div className="skeleton h-6 w-1/3 rounded"></div>
-        <div className="space-y-2">
-          <div className="skeleton h-3 w-full rounded"></div>
-          <div className="skeleton h-3 w-full rounded"></div>
-          <div className="skeleton h-3 w-4/5 rounded"></div>
-        </div>
-      </div>
     </div>
   );
 }
 
 export const loading5Code = `export default function Loading5Example() {
   return (
-    <div className="flex flex-col gap-8 p-8 w-full max-w-md">
+    <div className="flex items-center justify-center p-8">
       <style>
-        {\`
+        {\\\`
           @keyframes shimmer {
             0% { background-position: -468px 0; }
             100% { background-position: 468px 0; }
@@ -95,11 +60,10 @@ export const loading5Code = `export default function Loading5Example() {
             background-size: 800px 104px;
             animation: shimmer 1.5s infinite linear;
           }
-        \`}
+        \\\`}
       </style>
 
-      {/* Card Skeleton */}
-      <div className="bg-slate-800/40 rounded-xl p-4 border border-slate-700/50">
+      <div className="bg-slate-800/40 rounded-xl p-4 border border-slate-700/50 w-full max-w-md">
         <div className="flex items-center gap-3 mb-4">
           <div className="skeleton w-12 h-12 rounded-full"></div>
           <div className="flex-1 space-y-2">
@@ -111,41 +75,6 @@ export const loading5Code = `export default function Loading5Example() {
           <div className="skeleton h-3 w-full rounded"></div>
           <div className="skeleton h-3 w-full rounded"></div>
           <div className="skeleton h-3 w-2/3 rounded"></div>
-        </div>
-      </div>
-
-      {/* List Skeleton */}
-      <div className="space-y-3">
-        <div className="flex items-center gap-3">
-          <div className="skeleton w-10 h-10 rounded-lg"></div>
-          <div className="flex-1 space-y-2">
-            <div className="skeleton h-3 w-full rounded"></div>
-            <div className="skeleton h-2 w-2/3 rounded"></div>
-          </div>
-        </div>
-        <div className="flex items-center gap-3">
-          <div className="skeleton w-10 h-10 rounded-lg"></div>
-          <div className="flex-1 space-y-2">
-            <div className="skeleton h-3 w-full rounded"></div>
-            <div className="skeleton h-2 w-2/3 rounded"></div>
-          </div>
-        </div>
-        <div className="flex items-center gap-3">
-          <div className="skeleton w-10 h-10 rounded-lg"></div>
-          <div className="flex-1 space-y-2">
-            <div className="skeleton h-3 w-full rounded"></div>
-            <div className="skeleton h-2 w-2/3 rounded"></div>
-          </div>
-        </div>
-      </div>
-
-      {/* Text Skeleton */}
-      <div className="space-y-3">
-        <div className="skeleton h-6 w-1/3 rounded"></div>
-        <div className="space-y-2">
-          <div className="skeleton h-3 w-full rounded"></div>
-          <div className="skeleton h-3 w-full rounded"></div>
-          <div className="skeleton h-3 w-4/5 rounded"></div>
         </div>
       </div>
     </div>

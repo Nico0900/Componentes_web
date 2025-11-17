@@ -112,7 +112,7 @@ export const loading7Code = `export default function Loading7Example() {
   return (
     <div className="flex flex-col gap-8 items-center justify-center p-8">
       <style>
-        {\`
+        {\\\`
           @keyframes circular {
             0% { stroke-dashoffset: 280; }
             50% { stroke-dashoffset: 75; }
@@ -130,7 +130,7 @@ export const loading7Code = `export default function Loading7Example() {
             animation: circular 1.4s ease-in-out infinite;
             stroke-linecap: round;
           }
-        \`}
+        \\\`}
       </style>
 
       {/* Purple Circle */}

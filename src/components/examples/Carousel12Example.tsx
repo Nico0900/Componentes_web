@@ -150,7 +150,7 @@ export default function Carousel12Example() {
                 className="flex-shrink-0"
                 style={{ width: \`calc(\${100 / slidesPerView}% - 1rem)\` }}
               >
-                <div className={\\`h-56 rounded-lg bg-gradient-to-br \${slide.color} flex items-center justify-center\\`}>
+                <div className={\`h-56 rounded-lg bg-gradient-to-br \${slide.color} flex items-center justify-center\`}>
                   <h3 className="text-3xl font-bold text-white">{slide.title}</h3>
                 </div>
               </div>
