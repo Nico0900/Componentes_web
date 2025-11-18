@@ -57,7 +57,7 @@ export default function Modal4Example() {
       {isOpen && (
         <div className="absolute inset-0 z-50 flex items-center justify-center p-4">
           <div className="absolute inset-0 bg-slate-950/10"  />
-          <div className="relative bg-slate-800 rounded-2xl max-w-md w-full p-6 border border-slate-700">
+          <div className="relative bg-slate-800 rounded-2xl w-full max-w-md min-w-[400px] p-6 border border-slate-700">
             <div className="flex flex-col items-center text-center">
               <div className={`w-16 h-16 ${config.bg} rounded-full flex items-center justify-center mb-4`}>
                 <div className={config.text}>{config.icon}</div>
@@ -137,7 +137,7 @@ export default function Modal4Example() {
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
           <div className="absolute inset-0 bg-slate-950/10" onClick={() => setIsOpen(false)} />
-          <div className="relative bg-slate-800 rounded-2xl max-w-md w-full p-6 border border-slate-700">
+          <div className="relative bg-slate-800 rounded-2xl w-full max-w-md min-w-[400px] p-6 border border-slate-700">
             <div className="flex flex-col items-center text-center">
               <div className={\`w-16 h-16 \${config.bg} rounded-full flex items-center justify-center mb-4\`}>
                 <div className={config.text}>{config.icon}</div>

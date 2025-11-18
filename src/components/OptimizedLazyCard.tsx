@@ -364,7 +364,7 @@ export default function OptimizedLazyCard({ item, delay = 0, onDownload }: Optim
                 scroll-behavior: smooth;
               }
             `}</style>
-            <div className="preview-disabled flex items-center justify-center min-h-full">
+            <div className="preview-disabled w-full h-full flex items-center justify-center">
               {!isVisible ? (
                 <div className="text-slate-500 text-sm text-center">Cargando...</div>
               ) : Component ? (

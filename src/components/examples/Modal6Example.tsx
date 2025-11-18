@@ -1,21 +1,66 @@
 import { useState } from 'react';
 
 export default function Modal6Example() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex justify-center items-center p-6 relative min-h-[400px]">
+    <>
+      {/* Preview Card - Vista previa centrada */}
+      <div className="flex justify-center items-center w-full h-full p-8">
+        <button
+          onClick={() => setIsOpen(true)}
+          className="w-full max-w-md bg-slate-800 rounded-lg overflow-hidden shadow-2xl hover:shadow-indigo-500/20 transition-all duration-300 hover:scale-[1.02] cursor-pointer"
+        >
+          <div className="p-6 border-b border-slate-700 bg-slate-800/50">
+            <div className="flex items-center justify-between mb-1">
+              <h3 className="text-lg font-bold text-slate-100">Sidebar Panel</h3>
+              <svg className="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </div>
+            <p className="text-xs text-slate-400">Settings and configuration</p>
+          </div>
+
+          <div className="p-4 space-y-3">
+            <div className="flex items-center justify-between p-3 bg-slate-700/30 rounded-lg">
+              <span className="text-sm text-slate-300">Notifications</span>
+              <div className="w-10 h-5 bg-indigo-600 rounded-full flex items-center justify-end px-1">
+                <div className="w-4 h-4 bg-white rounded-full"></div>
+              </div>
+            </div>
+            <div className="flex items-center justify-between p-3 bg-slate-700/30 rounded-lg">
+              <span className="text-sm text-slate-300">Auto-save</span>
+              <div className="w-10 h-5 bg-slate-600 rounded-full flex items-center px-1">
+                <div className="w-4 h-4 bg-white rounded-full"></div>
+              </div>
+            </div>
+            <div className="flex items-center justify-between p-3 bg-slate-700/30 rounded-lg">
+              <span className="text-sm text-slate-300">Dark mode</span>
+              <div className="w-10 h-5 bg-indigo-600 rounded-full flex items-center justify-end px-1">
+                <div className="w-4 h-4 bg-white rounded-full"></div>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-4 text-center text-slate-400 text-sm border-t border-slate-700">
+            Click to open sidebar
+          </div>
+        </button>
+      </div>
+
+      {/* Full Screen Sidebar Modal */}
       {isOpen && (
-        <div className="absolute inset-0 z-50 animate-fadeIn">
+        <div className="fixed inset-0 z-9999 animate-fadeIn">
           <div
-            className="absolute inset-0 bg-slate-950/10"
-            
+            onClick={() => setIsOpen(false)}
+            className="absolute inset-0 bg-slate-950/80 backdrop-blur-sm"
           />
 
-          <div className="absolute right-0 top-0 h-full w-full max-w-md bg-slate-800 border-l border-slate-700 shadow-2xl animate-slideInRight overflow-auto">
+          <div className="absolute right-0 top-0 h-full w-full max-w-md min-w-[420px] bg-slate-800 border-l border-slate-700 shadow-2xl animate-slideInRight overflow-auto">
             <div className="sticky top-0 bg-slate-800 border-b border-slate-700 px-6 py-4 flex items-center justify-between">
               <h3 className="text-xl font-bold text-slate-100">Sidebar Panel</h3>
               <button
+                onClick={() => setIsOpen(false)}
                 className="text-slate-400 hover:text-slate-200 transition-colors"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -61,6 +106,7 @@ export default function Modal6Example() {
             <div className="sticky bottom-0 bg-slate-800 border-t border-slate-700 p-6">
               <div className="flex gap-3">
                 <button
+                  onClick={() => setIsOpen(false)}
                   className="flex-1 px-4 py-2 bg-slate-700 hover:bg-slate-600 text-slate-200 rounded-lg transition-colors"
                 >
                   Cancel
@@ -75,21 +121,23 @@ export default function Modal6Example() {
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 }
 
 export const modal6Code = `import { useState } from 'react';
 
 export default function Modal6Example() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex justify-center items-center p-6 relative min-h-[400px]">
+    <>
+      <button onClick={() => setIsOpen(true)}>Open Sidebar</button>
+
       {isOpen && (
-        <div className="absolute inset-0 z-50">
-          <div className="absolute inset-0 bg-slate-900/80"  />
-          <div className="absolute right-0 top-0 h-full w-full max-w-md bg-slate-800 border-l border-slate-700 overflow-auto">
+        <div className="fixed inset-0 z-50">
+          <div onClick={() => setIsOpen(false)} className="absolute inset-0 bg-slate-900/80" />
+          <div className="absolute right-0 top-0 h-full w-full max-w-md min-w-[420px] bg-slate-800 border-l border-slate-700 overflow-auto">
             <h3 className="p-6 text-xl font-bold text-slate-100 border-b border-slate-700">Sidebar Panel</h3>
             <div className="p-6">
               <p className="text-slate-400">Sidebar content goes here...</p>
@@ -97,6 +145,6 @@ export default function Modal6Example() {
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 }`;

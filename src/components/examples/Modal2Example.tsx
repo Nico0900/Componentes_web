@@ -19,7 +19,7 @@ export default function Modal2Example() {
           />
 
           {/* Modal */}
-          <div className="relative bg-slate-800 rounded-2xl shadow-2xl max-w-md w-full p-6 border border-slate-700 animate-slideUp">
+          <div className="relative bg-slate-800 rounded-2xl shadow-2xl w-full max-w-md min-w-[400px] p-6 border border-slate-700 animate-slideUp">
             <div className="flex flex-col items-center text-center">
               {/* Warning Icon */}
               <div className="w-16 h-16 bg-amber-500/20 rounded-full flex items-center justify-center mb-4">
@@ -73,7 +73,7 @@ export default function Modal2Example() {
             
           />
 
-          <div className="relative bg-slate-800 rounded-2xl shadow-2xl max-w-md w-full p-6 border border-slate-700">
+          <div className="relative bg-slate-800 rounded-2xl shadow-2xl w-full max-w-md min-w-[400px] p-6 border border-slate-700">
             <div className="flex flex-col items-center text-center">
               <div className="w-16 h-16 bg-amber-500/20 rounded-full flex items-center justify-center mb-4">
                 <svg className="w-8 h-8 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">

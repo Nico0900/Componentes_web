@@ -6,7 +6,7 @@ export default function Modal12Example() {
   return (
     <div className="flex justify-center items-center p-6 relative min-h-[400px]">
       {isOpen && (
-        <div className="fixed top-4 right-4 z-50 max-w-sm w-full animate-slideInRight">
+        <div className="fixed top-4 right-4 z-50 w-full max-w-sm min-w-[350px] animate-slideInRight">
           <div className="bg-slate-800 border border-slate-700 rounded-lg shadow-2xl p-4">
             <div className="flex items-start gap-3">
               <div className="w-10 h-10 bg-sky-500/20 rounded-full flex items-center justify-center flex-shrink-0">
@@ -62,7 +62,7 @@ export default function Modal12Example() {
   return (
     <div className="flex justify-center items-center p-6 relative min-h-[400px]">
       {isOpen && (
-        <div className="fixed top-4 right-4 z-50 max-w-sm w-full">
+        <div className="fixed top-4 right-4 z-50 w-full max-w-sm min-w-[350px]">
           <div className="bg-slate-800 border border-slate-700 rounded-lg shadow-2xl p-4">
             <div className="flex items-start gap-3">
               <div className="w-10 h-10 bg-sky-500/20 rounded-full flex items-center justify-center">

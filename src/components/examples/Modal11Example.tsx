@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 export default function Modal11Example() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [activeItem, setActiveItem] = useState('dashboard');
 
   const menuItems = [
@@ -12,12 +12,49 @@ export default function Modal11Example() {
   ];
 
   return (
-    <div className="flex justify-center items-center p-6 relative min-h-[400px]">
+    <>
+      {/* Preview Card - Vista previa del Drawer */}
+      <div className="flex justify-center items-center w-full h-full p-8">
+        <button
+          onClick={() => setIsOpen(true)}
+          className="w-full max-w-sm bg-slate-800 shadow-2xl rounded-lg overflow-hidden hover:shadow-teal-500/20 transition-all duration-300 hover:scale-[1.02] cursor-pointer"
+        >
+          <div className="p-6 border-b border-slate-700 bg-slate-800/50">
+            <div className="flex items-center justify-between mb-1">
+              <h3 className="text-lg font-bold text-slate-100">Navigation Drawer</h3>
+              <svg className="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </div>
+            <p className="text-xs text-slate-400">Side navigation menu</p>
+          </div>
+
+          <nav className="p-4 space-y-2">
+            {menuItems.slice(0, 3).map((item) => (
+              <div
+                key={item.id}
+                className="flex items-center gap-3 px-3 py-2 rounded-lg bg-slate-700/30 text-slate-300"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={item.icon} />
+                </svg>
+                <span className="text-sm font-medium">{item.label}</span>
+              </div>
+            ))}
+          </nav>
+
+          <div className="p-4 text-center text-slate-400 text-sm">
+            Click to open drawer
+          </div>
+        </button>
+      </div>
+
+      {/* Full Screen Drawer Modal */}
       {isOpen && (
-        <div className="absolute inset-0 z-50 animate-fadeIn">
+        <div className="fixed inset-0 z-9999 animate-fadeIn">
           <div
-            className="absolute inset-0 bg-slate-950/10"
-            
+            onClick={() => setIsOpen(false)}
+            className="absolute inset-0 bg-slate-950/80 backdrop-blur-sm"
           />
 
           <div className="absolute left-0 top-0 h-full w-full max-w-xs bg-slate-800 shadow-2xl animate-slideInLeft overflow-auto">
@@ -25,6 +62,7 @@ export default function Modal11Example() {
               <div className="flex items-center justify-between mb-1">
                 <h3 className="text-xl font-bold text-slate-100">Navigation</h3>
                 <button
+                  onClick={() => setIsOpen(false)}
                   className="text-slate-400 hover:text-slate-200 transition-colors"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -37,7 +75,7 @@ export default function Modal11Example() {
 
             <div className="p-6 border-b border-slate-700">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-full flex items-center justify-center text-white font-semibold">
+                <div className="w-12 h-12 bg-linear-to-br from-teal-500 to-cyan-600 rounded-full flex items-center justify-center text-white font-semibold">
                   JD
                 </div>
                 <div>
@@ -79,14 +117,14 @@ export default function Modal11Example() {
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 }
 
 export const modal11Code = `import { useState } from 'react';
 
 export default function Modal11Example() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [activeItem, setActiveItem] = useState('dashboard');
 
   const menuItems = [
@@ -95,10 +133,12 @@ export default function Modal11Example() {
   ];
 
   return (
-    <div className="flex justify-center items-center p-6 relative min-h-[400px]">
+    <>
+      <button onClick={() => setIsOpen(true)}>Open Drawer</button>
+
       {isOpen && (
-        <div className="absolute inset-0 z-50">
-          <div className="absolute inset-0 bg-slate-900/80"  />
+        <div className="fixed inset-0 z-50">
+          <div onClick={() => setIsOpen(false)} className="absolute inset-0 bg-slate-900/80" />
           <div className="absolute left-0 top-0 h-full w-full max-w-xs bg-slate-800 overflow-auto">
             <div className="p-6 border-b border-slate-700">
               <h3 className="text-xl font-bold text-slate-100">Navigation</h3>
@@ -113,6 +153,6 @@ export default function Modal11Example() {
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 }`;

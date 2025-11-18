@@ -24,7 +24,7 @@ export default function Modal3Example() {
 
           />
 
-          <div className="relative bg-slate-800 rounded-2xl shadow-2xl max-w-lg w-full p-6 border border-slate-700 animate-slideUp">
+          <div className="relative bg-slate-800 rounded-2xl shadow-2xl w-full max-w-lg min-w-[500px] p-6 border border-slate-700 animate-slideUp">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-xl font-bold text-slate-100">Contact Form</h3>
               <button
@@ -122,7 +122,7 @@ export default function Modal3Example() {
       {isOpen && (
         <div className="absolute inset-0 z-50 flex items-center justify-center p-4">
           <div className="absolute inset-0 bg-slate-900/80 backdrop-blur-sm"  />
-          <div className="relative bg-slate-800 rounded-2xl shadow-2xl max-w-lg w-full p-6 border border-slate-700">
+          <div className="relative bg-slate-800 rounded-2xl shadow-2xl w-full max-w-lg min-w-[500px] p-6 border border-slate-700">
             <h3 className="text-xl font-bold text-slate-100 mb-4">Contact Form</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <input type="text" required value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} className="w-full px-4 py-2 bg-slate-700 rounded-lg text-slate-100" placeholder="Name" />

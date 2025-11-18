@@ -14,7 +14,7 @@ export default function Modal1Example() {
           />
 
           {/* Modal */}
-          <div className="relative bg-slate-800 rounded-2xl shadow-2xl max-w-md w-full p-6 border border-slate-700 animate-slideUp">
+          <div className="relative bg-slate-800 rounded-2xl shadow-2xl w-full max-w-md min-w-[400px] p-6 border border-slate-700 animate-slideUp">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-xl font-bold text-slate-100">Modal Title</h3>
               <button
@@ -63,7 +63,7 @@ export default function Modal1Example() {
             
           />
 
-          <div className="relative bg-slate-800 rounded-2xl shadow-2xl max-w-md w-full p-6 border border-slate-700">
+          <div className="relative bg-slate-800 rounded-2xl shadow-2xl w-full max-w-md min-w-[400px] p-6 border border-slate-700">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-xl font-bold text-slate-100">Modal Title</h3>
               <button
