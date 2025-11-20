@@ -1,6 +1,10 @@
 # Galería de Componentes Web
 
+> **Proyecto en desarrollo** - Código libre y de código abierto
+
 Una galería interactiva de componentes web reutilizables construida con **Astro**, **React** y **Tailwind CSS**.
+
+**Desarrollado por:** Nicolás Vargas
 
 ## Características
 
@@ -13,10 +17,22 @@ Una galería interactiva de componentes web reutilizables construida con **Astro
 
 ## Componentes Incluidos
 
-1. **Botones** - Colección de botones con diferentes estilos (primary, secondary, success, danger)
-2. **Tarjetas** - Componente de tarjeta moderno con imagen y contenido
-3. **Alertas** - Mensajes informativos, de éxito y error
-4. **Badges** - Etiquetas coloridas para estados y categorías
+Este proyecto incluye una amplia variedad de componentes web profesionales:
+
+- **Botones** - 7+ variantes con diferentes estilos y efectos
+- **Tarjetas (Cards)** - 7+ diseños modernos con diferentes layouts
+- **Alertas** - 6+ estilos para diferentes tipos de mensajes
+- **Badges** - 6+ variaciones para etiquetas y estados
+- **Inputs** - 5+ tipos de campos de entrada con validación
+- **Tablas** - 15+ diseños responsivos y funcionales
+- **Navegación** - 15+ componentes de navbar y menús
+- **Tooltips** - 15+ estilos de información contextual
+- **Forms** - Múltiples ejemplos de formularios completos
+- **Timelines** - Componentes para mostrar cronologías
+- **Estadísticas** - Componentes para visualizar datos
+- **Checkboxes, Radio Buttons, Toggle Switches** - Elementos de formulario interactivos
+- **Progress Bars** - Barras de progreso lineales y circulares
+- **Y muchos más...**
 
 ## Comenzar
 
@@ -110,4 +126,17 @@ import MiComponente, { miComponenteCode } from '../components/examples/MiCompone
 
 ## Licencia
 
-Código abierto - Libre de usar para cualquier propósito
+Este proyecto es **código libre y de código abierto**. Puedes usar, modificar y distribuir este código para cualquier propósito, ya sea personal o comercial.
+
+## Estado del Proyecto
+
+🚧 **En desarrollo activo** - Se están agregando nuevos componentes y mejoras regularmente.
+
+## Autor
+
+**Nicolás Vargas**
+- GitHub: [@Nico0900](https://github.com/Nico0900)
+
+## Contribuciones
+
+Las contribuciones son bienvenidas. Este es un proyecto de código abierto y cualquier mejora o nuevo componente será apreciado.

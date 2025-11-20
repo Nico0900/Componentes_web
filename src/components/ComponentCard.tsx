@@ -1,3 +1,11 @@
+/**
+ * ComponentCard Component
+ *
+ * Desarrollado por: Nicolás Vargas
+ * Proyecto: BibliotecaUI - Galería de Componentes Web
+ * Licencia: Código libre y de código abierto
+ */
+
 import { useState } from 'react';
 import Modal from './Modal';
 import Toast from './Toast';

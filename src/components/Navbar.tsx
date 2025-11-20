@@ -1,3 +1,11 @@
+/**
+ * Navbar Component
+ *
+ * Desarrollado por: Nicolás Vargas
+ * Proyecto: BibliotecaUI - Galería de Componentes Web
+ * Licencia: Código libre y de código abierto
+ */
+
 import { useState, useEffect } from 'react';
 
 export default function Navbar() {
@@ -101,7 +109,7 @@ export default function Navbar() {
             </button>
             <div className="w-px h-4 bg-slate-800 mx-2"></div>
             <a
-              href="https://github.com"
+              href="https://github.com/Nico0900/Componentes_web"
               target="_blank"
               rel="noopener noreferrer"
               className="ml-2 px-4 py-2 bg-slate-800/50 hover:bg-slate-700/50 border border-slate-700/50 hover:border-blue-500/30 text-slate-300 hover:text-white text-sm font-medium rounded-lg transition-all duration-300"
@@ -162,7 +170,7 @@ export default function Navbar() {
             </button>
             <div className="pt-2">
               <a
-                href="https://github.com"
+                href="https://github.com/Nico0900/Componentes_web"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full text-center px-4 py-2 bg-slate-800/50 hover:bg-slate-700/50 border border-slate-700/50 hover:border-blue-500/30 text-slate-300 hover:text-white text-sm font-medium rounded-lg transition-all duration-300"

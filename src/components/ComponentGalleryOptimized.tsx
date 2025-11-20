@@ -1,3 +1,11 @@
+/**
+ * ComponentGalleryOptimized Component
+ *
+ * Desarrollado por: Nicolás Vargas
+ * Proyecto: BibliotecaUI - Galería de Componentes Web
+ * Licencia: Código libre y de código abierto
+ */
+
 import { useState, useMemo, useEffect } from 'react';
 import OptimizedLazyCard from './OptimizedLazyCard';
 import { componentsData } from '../data/componentsData';

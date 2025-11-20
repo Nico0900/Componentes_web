@@ -1,3 +1,11 @@
+/**
+ * Modal Component
+ *
+ * Desarrollado por: Nicolás Vargas
+ * Proyecto: BibliotecaUI - Galería de Componentes Web
+ * Licencia: Código libre y de código abierto
+ */
+
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 
