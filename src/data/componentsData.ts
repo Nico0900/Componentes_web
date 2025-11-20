@@ -42,7 +42,6 @@ import { modal6Code } from '../components/examples/Modal6Example';
 import { modal7Code } from '../components/examples/Modal7Example';
 import { modal8Code } from '../components/examples/Modal8Example';
 import { modal9Code } from '../components/examples/Modal9Example';
-import { modal10Code } from '../components/examples/Modal10Example';
 import { modal11Code } from '../components/examples/Modal11Example';
 import { modal12Code } from '../components/examples/Modal12Example';
 import { modal13Code } from '../components/examples/Modal13Example';
@@ -675,7 +674,7 @@ export const componentsData: ComponentItem[] = [
 						title: 'Circular Progress',
 						description: 'Barras de progreso circulares con diferentes tamaños y porcentajes.',
 						code: circularProgressCode,
-						category: 'Feedback',
+						category: 'UI Elements',
 						technologies: ['React', 'TypeScript'],
 					},
 					{
@@ -683,7 +682,7 @@ export const componentsData: ComponentItem[] = [
 						title: 'Linear Progress',
 						description: 'Barras de progreso lineales con gradientes y transiciones suaves.',
 						code: linearProgressCode,
-						category: 'Feedback',
+						category: 'UI Elements',
 						technologies: ['React', 'TypeScript'],
 					},
 					{
@@ -787,15 +786,6 @@ export const componentsData: ComponentItem[] = [
 						title: 'Modal 9 - Video',
 						description: 'Video player modal',
 						code: modal9Code,
-						category: 'Modals',
-						technologies: ['React', 'TypeScript'],
-					gridSize: 'tall',
-					},
-					{
-						id: 'modal-10',
-						title: 'Modal 10 - Multi-step',
-						description: 'Wizard style modal',
-						code: modal10Code,
 						category: 'Modals',
 						technologies: ['React', 'TypeScript'],
 					gridSize: 'tall',
@@ -2924,7 +2914,7 @@ export const componentsData: ComponentItem[] = [
 						title: 'Pagination 1 - Basic',
 						description: 'Simple pagination',
 						code: pagination1Code,
-						category: 'Paginations',
+						category: 'Pagination',
 						technologies: ['React', 'TypeScript'],
 					},
 					{
@@ -2932,7 +2922,7 @@ export const componentsData: ComponentItem[] = [
 						title: 'Pagination 2 - Numbers',
 						description: 'Page numbers',
 						code: pagination2Code,
-						category: 'Paginations',
+						category: 'Pagination',
 						technologies: ['React', 'TypeScript'],
 					},
 					{
@@ -2940,7 +2930,7 @@ export const componentsData: ComponentItem[] = [
 						title: 'Pagination 3 - Arrows',
 						description: 'Arrow navigation',
 						code: pagination3Code,
-						category: 'Paginations',
+						category: 'Pagination',
 						technologies: ['React', 'TypeScript'],
 					},
 					{
@@ -2948,7 +2938,7 @@ export const componentsData: ComponentItem[] = [
 						title: 'Pagination 4 - Dots',
 						description: 'With ellipsis',
 						code: pagination4Code,
-						category: 'Paginations',
+						category: 'Pagination',
 						technologies: ['React', 'TypeScript'],
 					},
 					{
@@ -2956,7 +2946,7 @@ export const componentsData: ComponentItem[] = [
 						title: 'Pagination 5 - Large',
 						description: 'Large pagination',
 						code: pagination5Code,
-						category: 'Paginations',
+						category: 'Pagination',
 						technologies: ['React', 'TypeScript'],
 					},
 					{
@@ -2964,7 +2954,7 @@ export const componentsData: ComponentItem[] = [
 						title: 'Pagination 6 - Small',
 						description: 'Small pagination',
 						code: pagination6Code,
-						category: 'Paginations',
+						category: 'Pagination',
 						technologies: ['React', 'TypeScript'],
 					},
 					{
@@ -2972,7 +2962,7 @@ export const componentsData: ComponentItem[] = [
 						title: 'Pagination 7 - Rounded',
 						description: 'Rounded buttons',
 						code: pagination7Code,
-						category: 'Paginations',
+						category: 'Pagination',
 						technologies: ['React', 'TypeScript'],
 					},
 					{
@@ -2980,7 +2970,7 @@ export const componentsData: ComponentItem[] = [
 						title: 'Pagination 8 - Bordered',
 						description: 'Bordered style',
 						code: pagination8Code,
-						category: 'Paginations',
+						category: 'Pagination',
 						technologies: ['React', 'TypeScript'],
 					},
 					{
@@ -2988,7 +2978,7 @@ export const componentsData: ComponentItem[] = [
 						title: 'Pagination 9 - Filled',
 						description: 'Filled buttons',
 						code: pagination9Code,
-						category: 'Paginations',
+						category: 'Pagination',
 						technologies: ['React', 'TypeScript'],
 					},
 					{
@@ -2996,7 +2986,7 @@ export const componentsData: ComponentItem[] = [
 						title: 'Pagination 10 - Minimal',
 						description: 'Minimal style',
 						code: pagination10Code,
-						category: 'Paginations',
+						category: 'Pagination',
 						technologies: ['React', 'TypeScript'],
 					},
 					{
@@ -3004,7 +2994,7 @@ export const componentsData: ComponentItem[] = [
 						title: 'Pagination 11 - Prev/Next',
 						description: 'Previous/Next only',
 						code: pagination11Code,
-						category: 'Paginations',
+						category: 'Pagination',
 						technologies: ['React', 'TypeScript'],
 					},
 					{
@@ -3012,7 +3002,7 @@ export const componentsData: ComponentItem[] = [
 						title: 'Pagination 12 - Info',
 						description: 'With page info',
 						code: pagination12Code,
-						category: 'Paginations',
+						category: 'Pagination',
 						technologies: ['React', 'TypeScript'],
 					},
 					{
@@ -3020,7 +3010,7 @@ export const componentsData: ComponentItem[] = [
 						title: 'Pagination 13 - Jump',
 						description: 'Jump to page',
 						code: pagination13Code,
-						category: 'Paginations',
+						category: 'Pagination',
 						technologies: ['React', 'TypeScript'],
 					},
 					{
@@ -3028,7 +3018,7 @@ export const componentsData: ComponentItem[] = [
 						title: 'Pagination 14 - Compact',
 						description: 'Compact pagination',
 						code: pagination14Code,
-						category: 'Paginations',
+						category: 'Pagination',
 						technologies: ['React', 'TypeScript'],
 					},
 					{
@@ -3036,7 +3026,7 @@ export const componentsData: ComponentItem[] = [
 						title: 'Pagination 15 - Modern',
 						description: 'Modern style',
 						code: pagination15Code,
-						category: 'Paginations',
+						category: 'Pagination',
 						technologies: ['React', 'TypeScript'],
 					},
 					{

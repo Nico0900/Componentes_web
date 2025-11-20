@@ -127,13 +127,6 @@ function CategoryIcon({ category }: { category: string }) {
           <circle cx="20" cy="12" r="1.5" fill="#fed7aa"/>
         </svg>
       );
-    case 'Feedback':
-      return (
-        <svg className={iconClass} viewBox="0 0 24 24" fill="none">
-          <circle cx="12" cy="12" r="8" fill="#10b981" stroke="#34d399" strokeWidth="1.5"/>
-          <path d="M8 12l2 2l4-4" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      );
     case 'Notifications':
       return (
         <svg className={iconClass} viewBox="0 0 24 24" fill="none">
@@ -142,7 +135,7 @@ function CategoryIcon({ category }: { category: string }) {
           <circle cx="16" cy="7" r="2" fill="#dc2626"/>
         </svg>
       );
-    case 'Paginations':
+    case 'Pagination':
       return (
         <svg className={iconClass} viewBox="0 0 24 24" fill="none">
           <rect x="4" y="10" width="3" height="4" rx="1" fill="#3b82f6"/>

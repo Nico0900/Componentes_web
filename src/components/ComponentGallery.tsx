@@ -52,7 +52,6 @@ import Modal6Example from './examples/Modal6Example';
 import Modal7Example from './examples/Modal7Example';
 import Modal8Example from './examples/Modal8Example';
 import Modal9Example from './examples/Modal9Example';
-import Modal10Example from './examples/Modal10Example';
 import Modal11Example from './examples/Modal11Example';
 import Modal12Example from './examples/Modal12Example';
 import Modal13Example from './examples/Modal13Example';
@@ -457,7 +456,6 @@ const componentMap: Record<string, React.ComponentType> = {
   'modal-7': Modal7Example,
   'modal-8': Modal8Example,
   'modal-9': Modal9Example,
-  'modal-10': Modal10Example,
   'modal-11': Modal11Example,
   'modal-12': Modal12Example,
   'modal-13': Modal13Example,
