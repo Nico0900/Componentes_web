@@ -10,7 +10,7 @@ import { useState, useMemo, useEffect } from 'react';
 import OptimizedLazyCard from './OptimizedLazyCard';
 import { componentsData } from '../data/componentsData';
 
-const TECHNOLOGIES = ['JavaScript', 'TypeScript', 'React', 'Vite', 'Astro', 'Tailwind CSS'];
+const TECHNOLOGIES = ['JavaScript', 'TypeScript', 'React', 'Tailwind CSS'];
 
 // Tech Icon Component for Filters
 function TechIcon({ name, isActive }: { name: string; isActive: boolean }) {
@@ -41,37 +41,6 @@ function TechIcon({ name, isActive }: { name: string; isActive: boolean }) {
             <ellipse rx="11" ry="4.2" transform="rotate(60)"/>
             <ellipse rx="11" ry="4.2" transform="rotate(120)"/>
           </g>
-        </svg>
-      );
-    case 'Vite':
-      return (
-        <svg className={`w-10 h-10 ${transitionClass} ${activeClass}`} viewBox="0 0 256 257">
-          <defs>
-            <linearGradient id="viteLogo1" x1="-.828%" x2="57.636%" y1="7.652%" y2="78.411%">
-              <stop offset="0%" stopColor="#41D1FF"/>
-              <stop offset="100%" stopColor="#BD34FE"/>
-            </linearGradient>
-            <linearGradient id="viteLogo2" x1="43.376%" x2="50.316%" y1="2.242%" y2="89.03%">
-              <stop offset="0%" stopColor="#FFEA83"/>
-              <stop offset="8.333%" stopColor="#FFDD35"/>
-              <stop offset="100%" stopColor="#FFA800"/>
-            </linearGradient>
-          </defs>
-          <path fill="url(#viteLogo1)" d="m255.153 37.938-134.897 236.241c-1.654 2.898-5.78 2.898-7.434 0L-.275 37.938c-1.753-3.072.393-6.875 3.88-6.875L251.273 31.063c3.487 0 5.633 3.803 3.88 6.875Z"/>
-          <path fill="url(#viteLogo2)" d="m135.072 0 105.276 186.064-1.431 2.51-133.69-73.485a6.63 6.63 0 0 1-3.228-5.717V18.056c0-4.915 5.913-7.337 9.373-3.838l23.7 27.782Z"/>
-        </svg>
-      );
-    case 'Astro':
-      return (
-        <svg className={`w-10 h-10 ${transitionClass} ${activeClass}`} viewBox="0 0 256 366">
-          <defs>
-            <linearGradient id="astroLogo" x1="50%" x2="50%" y1="0%" y2="100%">
-              <stop offset="0%" stopColor="#FFF"/>
-              <stop offset="100%" stopColor="#FFF" stopOpacity=".5"/>
-            </linearGradient>
-          </defs>
-          <path fill="url(#astroLogo)" d="M182.022 9.147c2.982 3.702 4.502 8.697 7.543 18.687L256 246.074a276.467 276.467 0 0 0-79.426-26.891L133.318 73.008a5.63 5.63 0 0 0-10.802.017L79.784 219.11A276.453 276.453 0 0 0 0 246.04L66.76 27.783c3.051-9.972 4.577-14.959 7.559-18.654a24.541 24.541 0 0 1 9.946-7.358C88.67 0 93.885 0 104.314 0h47.683c10.443 0 15.664 0 20.074 1.774a24.545 24.545 0 0 1 9.95 7.373Z"/>
-          <path fill="#FF5D01" d="M189.972 256.46c-10.952 9.364-32.812 15.751-57.992 15.751-30.904 0-56.807-9.621-63.68-22.56-2.458 7.415-3.009 15.903-3.009 21.324 0 0-1.619 26.623 16.898 45.14 0-9.615 7.795-17.41 17.41-17.41 16.48 0 16.46 14.378 16.446 26.043l-.001 1.041c0 17.705 10.82 32.883 26.21 39.28a35.685 35.685 0 0 1-3.588-15.647c0-16.886 9.913-23.173 21.435-30.48 9.167-5.814 19.353-12.274 26.372-25.232a47.588 47.588 0 0 0 5.742-22.735c0-5.06-.786-9.938-2.243-14.516Z"/>
         </svg>
       );
     case 'Tailwind CSS':

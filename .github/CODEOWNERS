@@ -1,0 +1,9 @@
+# CODEOWNERS file
+# Estos usuarios son responsables de revisar y aprobar cambios
+
+# Nicolás Vargas es el propietario de todo el código
+* @Nico0900
+
+# Componentes principales requieren revisión especial
+/src/components/ @Nico0900
+/src/pages/ @Nico0900
