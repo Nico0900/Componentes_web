@@ -7,13 +7,10 @@
  */
 
 import { useState, useEffect } from 'react';
-import VersionModal from './VersionModal';
-import { versions } from '../data/versions';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [versionModalOpen, setVersionModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -110,12 +107,12 @@ export default function Navbar() {
             >
               Guía
             </button>
-            <button
-              onClick={() => setVersionModalOpen(true)}
+            <a
+              href="/versiones"
               className="text-slate-400 hover:text-slate-200 transition-colors duration-300 font-medium text-sm px-4 py-2 rounded-lg hover:bg-slate-800/30"
             >
               Versiones
-            </button>
+            </a>
             <div className="w-px h-4 bg-slate-800 mx-2"></div>
             <a
               href="https://github.com/Nico0900/Componentes_web"
@@ -177,15 +174,12 @@ export default function Navbar() {
             >
               Guía
             </button>
-            <button
-              onClick={() => {
-                setVersionModalOpen(true);
-                setMobileMenuOpen(false);
-              }}
+            <a
+              href="/versiones"
               className="block w-full text-left text-slate-400 hover:text-slate-200 transition-colors duration-300 font-medium text-sm px-4 py-2 rounded-lg hover:bg-slate-800/30"
             >
               Versiones
-            </button>
+            </a>
             <div className="pt-2">
               <a
                 href="https://github.com/Nico0900/Componentes_web"
@@ -199,13 +193,6 @@ export default function Navbar() {
           </div>
         )}
       </div>
-
-      {/* Version Modal */}
-      <VersionModal
-        isOpen={versionModalOpen}
-        onClose={() => setVersionModalOpen(false)}
-        versions={versions}
-      />
     </nav>
   );
 }

@@ -1,0 +1,80 @@
+---
+/**
+ * BibliotecaUI - Página de Versiones
+ *
+ * Desarrollado por: Nicolás Vargas
+ * Proyecto: BibliotecaUI - Galería de Componentes Web
+ * Licencia: Código libre y de código abierto
+ */
+
+import '../styles/global.css';
+import GalaxyBackground from '../components/GalaxyBackground';
+import Navbar from '../components/Navbar';
+import VersionSidebar from '../components/VersionSidebar';
+import VersionContent from '../components/VersionContent';
+---
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Historial de Versiones | BibliotecaUI</title>
+		<meta name="description" content="Historial completo de versiones y actualizaciones de BibliotecaUI" />
+	</head>
+	<body class="min-h-screen">
+		<!-- Galaxy Background -->
+		<GalaxyBackground client:idle />
+
+		<!-- Navbar -->
+		<Navbar client:load />
+
+		<!-- Main Content -->
+		<main class="relative pt-24 pb-16 min-h-screen">
+			<div class="container mx-auto px-6">
+				<!-- Header -->
+				<div class="mb-12">
+					<div class="flex items-center gap-3 mb-4">
+						<div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
+							<svg
+								class="w-6 h-6 text-blue-400"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+								stroke-width="2"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+								/>
+							</svg>
+						</div>
+						<div>
+							<h1 class="text-3xl md:text-4xl font-bold text-slate-100 tracking-tight">
+								Historial de Versiones
+							</h1>
+							<p class="text-slate-400 text-sm mt-1">
+								Actualizaciones y nuevos componentes
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Two Column Layout -->
+				<div class="grid grid-cols-1 lg:grid-cols-10 gap-6">
+					<!-- Sidebar - 30% -->
+					<div class="lg:col-span-3">
+						<VersionSidebar client:load />
+					</div>
+
+					<!-- Content - 70% -->
+					<div class="lg:col-span-7">
+						<VersionContent client:load />
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
