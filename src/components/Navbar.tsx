@@ -11,6 +11,12 @@ import { useState, useEffect } from 'react';
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isVersionsPage, setIsVersionsPage] = useState(false);
+
+  useEffect(() => {
+    // Detectar si estamos en la página de versiones
+    setIsVersionsPage(window.location.pathname === '/versiones');
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -66,7 +72,7 @@ export default function Navbar() {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2.5 group">
+          <a href="/" className="flex items-center gap-2.5 group">
             <div className="w-8 h-8 rounded-lg bg-slate-800/50 border border-slate-700/50 flex items-center justify-center group-hover:border-blue-500/30 transition-all duration-300">
               <svg
                 className="w-5 h-5 text-blue-400/80"
@@ -89,24 +95,49 @@ export default function Navbar() {
 
           {/* Nav Links */}
           <div className="hidden md:flex items-center gap-1">
-            <button
-              onClick={() => smoothScrollTo('#hero')}
-              className="text-slate-400 hover:text-slate-200 transition-colors duration-300 font-medium text-sm px-4 py-2 rounded-lg hover:bg-slate-800/30"
-            >
-              Inicio
-            </button>
-            <button
-              onClick={() => smoothScrollTo('#componentes')}
-              className="text-slate-400 hover:text-slate-200 transition-colors duration-300 font-medium text-sm px-4 py-2 rounded-lg hover:bg-slate-800/30"
-            >
-              Componentes
-            </button>
-            <button
-              onClick={() => smoothScrollTo('#guia')}
-              className="text-slate-400 hover:text-slate-200 transition-colors duration-300 font-medium text-sm px-4 py-2 rounded-lg hover:bg-slate-800/30"
-            >
-              Guía
-            </button>
+            {isVersionsPage ? (
+              <>
+                <a
+                  href="/"
+                  className="text-slate-400 hover:text-slate-200 transition-colors duration-300 font-medium text-sm px-4 py-2 rounded-lg hover:bg-slate-800/30"
+                >
+                  Inicio
+                </a>
+                <a
+                  href="/#componentes"
+                  className="text-slate-400 hover:text-slate-200 transition-colors duration-300 font-medium text-sm px-4 py-2 rounded-lg hover:bg-slate-800/30"
+                >
+                  Componentes
+                </a>
+                <a
+                  href="/#guia"
+                  className="text-slate-400 hover:text-slate-200 transition-colors duration-300 font-medium text-sm px-4 py-2 rounded-lg hover:bg-slate-800/30"
+                >
+                  Guía
+                </a>
+              </>
+            ) : (
+              <>
+                <button
+                  onClick={() => smoothScrollTo('#hero')}
+                  className="text-slate-400 hover:text-slate-200 transition-colors duration-300 font-medium text-sm px-4 py-2 rounded-lg hover:bg-slate-800/30"
+                >
+                  Inicio
+                </button>
+                <button
+                  onClick={() => smoothScrollTo('#componentes')}
+                  className="text-slate-400 hover:text-slate-200 transition-colors duration-300 font-medium text-sm px-4 py-2 rounded-lg hover:bg-slate-800/30"
+                >
+                  Componentes
+                </button>
+                <button
+                  onClick={() => smoothScrollTo('#guia')}
+                  className="text-slate-400 hover:text-slate-200 transition-colors duration-300 font-medium text-sm px-4 py-2 rounded-lg hover:bg-slate-800/30"
+                >
+                  Guía
+                </button>
+              </>
+            )}
             <a
               href="/versiones"
               className="text-slate-400 hover:text-slate-200 transition-colors duration-300 font-medium text-sm px-4 py-2 rounded-lg hover:bg-slate-800/30"
@@ -156,24 +187,49 @@ export default function Navbar() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden border-t border-slate-800/30 mt-2 py-4 space-y-1">
-            <button
-              onClick={() => smoothScrollTo('#hero')}
-              className="block w-full text-left text-slate-400 hover:text-slate-200 transition-colors duration-300 font-medium text-sm px-4 py-2 rounded-lg hover:bg-slate-800/30"
-            >
-              Inicio
-            </button>
-            <button
-              onClick={() => smoothScrollTo('#componentes')}
-              className="block w-full text-left text-slate-400 hover:text-slate-200 transition-colors duration-300 font-medium text-sm px-4 py-2 rounded-lg hover:bg-slate-800/30"
-            >
-              Componentes
-            </button>
-            <button
-              onClick={() => smoothScrollTo('#guia')}
-              className="block w-full text-left text-slate-400 hover:text-slate-200 transition-colors duration-300 font-medium text-sm px-4 py-2 rounded-lg hover:bg-slate-800/30"
-            >
-              Guía
-            </button>
+            {isVersionsPage ? (
+              <>
+                <a
+                  href="/"
+                  className="block w-full text-left text-slate-400 hover:text-slate-200 transition-colors duration-300 font-medium text-sm px-4 py-2 rounded-lg hover:bg-slate-800/30"
+                >
+                  Inicio
+                </a>
+                <a
+                  href="/#componentes"
+                  className="block w-full text-left text-slate-400 hover:text-slate-200 transition-colors duration-300 font-medium text-sm px-4 py-2 rounded-lg hover:bg-slate-800/30"
+                >
+                  Componentes
+                </a>
+                <a
+                  href="/#guia"
+                  className="block w-full text-left text-slate-400 hover:text-slate-200 transition-colors duration-300 font-medium text-sm px-4 py-2 rounded-lg hover:bg-slate-800/30"
+                >
+                  Guía
+                </a>
+              </>
+            ) : (
+              <>
+                <button
+                  onClick={() => smoothScrollTo('#hero')}
+                  className="block w-full text-left text-slate-400 hover:text-slate-200 transition-colors duration-300 font-medium text-sm px-4 py-2 rounded-lg hover:bg-slate-800/30"
+                >
+                  Inicio
+                </button>
+                <button
+                  onClick={() => smoothScrollTo('#componentes')}
+                  className="block w-full text-left text-slate-400 hover:text-slate-200 transition-colors duration-300 font-medium text-sm px-4 py-2 rounded-lg hover:bg-slate-800/30"
+                >
+                  Componentes
+                </button>
+                <button
+                  onClick={() => smoothScrollTo('#guia')}
+                  className="block w-full text-left text-slate-400 hover:text-slate-200 transition-colors duration-300 font-medium text-sm px-4 py-2 rounded-lg hover:bg-slate-800/30"
+                >
+                  Guía
+                </button>
+              </>
+            )}
             <a
               href="/versiones"
               className="block w-full text-left text-slate-400 hover:text-slate-200 transition-colors duration-300 font-medium text-sm px-4 py-2 rounded-lg hover:bg-slate-800/30"
