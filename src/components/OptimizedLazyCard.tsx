@@ -180,6 +180,15 @@ function TechIconSmall({ name }: { name: string }) {
           <path fill="url(#tailwindLogoSmall1)" d="M128 0C93.867 0 72.533 17.067 64 51.2 76.8 34.133 91.733 27.733 108.8 32c9.737 2.434 16.697 9.499 24.401 17.318C145.751 62.057 160.275 76.8 192 76.8c34.133 0 55.467-17.067 64-51.2-12.8 17.067-27.733 23.467-44.8 19.2-9.737-2.434-16.697-9.499-24.401-17.318C174.249 14.743 159.725 0 128 0ZM64 76.8C29.867 76.8 8.533 93.867 0 128c12.8-17.067 27.733-23.467 44.8-19.2 9.737 2.434 16.697 9.499 24.401 17.318C81.751 138.857 96.275 153.6 128 153.6c34.133 0 55.467-17.067 64-51.2-12.8 17.067-27.733 23.467-44.8 19.2-9.737-2.434-16.697-9.499-24.401-17.318C110.249 91.543 95.725 76.8 64 76.8Z"/>
         </svg>
       );
+    case 'CSS':
+      return (
+        <svg className={iconClass} viewBox="0 0 256 361">
+          <path fill="#264de4" d="M127.844 360.088L23.662 331.166.445 70.766h255.11l-23.241 260.36-104.47 28.962z"/>
+          <path fill="#2965f1" d="M212.417 314.547l19.86-222.49H128V337.95l84.417-23.403z"/>
+          <path fill="#ebebeb" d="M53.669 188.636l2.862 31.937H128v-31.937H53.669zM47.917 123.995l2.903 31.937H128v-31.937H47.917zM128 271.58l-.14.037-35.568-9.604-2.274-25.471h-32.06l4.474 50.146 65.421 18.16.147-.04V271.58z"/>
+          <path fill="#fff" d="M202.127 188.636l5.765-64.641H127.89v31.937h45.002l-2.906 32.704H127.89v31.937h39.327l-3.708 41.42-35.62 9.614v33.226l65.473-18.145.48-5.396 7.506-84.08.779-8.576z"/>
+        </svg>
+      );
     default:
       return null;
   }
@@ -279,7 +288,7 @@ export default function OptimizedLazyCard({ item, delay = 0, onDownload }: Optim
       <div className="group relative bg-slate-900/30 backdrop-blur-xl rounded-3xl border border-slate-800/50 hover:border-blue-500/30 transition-all duration-300 overflow-hidden hover:shadow-2xl hover:shadow-blue-500/10 flex flex-col">
         {/* Glow effect on hover */}
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          <div className="absolute inset-0 bg-linear-to-br from-blue-500/5 via-transparent to-purple-500/5" />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5" />
         </div>
 
         {/* Action Buttons - Top Right */}
@@ -441,9 +450,27 @@ function getComponentFileName(id: string): string {
     if (!isNaN(Number(part))) {
       return part;
     }
-    if (part.toLowerCase() === 'js') {
+
+    const lowerPart = part.toLowerCase();
+
+    // Handle 'js' - either standalone or as suffix (e.g., 'js' -> 'JS', 'alertjs' -> 'AlertJS')
+    if (lowerPart === 'js') {
       return 'JS';
     }
+    if (lowerPart.endsWith('js') && part.length > 2) {
+      const prefix = part.slice(0, -2);
+      return prefix.charAt(0).toUpperCase() + prefix.slice(1).toLowerCase() + 'JS';
+    }
+
+    // Handle 'css' - either standalone or as suffix (e.g., 'css' -> 'CSS', 'alertcss' -> 'AlertCSS')
+    if (lowerPart === 'css') {
+      return 'CSS';
+    }
+    if (lowerPart.endsWith('css') && part.length > 3) {
+      const prefix = part.slice(0, -3);
+      return prefix.charAt(0).toUpperCase() + prefix.slice(1).toLowerCase() + 'CSS';
+    }
+
     return part.charAt(0).toUpperCase() + part.slice(1).toLowerCase();
   }).join('');
 

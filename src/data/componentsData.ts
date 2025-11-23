@@ -15,18 +15,108 @@ import { button4Code } from '../components/examples/Button4Example';
 import { button5Code } from '../components/examples/Button5Example';
 import { button6Code } from '../components/examples/Button6Example';
 import { button7Code } from '../components/examples/Button7Example';
+import { button8Code } from '../components/examples/Button8Example';
+import { button9Code } from '../components/examples/Button9Example';
+import { button10Code } from '../components/examples/Button10Example';
+import { button11Code } from '../components/examples/Button11Example';
+import { button12Code } from '../components/examples/Button12Example';
+import { button13Code } from '../components/examples/Button13Example';
+import { button14Code } from '../components/examples/Button14Example';
+import { toggle1Code } from '../components/examples/Toggle1Example';
+import { button16Code } from '../components/examples/Button16Example';
+import { button17Code } from '../components/examples/Button17Example';
+import { buttonjs7Code } from '../components/examples/ButtonJS7Example';
+import { buttonjs8Code } from '../components/examples/ButtonJS8Example';
+import { buttonjs9Code } from '../components/examples/ButtonJS9Example';
+import { buttonjs10Code } from '../components/examples/ButtonJS10Example';
+import { buttonjs11Code } from '../components/examples/ButtonJS11Example';
+import { buttonjs12Code } from '../components/examples/ButtonJS12Example';
+import { buttonjs13Code } from '../components/examples/ButtonJS13Example';
+import { buttonjs14Code } from '../components/examples/ButtonJS14Example';
+import { dropdownjs4Code } from '../components/examples/DropdownJS4Example';
+import { buttonjs16Code } from '../components/examples/ButtonJS16Example';
+import { buttoncss1Code } from '../components/examples/ButtonCSS1Example';
+import { buttoncss2Code } from '../components/examples/ButtonCSS2Example';
+import { buttoncss3Code } from '../components/examples/ButtonCSS3Example';
+import { buttoncss4Code } from '../components/examples/ButtonCSS4Example';
+import { buttoncss5Code } from '../components/examples/ButtonCSS5Example';
+import { buttoncss6Code } from '../components/examples/ButtonCSS6Example';
+import { buttoncss7Code } from '../components/examples/ButtonCSS7Example';
+import { buttoncss8Code } from '../components/examples/ButtonCSS8Example';
+import { buttoncss9Code } from '../components/examples/ButtonCSS9Example';
+import { buttoncss10Code } from '../components/examples/ButtonCSS10Example';
 import { badge1Code } from '../components/examples/Badge1Example';
 import { badge2Code } from '../components/examples/Badge2Example';
 import { badge3Code } from '../components/examples/Badge3Example';
 import { badge4Code } from '../components/examples/Badge4Example';
 import { badge5Code } from '../components/examples/Badge5Example';
 import { badge6Code } from '../components/examples/Badge6Example';
+import { badge7Code } from '../components/examples/Badge7Example';
+import { badge8Code } from '../components/examples/Badge8Example';
+import { badge9Code } from '../components/examples/Badge9Example';
+import { badge10Code } from '../components/examples/Badge10Example';
+import { badge11Code } from '../components/examples/Badge11Example';
+import { badge12Code } from '../components/examples/Badge12Example';
+import { badge13Code } from '../components/examples/Badge13Example';
+import { badge14Code } from '../components/examples/Badge14Example';
+import { badge15Code } from '../components/examples/Badge15Example';
+import { badge16Code } from '../components/examples/Badge16Example';
+import { badgejs7Code } from '../components/examples/BadgeJS7Example';
+import { badgejs8Code } from '../components/examples/BadgeJS8Example';
+import { badgejs9Code } from '../components/examples/BadgeJS9Example';
+import { badgejs10Code } from '../components/examples/BadgeJS10Example';
+import { badgejs11Code } from '../components/examples/BadgeJS11Example';
+import { badgejs12Code } from '../components/examples/BadgeJS12Example';
+import { badgejs13Code } from '../components/examples/BadgeJS13Example';
+import { badgejs14Code } from '../components/examples/BadgeJS14Example';
+import { badgejs15Code } from '../components/examples/BadgeJS15Example';
+import { badgejs16Code } from '../components/examples/BadgeJS16Example';
+import { badgecss1Code } from '../components/examples/BadgeCSS1Example';
+import { badgecss2Code } from '../components/examples/BadgeCSS2Example';
+import { badgecss3Code } from '../components/examples/BadgeCSS3Example';
+import { badgecss4Code } from '../components/examples/BadgeCSS4Example';
+import { badgecss5Code } from '../components/examples/BadgeCSS5Example';
+import { badgecss6Code } from '../components/examples/BadgeCSS6Example';
+import { badgecss7Code } from '../components/examples/BadgeCSS7Example';
+import { badgecss8Code } from '../components/examples/BadgeCSS8Example';
+import { badgecss9Code } from '../components/examples/BadgeCSS9Example';
+import { badgecss10Code } from '../components/examples/BadgeCSS10Example';
 import { alert1Code } from '../components/examples/Alert1Example';
 import { alert2Code } from '../components/examples/Alert2Example';
 import { alert3Code } from '../components/examples/Alert3Example';
 import { alert4Code } from '../components/examples/Alert4Example';
 import { alert5Code } from '../components/examples/Alert5Example';
 import { alert6Code } from '../components/examples/Alert6Example';
+import { alert7Code } from '../components/examples/Alert7Example';
+import { alert8Code } from '../components/examples/Alert8Example';
+import { alert9Code } from '../components/examples/Alert9Example';
+import { alert10Code } from '../components/examples/Alert10Example';
+import { alert11Code } from '../components/examples/Alert11Example';
+import { alert12Code } from '../components/examples/Alert12Example';
+import { alert13Code } from '../components/examples/Alert13Example';
+import { alert14Code } from '../components/examples/Alert14Example';
+import { alert15Code } from '../components/examples/Alert15Example';
+import { alert16Code } from '../components/examples/Alert16Example';
+import { alertjs7Code } from '../components/examples/AlertJS7Example';
+import { alertjs8Code } from '../components/examples/AlertJS8Example';
+import { alertjs9Code } from '../components/examples/AlertJS9Example';
+import { alertjs10Code } from '../components/examples/AlertJS10Example';
+import { alertjs11Code } from '../components/examples/AlertJS11Example';
+import { alertjs12Code } from '../components/examples/AlertJS12Example';
+import { alertjs13Code } from '../components/examples/AlertJS13Example';
+import { alertjs14Code } from '../components/examples/AlertJS14Example';
+import { alertjs15Code } from '../components/examples/AlertJS15Example';
+import { alertjs16Code } from '../components/examples/AlertJS16Example';
+import { alertcss1Code } from '../components/examples/AlertCSS1Example';
+import { alertcss2Code } from '../components/examples/AlertCSS2Example';
+import { alertcss3Code } from '../components/examples/AlertCSS3Example';
+import { alertcss4Code } from '../components/examples/AlertCSS4Example';
+import { alertcss5Code } from '../components/examples/AlertCSS5Example';
+import { alertcss6Code } from '../components/examples/AlertCSS6Example';
+import { alertcss7Code } from '../components/examples/AlertCSS7Example';
+import { alertcss8Code } from '../components/examples/AlertCSS8Example';
+import { alertcss9Code } from '../components/examples/AlertCSS9Example';
+import { alertcss10Code } from '../components/examples/AlertCSS10Example';
 import { input1Code } from '../components/examples/Input1Example';
 import { input2Code } from '../components/examples/Input2Example';
 import { input3Code } from '../components/examples/Input3Example';
@@ -456,6 +546,246 @@ export const componentsData: ComponentItem[] = [
 						category: 'Buttons',
 						technologies: ['React', 'TypeScript'],
 					},
+	{
+		id: 'button-8',
+		title: 'Button 8 - Gradient with Icon',
+		description: 'Gradient button with lightning icon and hover effect.',
+		code: button8Code,
+		category: 'Buttons',
+		technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+	},
+	{
+		id: 'button-9',
+		title: 'Button 9 - Outline Hover Fill',
+		description: 'Outline button with smooth fill animation on hover.',
+		code: button9Code,
+		category: 'Buttons',
+		technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+	},
+	{
+		id: 'button-10',
+		title: 'Button 10 - Button Group',
+		description: 'Segmented control button group with active state.',
+		code: button10Code,
+		category: 'Buttons',
+		technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+	},
+	{
+		id: 'button-11',
+		title: 'Button 11 - Icon Button',
+		description: 'Circular icon-only button with hover animation.',
+		code: button11Code,
+		category: 'Buttons',
+		technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+	},
+	{
+		id: 'button-12',
+		title: 'Button 12 - Loading Button',
+		description: 'Button with animated loading spinner.',
+		code: button12Code,
+		category: 'Buttons',
+		technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+	},
+	{
+		id: 'button-13',
+		title: 'Button 13 - Social Login',
+		description: 'Facebook login button with brand styling.',
+		code: button13Code,
+		category: 'Buttons',
+		technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+	},
+	{
+		id: 'button-14',
+		title: 'Button 14 - CTA with Arrow',
+		description: 'Call-to-action button with animated arrow icon.',
+		code: button14Code,
+		category: 'Buttons',
+		technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+	},
+	{
+		id: 'toggle-1',
+		title: 'Toggle 1 - Toggle Switch',
+		description: 'Interactive toggle switch with state.',
+		code: toggle1Code,
+		category: 'Toggles',
+		technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+	},
+	{
+		id: 'button-16',
+		title: 'Button 16 - 3D Button',
+		description: 'Button with 3D shadow effect and press animation.',
+		code: button16Code,
+		category: 'Buttons',
+		technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+	},
+	{
+		id: 'button-17',
+		title: 'Button 17 - With Badge',
+		description: 'Button with notification badge counter.',
+		code: button17Code,
+		category: 'Buttons',
+		technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+	},
+	{
+		id: 'buttonjs-7',
+		title: 'ButtonJS 7 - Ripple Effect',
+		description: 'Button with click ripple animation using vanilla JavaScript.',
+		code: buttonjs7Code,
+		category: 'Buttons',
+		technologies: ['React', 'JavaScript', 'Tailwind CSS'],
+	},
+	{
+		id: 'buttonjs-8',
+		title: 'ButtonJS 8 - Neon Glow',
+		description: 'Neon-styled button with glow effect on hover.',
+		code: buttonjs8Code,
+		category: 'Buttons',
+		technologies: ['React', 'JavaScript', 'Tailwind CSS'],
+	},
+	{
+		id: 'buttonjs-9',
+		title: 'ButtonJS 9 - Particle Burst',
+		description: 'Button with particle explosion effect on click.',
+		code: buttonjs9Code,
+		category: 'Buttons',
+		technologies: ['React', 'JavaScript', 'Tailwind CSS'],
+	},
+	{
+		id: 'buttonjs-10',
+		title: 'ButtonJS 10 - Sound Wave',
+		description: 'Button with animated sound wave visualization.',
+		code: buttonjs10Code,
+		category: 'Buttons',
+		technologies: ['React', 'JavaScript', 'Tailwind CSS'],
+	},
+	{
+		id: 'buttonjs-11',
+		title: 'ButtonJS 11 - Magnetic',
+		description: 'Button that follows cursor movement within range.',
+		code: buttonjs11Code,
+		category: 'Buttons',
+		technologies: ['React', 'JavaScript', 'Tailwind CSS'],
+	},
+	{
+		id: 'buttonjs-12',
+		title: 'ButtonJS 12 - Liquid Fill',
+		description: 'Button with liquid fill animation from bottom.',
+		code: buttonjs12Code,
+		category: 'Buttons',
+		technologies: ['React', 'JavaScript', 'Tailwind CSS'],
+	},
+	{
+		id: 'buttonjs-13',
+		title: 'ButtonJS 13 - Glitch Effect',
+		description: 'Cyberpunk-style button with text glitch animation.',
+		code: buttonjs13Code,
+		category: 'Buttons',
+		technologies: ['React', 'JavaScript', 'Tailwind CSS'],
+	},
+	{
+		id: 'buttonjs-14',
+		title: 'ButtonJS 14 - Morphing Text',
+		description: 'Button with text that morphs on hover.',
+		code: buttonjs14Code,
+		category: 'Buttons',
+		technologies: ['React', 'JavaScript', 'Tailwind CSS'],
+	},
+	{
+		id: 'dropdown-js-4',
+		title: 'Dropdown JS4 - Split Button',
+		description: 'Split button with dropdown indicator.',
+		code: dropdownjs4Code,
+		category: 'Dropdowns',
+		technologies: ['React', 'JavaScript', 'Tailwind CSS'],
+	},
+	{
+		id: 'buttonjs-16',
+		title: 'ButtonJS 16 - Holographic',
+		description: 'Button with animated holographic gradient background.',
+		code: buttonjs16Code,
+		category: 'Buttons',
+		technologies: ['React', 'JavaScript', 'Tailwind CSS'],
+	},
+	{
+		id: 'buttoncss-1',
+		title: 'ButtonCSS 1 - Pulse Glow',
+		description: 'Button with pulsing glow animation using CSS.',
+		code: buttoncss1Code,
+		category: 'Buttons',
+		technologies: ['React', 'CSS'],
+	},
+	{
+		id: 'buttoncss-2',
+		title: 'ButtonCSS 2 - Bounce',
+		description: 'Button with continuous bounce animation.',
+		code: buttoncss2Code,
+		category: 'Buttons',
+		technologies: ['React', 'CSS'],
+	},
+	{
+		id: 'buttoncss-3',
+		title: 'ButtonCSS 3 - Shimmer',
+		description: 'Button with shimmer light effect animation.',
+		code: buttoncss3Code,
+		category: 'Buttons',
+		technologies: ['React', 'CSS'],
+	},
+	{
+		id: 'buttoncss-4',
+		title: 'ButtonCSS 4 - Rotating Border',
+		description: 'Button with rotating gradient border animation.',
+		code: buttoncss4Code,
+		category: 'Buttons',
+		technologies: ['React', 'CSS'],
+	},
+	{
+		id: 'buttoncss-5',
+		title: 'ButtonCSS 5 - Slide In',
+		description: 'Button with slide-in entrance animation.',
+		code: buttoncss5Code,
+		category: 'Buttons',
+		technologies: ['React', 'CSS'],
+	},
+	{
+		id: 'buttoncss-6',
+		title: 'ButtonCSS 6 - Rainbow',
+		description: 'Button with animated rainbow gradient background.',
+		code: buttoncss6Code,
+		category: 'Buttons',
+		technologies: ['React', 'CSS'],
+	},
+	{
+		id: 'buttoncss-7',
+		title: 'ButtonCSS 7 - 3D Flip',
+		description: 'Button with 3D flip rotation animation.',
+		code: buttoncss7Code,
+		category: 'Buttons',
+		technologies: ['React', 'CSS'],
+	},
+	{
+		id: 'buttoncss-8',
+		title: 'ButtonCSS 8 - Wiggle',
+		description: 'Button with wiggle rotation animation.',
+		code: buttoncss8Code,
+		category: 'Buttons',
+		technologies: ['React', 'CSS'],
+	},
+	{
+		id: 'buttoncss-9',
+		title: 'ButtonCSS 9 - Border Pulse',
+		description: 'Button with pulsing border animation.',
+		code: buttoncss9Code,
+		category: 'Buttons',
+		technologies: ['React', 'CSS'],
+	},
+	{
+		id: 'buttoncss-10',
+		title: 'ButtonCSS 10 - Wave Effect',
+		description: 'Button with wave light sweep animation.',
+		code: buttoncss10Code,
+		category: 'Buttons',
+		technologies: ['React', 'CSS'],
+	},
 
 					{
 						id: 'card-1',
@@ -562,6 +892,247 @@ export const componentsData: ComponentItem[] = [
 						category: 'Alerts',
 						technologies: ['React', 'TypeScript'],
 					},
+{
+id: 'alert-7',
+title: 'Alert 7 - New Feature',
+description: 'Gradient alert with dismissible feature for announcing new features.',
+code: alert7Code,
+category: 'Alerts',
+technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+},
+{
+id: 'alert-8',
+title: 'Alert 8 - Warning Notice',
+description: 'Animated warning alert with pulsing icon and glow effect.',
+code: alert8Code,
+category: 'Alerts',
+technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+},
+{
+id: 'alert-9',
+title: 'Alert 9 - System Update',
+description: 'Update alert with action buttons and timestamp badge.',
+code: alert9Code,
+category: 'Alerts',
+technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+},
+{
+id: 'alert-10',
+title: 'Alert 10 - Successfully Saved',
+description: 'Success alert with checkmark icon and progress bar animation.',
+code: alert10Code,
+category: 'Alerts',
+technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+},
+{
+id: 'alert-11',
+title: 'Alert 11 - Upload Progress',
+description: 'Interactive alert with progress tracking and upload functionality.',
+code: alert11Code,
+category: 'Alerts',
+technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+},
+{
+id: 'alert-12',
+title: 'Alert 12 - Critical Error',
+description: 'Error alert with pulsing background and action links.',
+code: alert12Code,
+category: 'Alerts',
+technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+},
+{
+id: 'alert-13',
+title: 'Alert 13 - New Message',
+description: 'Message notification alert with ping animation and badge counter.',
+code: alert13Code,
+category: 'Alerts',
+technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+},
+{
+id: 'alert-14',
+title: 'Alert 14 - Premium Feature',
+description: 'Gradient premium alert with glow effects and upgrade button.',
+code: alert14Code,
+category: 'Alerts',
+technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+},
+{
+id: 'alert-15',
+title: 'Alert 15 - Maintenance Scheduled',
+description: 'Maintenance alert with detailed information and time duration.',
+code: alert15Code,
+category: 'Alerts',
+technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+},
+{
+id: 'alert-16',
+title: 'Alert 16 - Quick Tip',
+description: 'Tip alert with keyboard shortcut display and glow effects.',
+code: alert16Code,
+category: 'Alerts',
+technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+},
+{
+id: 'alertjs-7',
+title: 'Alert JS 7 - Success',
+description: 'Success alert built with vanilla JavaScript and Tailwind CSS.',
+code: alertjs7Code,
+category: 'Alerts',
+technologies: ['JavaScript', 'React', 'Tailwind CSS'],
+},
+{
+id: 'alertjs-8',
+title: 'Alert JS 8 - Operation Failed',
+description: 'Error alert with gradient background built with vanilla JavaScript.',
+code: alertjs8Code,
+category: 'Alerts',
+technologies: ['JavaScript', 'React', 'Tailwind CSS'],
+},
+{
+id: 'alertjs-9',
+title: 'Alert JS 9 - Notification',
+description: 'Notification alert with dismissible button using JavaScript.',
+code: alertjs9Code,
+category: 'Alerts',
+technologies: ['JavaScript', 'React', 'Tailwind CSS'],
+},
+{
+id: 'alertjs-10',
+title: 'Alert JS 10 - Authentication',
+description: 'Information alert with sign-in action built with JavaScript.',
+code: alertjs10Code,
+category: 'Alerts',
+technologies: ['JavaScript', 'React', 'Tailwind CSS'],
+},
+{
+id: 'alertjs-11',
+title: 'Alert JS 11 - Cookie Policy',
+description: 'Cookie consent alert with accept/decline buttons using JavaScript.',
+code: alertjs11Code,
+category: 'Alerts',
+technologies: ['JavaScript', 'React', 'Tailwind CSS'],
+},
+{
+id: 'alertjs-12',
+title: 'Alert JS 12 - Account Verified',
+description: 'Verification success alert with timestamp using JavaScript.',
+code: alertjs12Code,
+category: 'Alerts',
+technologies: ['JavaScript', 'React', 'Tailwind CSS'],
+},
+{
+id: 'alertjs-13',
+title: 'Alert JS 13 - Access Denied',
+description: 'Access denied alert with top border using vanilla JavaScript.',
+code: alertjs13Code,
+category: 'Alerts',
+technologies: ['JavaScript', 'React', 'Tailwind CSS'],
+},
+{
+id: 'alertjs-14',
+title: 'Alert JS 14 - Important Update',
+description: 'Update alert with gradient icon built with JavaScript.',
+code: alertjs14Code,
+category: 'Alerts',
+technologies: ['JavaScript', 'React', 'Tailwind CSS'],
+},
+{
+id: 'alertjs-15',
+title: 'Alert JS 15 - Task Completed',
+description: 'Completion alert with progress indicator using JavaScript.',
+code: alertjs15Code,
+category: 'Alerts',
+technologies: ['JavaScript', 'React', 'Tailwind CSS'],
+},
+{
+id: 'alertjs-16',
+title: 'Alert JS 16 - Special Offer',
+description: 'Promotional alert with glow effects built with JavaScript.',
+code: alertjs16Code,
+category: 'Alerts',
+technologies: ['JavaScript', 'React', 'Tailwind CSS'],
+},
+{
+id: 'alertcss-1',
+title: 'Alert CSS 1 - Payment Success',
+description: 'Animated success alert with slide-in effect and custom CSS glow.',
+code: alertcss1Code,
+category: 'Alerts',
+technologies: ['React', 'TypeScript', 'Tailwind CSS', 'CSS'],
+},
+{
+id: 'alertcss-2',
+title: 'Alert CSS 2 - Security Alert',
+description: 'Bounce-in security alert with pulsing shadow animation using CSS.',
+code: alertcss2Code,
+category: 'Alerts',
+technologies: ['React', 'TypeScript', 'Tailwind CSS', 'CSS'],
+},
+{
+id: 'alertcss-3',
+title: 'Alert CSS 3 - Syncing Data',
+description: 'Alert with gradient background animation and rotating icon using CSS.',
+code: alertcss3Code,
+category: 'Alerts',
+technologies: ['React', 'TypeScript', 'Tailwind CSS', 'CSS'],
+},
+{
+id: 'alertcss-4',
+title: 'Alert CSS 4 - Caution Required',
+description: 'Warning alert with border animation and shake effect on hover.',
+code: alertcss4Code,
+category: 'Alerts',
+technologies: ['React', 'TypeScript', 'Tailwind CSS', 'CSS'],
+},
+{
+id: 'alertcss-5',
+title: 'Alert CSS 5 - Premium Unlocked',
+description: 'Premium alert with float animation and glowing pulse effect.',
+code: alertcss5Code,
+category: 'Alerts',
+technologies: ['React', 'TypeScript', 'Tailwind CSS', 'CSS'],
+},
+{
+id: 'alertcss-6',
+title: 'Alert CSS 6 - Processing Request',
+description: 'Processing alert with animated progress bar using custom CSS.',
+code: alertcss6Code,
+category: 'Alerts',
+technologies: ['React', 'TypeScript', 'Tailwind CSS', 'CSS'],
+},
+{
+id: 'alertcss-7',
+title: 'Alert CSS 7 - Backup Complete',
+description: 'Completion alert with shimmer background animation effect.',
+code: alertcss7Code,
+category: 'Alerts',
+technologies: ['React', 'TypeScript', 'Tailwind CSS', 'CSS'],
+},
+{
+id: 'alertcss-8',
+title: 'Alert CSS 8 - New Comment',
+description: 'Comment notification with flip-in animation and wave effect.',
+code: alertcss8Code,
+category: 'Alerts',
+technologies: ['React', 'TypeScript', 'Tailwind CSS', 'CSS'],
+},
+{
+id: 'alertcss-9',
+title: 'Alert CSS 9 - Event Reminder',
+description: 'Event alert with zoom-in animation and border glow effect.',
+code: alertcss9Code,
+category: 'Alerts',
+technologies: ['React', 'TypeScript', 'Tailwind CSS', 'CSS'],
+},
+{
+id: 'alertcss-10',
+title: 'Alert CSS 10 - System Processing',
+description: 'Processing alert with rotating icon and animated background pan.',
+code: alertcss10Code,
+category: 'Alerts',
+technologies: ['React', 'TypeScript', 'Tailwind CSS', 'CSS'],
+},
+
 
 					{
 						id: 'badge-1',
@@ -611,6 +1182,246 @@ export const componentsData: ComponentItem[] = [
 						category: 'Badges',
 						technologies: ['React', 'TypeScript'],
 					},
+		{
+			id: 'badge-7',
+			title: 'Badge 7 - Status Online',
+			description: 'Status badge with pulsing animation indicator for online status.',
+			code: badge7Code,
+			category: 'Badges',
+			technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+		},
+		{
+			id: 'badge-8',
+			title: 'Badge 8 - Notification Count',
+			description: 'Notification badge with count display and gradient background.',
+			code: badge8Code,
+			category: 'Badges',
+			technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+		},
+		{
+			id: 'badge-9',
+			title: 'Badge 9 - Trending',
+			description: 'Trending badge with fire icon and gradient colors.',
+			code: badge9Code,
+			category: 'Badges',
+			technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+		},
+		{
+			id: 'badge-10',
+			title: 'Badge 10 - Pro Member',
+			description: 'Achievement badge with star icon for pro membership.',
+			code: badge10Code,
+			category: 'Badges',
+			technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+		},
+		{
+			id: 'badge-11',
+			title: 'Badge 11 - Admin Role',
+			description: 'Role badge with gradient background for admin users.',
+			code: badge11Code,
+			category: 'Badges',
+			technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+		},
+		{
+			id: 'badge-12',
+			title: 'Badge 12 - High Priority',
+			description: 'Priority badge with warning icon and left border accent.',
+			code: badge12Code,
+			category: 'Badges',
+			technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+		},
+		{
+			id: 'badge-13',
+			title: 'Badge 13 - Category',
+			description: 'Category badge with video icon for tutorial content.',
+			code: badge13Code,
+			category: 'Badges',
+			technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+		},
+		{
+			id: 'badge-14',
+			title: 'Badge 14 - Verified',
+			description: 'Verified badge with checkmark icon in shield design.',
+			code: badge14Code,
+			category: 'Badges',
+			technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+		},
+		{
+			id: 'badge-15',
+			title: 'Badge 15 - Beta',
+			description: 'Beta badge with gradient background and glow shadow effect.',
+			code: badge15Code,
+			category: 'Badges',
+			technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+		},
+		{
+			id: 'badge-16',
+			title: 'Badge 16 - New',
+			description: 'New badge with animated spinning border and gradient text.',
+			code: badge16Code,
+			category: 'Badges',
+			technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+		},
+		{
+			id: 'badgejs-7',
+			title: 'Badge JS 7 - Away Status',
+			description: 'Away status badge built with vanilla JavaScript.',
+			code: badgejs7Code,
+			category: 'Badges',
+			technologies: ['JavaScript', 'React', 'Tailwind CSS'],
+		},
+		{
+			id: 'badgejs-8',
+			title: 'Badge JS 8 - Live',
+			description: 'Live badge with lightning emoji using JavaScript.',
+			code: badgejs8Code,
+			category: 'Badges',
+			technologies: ['JavaScript', 'React', 'Tailwind CSS'],
+		},
+		{
+			id: 'badgejs-9',
+			title: 'Badge JS 9 - Version',
+			description: 'Version badge displaying semantic version number.',
+			code: badgejs9Code,
+			category: 'Badges',
+			technologies: ['JavaScript', 'React', 'Tailwind CSS'],
+		},
+		{
+			id: 'badgejs-10',
+			title: 'Badge JS 10 - Top Contributor',
+			description: 'Achievement badge with trophy emoji for top contributors.',
+			code: badgejs10Code,
+			category: 'Badges',
+			technologies: ['JavaScript', 'React', 'Tailwind CSS'],
+		},
+		{
+			id: 'badgejs-11',
+			title: 'Badge JS 11 - Approved',
+			description: 'Approval badge with checkmark using JavaScript.',
+			code: badgejs11Code,
+			category: 'Badges',
+			technologies: ['JavaScript', 'React', 'Tailwind CSS'],
+		},
+		{
+			id: 'badgejs-12',
+			title: 'Badge JS 12 - Closed',
+			description: 'Closed status badge with X emoji built with JavaScript.',
+			code: badgejs12Code,
+			category: 'Badges',
+			technologies: ['JavaScript', 'React', 'Tailwind CSS'],
+		},
+		{
+			id: 'badgejs-13',
+			title: 'Badge JS 13 - Premium',
+			description: 'Premium badge with crown emoji using vanilla JavaScript.',
+			code: badgejs13Code,
+			category: 'Badges',
+			technologies: ['JavaScript', 'React', 'Tailwind CSS'],
+		},
+		{
+			id: 'badgejs-14',
+			title: 'Badge JS 14 - Featured',
+			description: 'Featured badge with top border accent built with JavaScript.',
+			code: badgejs14Code,
+			category: 'Badges',
+			technologies: ['JavaScript', 'React', 'Tailwind CSS'],
+		},
+		{
+			id: 'badgejs-15',
+			title: 'Badge JS 15 - In Progress',
+			description: 'Progress status badge with target emoji using JavaScript.',
+			code: badgejs15Code,
+			category: 'Badges',
+			technologies: ['JavaScript', 'React', 'Tailwind CSS'],
+		},
+		{
+			id: 'badgejs-16',
+			title: 'Badge JS 16 - Warning',
+			description: 'Warning badge with left border and emoji built with JavaScript.',
+			code: badgejs16Code,
+			category: 'Badges',
+			technologies: ['JavaScript', 'React', 'Tailwind CSS'],
+		},
+		{
+			id: 'badgecss-1',
+			title: 'Badge CSS 1 - Active Glow',
+			description: 'Active badge with pulsing glow animation using CSS.',
+			code: badgecss1Code,
+			category: 'Badges',
+			technologies: ['React', 'TypeScript', 'Tailwind CSS', 'CSS'],
+		},
+		{
+			id: 'badgecss-2',
+			title: 'Badge CSS 2 - Hot Badge',
+			description: 'Hot badge with bounce animation and fire emoji.',
+			code: badgecss2Code,
+			category: 'Badges',
+			technologies: ['React', 'TypeScript', 'Tailwind CSS', 'CSS'],
+		},
+		{
+			id: 'badgecss-3',
+			title: 'Badge CSS 3 - VIP',
+			description: 'VIP badge with shimmer gradient animation effect.',
+			code: badgecss3Code,
+			category: 'Badges',
+			technologies: ['React', 'TypeScript', 'Tailwind CSS', 'CSS'],
+		},
+		{
+			id: 'badgecss-4',
+			title: 'Badge CSS 4 - Recommended',
+			description: 'Recommended badge with pulse scale animation.',
+			code: badgecss4Code,
+			category: 'Badges',
+			technologies: ['React', 'TypeScript', 'Tailwind CSS', 'CSS'],
+		},
+		{
+			id: 'badgecss-5',
+			title: 'Badge CSS 5 - Exclusive',
+			description: 'Exclusive badge with rotating rainbow border animation.',
+			code: badgecss5Code,
+			category: 'Badges',
+			technologies: ['React', 'TypeScript', 'Tailwind CSS', 'CSS'],
+		},
+		{
+			id: 'badgecss-6',
+			title: 'Badge CSS 6 - Pinned',
+			description: 'Pinned badge with slide-in animation from left.',
+			code: badgecss6Code,
+			category: 'Badges',
+			technologies: ['React', 'TypeScript', 'Tailwind CSS', 'CSS'],
+		},
+		{
+			id: 'badgecss-7',
+			title: 'Badge CSS 7 - Limited Edition',
+			description: 'Limited edition badge with rainbow gradient animation.',
+			code: badgecss7Code,
+			category: 'Badges',
+			technologies: ['React', 'TypeScript', 'Tailwind CSS', 'CSS'],
+		},
+		{
+			id: 'badgecss-8',
+			title: 'Badge CSS 8 - Premium Diamond',
+			description: 'Premium badge with 3D flip animation effect.',
+			code: badgecss8Code,
+			category: 'Badges',
+			technologies: ['React', 'TypeScript', 'Tailwind CSS', 'CSS'],
+		},
+		{
+			id: 'badgecss-9',
+			title: 'Badge CSS 9 - Sale',
+			description: 'Sale badge with wiggle animation to grab attention.',
+			code: badgecss9Code,
+			category: 'Badges',
+			technologies: ['React', 'TypeScript', 'Tailwind CSS', 'CSS'],
+		},
+		{
+			id: 'badgecss-10',
+			title: 'Badge CSS 10 - Special Offer',
+			description: 'Special offer badge with pulsing border animation.',
+			code: badgecss10Code,
+			category: 'Badges',
+			technologies: ['React', 'TypeScript', 'Tailwind CSS', 'CSS'],
+		},
 
 					{
 						id: 'input-1',

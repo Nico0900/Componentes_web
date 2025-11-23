@@ -2,7 +2,7 @@ export default function Card2Example() {
   return (
     <div className="max-w-md mx-auto bg-slate-800/40 backdrop-blur-xl rounded-2xl shadow-xl overflow-hidden border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300">
       <div className="flex">
-        <div className="w-32 h-full bg-linear-to-br from-purple-500 to-pink-600 shrink-0" />
+        <div className="w-32 h-full bg-gradient-to-br from-purple-500 to-pink-600 shrink-0" />
         <div className="p-5 flex-1">
           <span className="px-2 py-0.5 bg-purple-500/20 text-purple-300 text-xs rounded border border-purple-500/30 font-medium">
             Featured
@@ -24,7 +24,7 @@ export const card2Code = `export default function Card2Example() {
   return (
     <div className="max-w-md mx-auto bg-slate-800/40 backdrop-blur-xl rounded-2xl shadow-xl overflow-hidden border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300">
       <div className="flex">
-        <div className="w-32 h-full bg-linear-to-br from-purple-500 to-pink-600 shrink-0" />
+        <div className="w-32 h-full bg-gradient-to-br from-purple-500 to-pink-600 shrink-0" />
         <div className="p-5 flex-1">
           <span className="px-2 py-0.5 bg-purple-500/20 text-purple-300 text-xs rounded border border-purple-500/30 font-medium">
             Featured

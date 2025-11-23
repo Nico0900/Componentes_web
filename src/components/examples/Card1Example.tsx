@@ -1,7 +1,7 @@
 export default function Card1Example() {
   return (
     <div className="max-w-sm mx-auto bg-slate-800/40 backdrop-blur-xl rounded-2xl shadow-xl overflow-hidden border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300">
-      <div className="h-48 bg-linear-to-br from-blue-500 to-purple-600 relative overflow-hidden">
+      <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-black/10" />
       </div>
       <div className="p-6">
@@ -25,7 +25,7 @@ export default function Card1Example() {
 export const card1Code = `export default function Card1Example() {
   return (
     <div className="max-w-sm mx-auto bg-slate-800/40 backdrop-blur-xl rounded-2xl shadow-xl overflow-hidden border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300">
-      <div className="h-48 bg-linear-to-br from-blue-500 to-purple-600 relative overflow-hidden">
+      <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-black/10" />
       </div>
       <div className="p-6">

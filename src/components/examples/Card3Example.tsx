@@ -2,12 +2,12 @@ export default function Card3Example() {
   return (
     <div className="max-w-sm mx-auto relative group">
       {/* Glow effect */}
-      <div className="absolute -inset-1 bg-linear-to-br from-cyan-500 to-blue-600 rounded-2xl opacity-30 group-hover:opacity-50 blur-xl transition-opacity duration-500" />
+      <div className="absolute -inset-1 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl opacity-30 group-hover:opacity-50 blur-xl transition-opacity duration-500" />
 
       {/* Card */}
       <div className="relative bg-slate-900/60 backdrop-blur-2xl rounded-2xl p-6 border border-slate-700/30 shadow-2xl">
         <div className="flex items-center justify-between mb-4">
-          <div className="w-12 h-12 rounded-full bg-linear-to-br from-cyan-400 to-blue-500 flex items-center justify-center">
+          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center">
             <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
@@ -39,12 +39,12 @@ export const card3Code = `export default function Card3Example() {
   return (
     <div className="max-w-sm mx-auto relative group">
       {/* Glow effect */}
-      <div className="absolute -inset-1 bg-linear-to-br from-cyan-500 to-blue-600 rounded-2xl opacity-30 group-hover:opacity-50 blur-xl transition-opacity duration-500" />
+      <div className="absolute -inset-1 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl opacity-30 group-hover:opacity-50 blur-xl transition-opacity duration-500" />
 
       {/* Card */}
       <div className="relative bg-slate-900/60 backdrop-blur-2xl rounded-2xl p-6 border border-slate-700/30 shadow-2xl">
         <div className="flex items-center justify-between mb-4">
-          <div className="w-12 h-12 rounded-full bg-linear-to-br from-cyan-400 to-blue-500 flex items-center justify-center">
+          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center">
             <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>

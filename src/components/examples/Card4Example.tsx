@@ -1,6 +1,6 @@
 export default function Card4Example() {
   return (
-    <div className="max-w-sm mx-auto relative p-[2px] rounded-2xl bg-linear-to-br from-pink-500 via-purple-500 to-indigo-500 shadow-xl group hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-500">
+    <div className="max-w-sm mx-auto relative p-[2px] rounded-2xl bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-500 shadow-xl group hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-500">
       <div className="bg-slate-900 rounded-2xl p-6 h-full">
         <div className="flex items-start justify-between mb-4">
           <div className="flex-1">
@@ -16,14 +16,14 @@ export default function Card4Example() {
 
         <div className="flex items-center gap-3 mb-4">
           <div className="flex -space-x-2">
-            <div className="w-8 h-8 rounded-full bg-linear-to-br from-pink-400 to-pink-600 border-2 border-slate-900" />
-            <div className="w-8 h-8 rounded-full bg-linear-to-br from-purple-400 to-purple-600 border-2 border-slate-900" />
-            <div className="w-8 h-8 rounded-full bg-linear-to-br from-indigo-400 to-indigo-600 border-2 border-slate-900" />
+            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 border-2 border-slate-900" />
+            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 border-2 border-slate-900" />
+            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-400 to-indigo-600 border-2 border-slate-900" />
           </div>
           <span className="text-xs text-slate-400">+12 members</span>
         </div>
 
-        <button className="w-full bg-linear-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white font-medium py-2.5 px-4 rounded-xl transition-all duration-300 shadow-lg shadow-purple-900/50">
+        <button className="w-full bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white font-medium py-2.5 px-4 rounded-xl transition-all duration-300 shadow-lg shadow-purple-900/50">
           Join Now
         </button>
       </div>
@@ -33,7 +33,7 @@ export default function Card4Example() {
 
 export const card4Code = `export default function Card4Example() {
   return (
-    <div className="max-w-sm mx-auto relative p-[2px] rounded-2xl bg-linear-to-br from-pink-500 via-purple-500 to-indigo-500 shadow-xl group hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-500">
+    <div className="max-w-sm mx-auto relative p-[2px] rounded-2xl bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-500 shadow-xl group hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-500">
       <div className="bg-slate-900 rounded-2xl p-6 h-full">
         <div className="flex items-start justify-between mb-4">
           <div className="flex-1">
@@ -49,14 +49,14 @@ export const card4Code = `export default function Card4Example() {
 
         <div className="flex items-center gap-3 mb-4">
           <div className="flex -space-x-2">
-            <div className="w-8 h-8 rounded-full bg-linear-to-br from-pink-400 to-pink-600 border-2 border-slate-900" />
-            <div className="w-8 h-8 rounded-full bg-linear-to-br from-purple-400 to-purple-600 border-2 border-slate-900" />
-            <div className="w-8 h-8 rounded-full bg-linear-to-br from-indigo-400 to-indigo-600 border-2 border-slate-900" />
+            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 border-2 border-slate-900" />
+            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 border-2 border-slate-900" />
+            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-400 to-indigo-600 border-2 border-slate-900" />
           </div>
           <span className="text-xs text-slate-400">+12 members</span>
         </div>
 
-        <button className="w-full bg-linear-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white font-medium py-2.5 px-4 rounded-xl transition-all duration-300 shadow-lg shadow-purple-900/50">
+        <button className="w-full bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white font-medium py-2.5 px-4 rounded-xl transition-all duration-300 shadow-lg shadow-purple-900/50">
           Join Now
         </button>
       </div>
