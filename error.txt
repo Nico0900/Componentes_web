@@ -1,0 +1,80 @@
+Download the React DevTools for a better development experience: https://react.dev/link/react-devtools
+VersionContent.tsx:76 Invalid DOM property `stroke-linecap`. Did you mean `strokeLinecap`?
+validateProperty @ @astrojs_react_client__js.js?v=2267025a:2398
+warnUnknownProperties @ @astrojs_react_client__js.js?v=2267025a:2542
+validatePropertiesInDevelopment @ @astrojs_react_client__js.js?v=2267025a:14130
+prepareToHydrateHostInstance @ @astrojs_react_client__js.js?v=2267025a:3934
+completeWork @ @astrojs_react_client__js.js?v=2267025a:9000
+runWithFiberInDEV @ @astrojs_react_client__js.js?v=2267025a:998
+completeUnitOfWork @ @astrojs_react_client__js.js?v=2267025a:12670
+performUnitOfWork @ @astrojs_react_client__js.js?v=2267025a:12576
+workLoopConcurrentByScheduler @ @astrojs_react_client__js.js?v=2267025a:12558
+renderRootConcurrent @ @astrojs_react_client__js.js?v=2267025a:12540
+performWorkOnRoot @ @astrojs_react_client__js.js?v=2267025a:11767
+performWorkOnRootViaSchedulerTask @ @astrojs_react_client__js.js?v=2267025a:13506
+performWorkUntilDeadline @ @astrojs_react_client__js.js?v=2267025a:37
+<path>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=2267025a:247
+VersionContent @ VersionContent.tsx:76
+react_stack_bottom_frame @ @astrojs_react_client__js.js?v=2267025a:18510
+renderWithHooks @ @astrojs_react_client__js.js?v=2267025a:5655
+updateFunctionComponent @ @astrojs_react_client__js.js?v=2267025a:7476
+beginWork @ @astrojs_react_client__js.js?v=2267025a:8526
+runWithFiberInDEV @ @astrojs_react_client__js.js?v=2267025a:998
+performUnitOfWork @ @astrojs_react_client__js.js?v=2267025a:12562
+workLoopConcurrentByScheduler @ @astrojs_react_client__js.js?v=2267025a:12558
+renderRootConcurrent @ @astrojs_react_client__js.js?v=2267025a:12540
+performWorkOnRoot @ @astrojs_react_client__js.js?v=2267025a:11767
+performWorkOnRootViaSchedulerTask @ @astrojs_react_client__js.js?v=2267025a:13506
+performWorkUntilDeadline @ @astrojs_react_client__js.js?v=2267025a:37
+<VersionContent>
+exports.createElement @ chunk-JEBY6MC3.js?v=0dbedd9b:793
+(anonymous) @ @astrojs_react_client__js.js?v=2267025a:20284
+(anonymous) @ versiones:7421
+e @ versiones:7421
+await in e
+start @ versiones:7421
+childrenConnectedCallback @ versiones:7421
+await in childrenConnectedCallback
+e @ versiones:7421
+(anonymous) @ versiones:7421
+VersionContent.tsx:76 Invalid DOM property `stroke-linejoin`. Did you mean `strokeLinejoin`?
+validateProperty @ @astrojs_react_client__js.js?v=2267025a:2398
+warnUnknownProperties @ @astrojs_react_client__js.js?v=2267025a:2542
+validatePropertiesInDevelopment @ @astrojs_react_client__js.js?v=2267025a:14130
+prepareToHydrateHostInstance @ @astrojs_react_client__js.js?v=2267025a:3934
+completeWork @ @astrojs_react_client__js.js?v=2267025a:9000
+runWithFiberInDEV @ @astrojs_react_client__js.js?v=2267025a:998
+completeUnitOfWork @ @astrojs_react_client__js.js?v=2267025a:12670
+performUnitOfWork @ @astrojs_react_client__js.js?v=2267025a:12576
+workLoopConcurrentByScheduler @ @astrojs_react_client__js.js?v=2267025a:12558
+renderRootConcurrent @ @astrojs_react_client__js.js?v=2267025a:12540
+performWorkOnRoot @ @astrojs_react_client__js.js?v=2267025a:11767
+performWorkOnRootViaSchedulerTask @ @astrojs_react_client__js.js?v=2267025a:13506
+performWorkUntilDeadline @ @astrojs_react_client__js.js?v=2267025a:37
+<path>
+exports.jsxDEV @ react_jsx-dev-runtime.js?v=2267025a:247
+VersionContent @ VersionContent.tsx:76
+react_stack_bottom_frame @ @astrojs_react_client__js.js?v=2267025a:18510
+renderWithHooks @ @astrojs_react_client__js.js?v=2267025a:5655
+updateFunctionComponent @ @astrojs_react_client__js.js?v=2267025a:7476
+beginWork @ @astrojs_react_client__js.js?v=2267025a:8526
+runWithFiberInDEV @ @astrojs_react_client__js.js?v=2267025a:998
+performUnitOfWork @ @astrojs_react_client__js.js?v=2267025a:12562
+workLoopConcurrentByScheduler @ @astrojs_react_client__js.js?v=2267025a:12558
+renderRootConcurrent @ @astrojs_react_client__js.js?v=2267025a:12540
+performWorkOnRoot @ @astrojs_react_client__js.js?v=2267025a:11767
+performWorkOnRootViaSchedulerTask @ @astrojs_react_client__js.js?v=2267025a:13506
+performWorkUntilDeadline @ @astrojs_react_client__js.js?v=2267025a:37
+<VersionContent>
+exports.createElement @ chunk-JEBY6MC3.js?v=0dbedd9b:793
+(anonymous) @ @astrojs_react_client__js.js?v=2267025a:20284
+(anonymous) @ versiones:7421
+e @ versiones:7421
+await in e
+start @ versiones:7421
+childrenConnectedCallback @ versiones:7421
+await in childrenConnectedCallback
+e @ versiones:7421
+(anonymous) @ versiones:7421
+VersionContent.tsx:69 Invalid DOM property `stroke-width`. Did you mean `strokeWidth`?
