@@ -2,7 +2,7 @@ export default function Card7Example() {
   return (
     <div className="max-w-sm mx-auto bg-slate-800/40 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 shadow-xl hover:shadow-2xl transition-all duration-300">
       <div className="flex items-center gap-4 mb-4">
-        <div className="w-16 h-16 rounded-full bg-linear-to-br from-emerald-400 to-cyan-600 p-0.5">
+        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-emerald-400 to-cyan-600 p-0.5">
           <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center">
             <span className="text-xl font-bold text-emerald-400">JD</span>
           </div>
@@ -42,7 +42,7 @@ export const card7Code = `export default function Card7Example() {
   return (
     <div className="max-w-sm mx-auto bg-slate-800/40 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 shadow-xl hover:shadow-2xl transition-all duration-300">
       <div className="flex items-center gap-4 mb-4">
-        <div className="w-16 h-16 rounded-full bg-linear-to-br from-emerald-400 to-cyan-600 p-0.5">
+        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-emerald-400 to-cyan-600 p-0.5">
           <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center">
             <span className="text-xl font-bold text-emerald-400">JD</span>
           </div>
